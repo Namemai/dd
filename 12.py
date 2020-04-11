@@ -6978,7 +6978,7 @@ def bot(op):
                                   except:
                                       pass
                                       
-                        elif "Invite " in msg.text:
+                        elif "ดึง " in msg.text:
                             if msg._from in admin:                                                                                                                                       
                                key = eval(msg.contentMetadata["MENTION"])
                                key["MENTIONEES"][0]["M"]                                                                                                                                
@@ -7024,7 +7024,7 @@ def bot(op):
                                cl.sendMessage(to, None, contentMetadata={"STKID":"406","STKPKGID":"1","STKVER":"100"}, contentType=7)
                                cl.sendMessage(to, None, contentMetadata={"STKID":"406","STKPKGID":"1","STKVER":"100"}, contentType=7)
 #===========ADMIN ADD============
-                        elif ("Staff " in msg.text):
+                        elif ("ตั้งสตาฟ " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
@@ -7056,7 +7056,7 @@ def bot(op):
                                        except:
                                            pass
 
-                        elif ("Admin " in msg.text):
+                        elif ("ตั้งแอดมิน " in msg.text):
                             if msg._from in owner or msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
                                key["MENTIONEES"][0]["M"]
@@ -7071,7 +7071,7 @@ def bot(op):
                                        except:
                                            pass
 
-                        elif ("Staffdell " in msg.text):
+                        elif ("ลบสตาฟ " in msg.text):
                             if msg._from in owner or msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
                                key["MENTIONEES"][0]["M"]
@@ -7086,7 +7086,7 @@ def bot(op):
                                        except:
                                            pass
 
-                        elif ("Botdell " in msg.text):
+                        elif ("บอทลบ " in msg.text):
                             if msg._from in owner:
                                key = eval(msg.contentMetadata["MENTION"])
                                key["MENTIONEES"][0]["M"]
@@ -7103,7 +7103,7 @@ def bot(op):
 #====================================#                                         
                         
 #====================================#
-                        elif cmd == "admin on" or text.lower() == 'admin:on':
+                        elif cmd == "แอดมิน on" or text.lower() == 'admin:on':
                             if msg._from in owner:
                                 wait["addadmin"] = True
                                 cl.sendMessage(msg.to,"Send Contact")
@@ -7113,7 +7113,7 @@ def bot(op):
                                 wait["delladmin"] = True
                                 cl.sendMessage(msg.to,"Send contact")
 
-                        elif cmd == "staff on" or text.lower() == 'staff:on':
+                        elif cmd == "สตาฟ on" or text.lower() == 'staff:on':
                             if msg._from in owner or msg._from in admin:
                                 wait["addstaff"] = True
                                 cl.sendMessage(msg.to,"Send contact")
@@ -7198,13 +7198,13 @@ def bot(op):
                                 wait["detectMention"] = False
                                 cl.sendMessage(msg.to,"Auto respon dinonaktifkan")
 
-                        elif cmd == "autojoin on" or text.lower() == 'autojoin on':
+                        elif cmd == "autojoin on" or text.lower() == 'join on':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
                                 wait["autoJoin"] = True
                                 cl.sendMessage(msg.to,"Autojoin diaktifkan")
 
-                        elif cmd == "autojoin off" or text.lower() == 'autojoin off':
+                        elif cmd == "autojoin off" or text.lower() == 'join off':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
                                 wait["autoJoin"] = False
@@ -7222,13 +7222,13 @@ def bot(op):
                                 wait["autoLeave"] = False
                                 cl.sendMessage(msg.to,"Autoleave dinonaktifkan")
 
-                        elif cmd == "autoadd on" or text.lower() == 'autoadd on':
+                        elif cmd == "autoadd on" or text.lower() == 'add on':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                                 wait["autoAdd"] = True
                                 cl.sendMessage(msg.to,"Auto add diaktifkan")
 
-                        elif cmd == "autoadd off" or text.lower() == 'autoadd off':
+                        elif cmd == "autoadd off" or text.lower() == 'add off':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                                 wait["autoAdd"] = False
@@ -7246,13 +7246,13 @@ def bot(op):
                                 wait["sticker"] = False
                                 cl.sendMessage(msg.to,"Deteksi sticker dinonaktifkan")
 
-                        elif cmd == "jointicket on" or text.lower() == 'jointicket on':
+                        elif cmd == "jointicket on" or text.lower() == 'มุดลิ้ง on':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
                                 settings["autoJoinTicket"] = True
                                 cl.sendMessage(msg.to,"Auto Join Ticket diaktifkan")
 
-                        elif cmd == "jointicket off" or text.lower() == 'jointicket off':
+                        elif cmd == "jointicket off" or text.lower() == 'มุดลิ้ง off':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
                                 settings["autoJoinTicket"] = False
@@ -7270,13 +7270,13 @@ def bot(op):
                                 settings["unsendMessage"] = False
                                 cl.sendMessage(msg.to,"detect unsend dinonaktifkan")
              
-                        elif cmd == "timeline on" or text.lower() == 'timeline on':
+                        elif cmd == "timeline on" or text.lower() == 'ไลค์ on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["Timeline"] = True
                                 cl.sendMessage(msg.to,"detect timeline on")
 
-                        elif cmd == "timeline off" or text.lower() == 'timeline off':
+                        elif cmd == "timeline off" or text.lower() == 'ไลค์ off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["Timeline"] = False
@@ -7430,7 +7430,7 @@ def bot(op):
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
                                 cl.sendMessage(msg.to," Talkban User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
 
-                        elif cmd == "bl" or text.lower() == 'bl':
+                        elif cmd == "bl" or text.lower() == 'bc':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                               if wait["blacklist"] == {}:
@@ -7441,7 +7441,7 @@ def bot(op):
                                         ma = cl.getContact(i)
                                         cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
                                         
-                        elif cmd == "clearban" or text.lower() == 'cbl':
+                        elif cmd == "clearban" or text.lower() == 'cb':
                           if wait["selfbot"] == True:
                             if msg._from in creator or msg._from in owner or msg._from in admin:
                               cl.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"]))))
@@ -7549,17 +7549,8 @@ def bot(op):
                             if msg._from in admin:
                                cl.sendMessage(msg.to, "「Sider Msg」\nSider Msg mu :\n\n「 " + str(wait["mention"]) + " 」")
                         
-                        elif cmd == "batre":
+                        elif cmd == "ck":
                             if msg._from in admin or msg._from in owner:
-                               try:cl.inviteIntoGroup(to, [mid]);has = "OK"
-                               except:has = "NOT"
-                               try:cl.kickoutFromGroup(to, [mid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒. Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low 0%"
-                               cl.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))
                                try:k1.inviteIntoGroup(to, [Amid]);has = "OK"
                                except:has = "NOT"
                                try:k1.kickoutFromGroup(to, [Amid]);has1 = "OK"
