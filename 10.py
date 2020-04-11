@@ -5079,25 +5079,25 @@ def bot(op):
                             if msg._from in admin:
                                start = time.time()
                                elapsed_time = time.time() - start
-                               k1.sendMessage(msg.to, "[ %s ][ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
+                               k1.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start
-                               k2.sendMessage(msg.to, "[ %s ][ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
+                               k2.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start
-                               k3.sendMessage(msg.to, "[ %s ][ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
+                               k3.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start
-                               k4.sendMessage(msg.to, "[ %s ][ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
+                               k4.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start
-                               k5.sendMessage(msg.to, "[ %s ][ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
+                               k5.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start
-                               k6.sendMessage(msg.to, "[ %s ][ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
+                               k6.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start
-                               k7.sendMessage(msg.to, "[ %s ][ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
+                               k7.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start
-                               k8.sendMessage(msg.to, "[ %s ][ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
+                               k8.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start
-                               k9.sendMessage(msg.to, "[ %s ][ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
+                               k9.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start       
-                               k10.sendMessage(msg.to, "[ %s ][ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")      
+                               k10.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")      
                                
                         elif cmd == "cb" or text.lower() == '#hapusbl':
                           if wait["selfbot"] == True:
