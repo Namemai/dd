@@ -7591,14 +7591,14 @@ def bot(op):
                                     cl.sendMessage(msg.to,"blacklist")
                               else:
                                     ma = ""
-                                    for i in  bl["blacklist"]:
+                                    for i in  wait["blacklist"]:
                                         ma = cl.getContact(i)
                                         cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
                                         
                         elif cmd == "clearban" or text.lower() == 'cb':
                           if wait["selfbot"] == True:
                             if msg._from in creator or msg._from in owner or msg._from in admin:
-                              cl.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(bl["blacklist"]))))
+                              cl.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"]))))
                                wait["blacklist"] = {}
                               
                         elif text.lower() == rname["rname"]+" bl" or text.lower() == sname["sname"]+" bl":
