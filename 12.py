@@ -7587,8 +7587,8 @@ def bot(op):
                         elif cmd == "bl" or text.lower() == 'bc':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              if  bl["blacklist"] == {}:
-                                    cl.sendMessage(msg.to,"Tidak ada blacklist")
+                              if  wait["blacklist"] == {}:
+                                    cl.sendMessage(msg.to,"blacklist")
                               else:
                                     ma = ""
                                     for i in  bl["blacklist"]:
@@ -7599,7 +7599,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in creator or msg._from in owner or msg._from in admin:
                               cl.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(bl["blacklist"]))))
-                               bl["blacklist"] = {}
+                               wait["blacklist"] = {}
                               
                         elif text.lower() == rname["rname"]+" bl" or text.lower() == sname["sname"]+" bl":
                           if wait["selfbot"] == True:
