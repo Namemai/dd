@@ -1130,6 +1130,7 @@ def bot(op):
                     if taged in bl['blacklist']:
                         try:
                             k1.cancelGroupInvitation(op.param1,[taged])
+                            k1.kickoutFromGroup(op.param1,[op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
@@ -1152,6 +1153,7 @@ def bot(op):
                     if taged in bl['blacklist']:
                         try:
                             k2.cancelGroupInvitation(op.param1,[taged])
+                            k2.kickoutFromGroup(op.param1,[op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
@@ -1174,6 +1176,7 @@ def bot(op):
                     if taged in bl['blacklist']:
                         try:
                             k3.cancelGroupInvitation(op.param1,[taged])
+                            k3.kickoutFromGroup(op.param1,[op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
@@ -1196,6 +1199,7 @@ def bot(op):
                     if taged in bl['blacklist']:
                         try:
                             k4.cancelGroupInvitation(op.param1,[taged])
+                            k4.kickoutFromGroup(op.param1,[op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
@@ -1218,6 +1222,7 @@ def bot(op):
                     if taged in bl['blacklist']:
                         try:
                             k5.cancelGroupInvitation(op.param1,[taged])
+                            k5.kickoutFromGroup(op.param1,[op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
@@ -1240,6 +1245,7 @@ def bot(op):
                     if taged in bl['blacklist']:
                         try:
                             k6.cancelGroupInvitation(op.param1,[taged])
+                            k6.kickoutFromGroup(op.param1,[op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
@@ -1262,6 +1268,7 @@ def bot(op):
                     if taged in bl['blacklist']:
                         try:
                             k7.cancelGroupInvitation(op.param1,[taged])
+                            k7.kickoutFromGroup(op.param1,[op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
@@ -1284,6 +1291,7 @@ def bot(op):
                     if taged in bl['blacklist']:
                         try:
                             k8.cancelGroupInvitation(op.param1,[taged])
+                            k8.kickoutFromGroup(op.param1,[op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
@@ -1306,6 +1314,7 @@ def bot(op):
                     if taged in bl['blacklist']:
                         try:
                             k9.cancelGroupInvitation(op.param1,[taged])
+                            k9.kickoutFromGroup(op.param1,[op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
@@ -1328,6 +1337,7 @@ def bot(op):
                     if taged in bl['blacklist']:
                         try:
                             k10.cancelGroupInvitation(op.param1,[taged])
+                            k10.kickoutFromGroup(op.param1,[op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
@@ -4636,40 +4646,40 @@ def bot(op):
                             if msg._from in owner or msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)                                
-                                md = "│╔══[ TΣΔM βΩT PRΩTΣCTsᴋ ] \n"                                
+                                md = "│[ MAI ] \n"                                
                                 if wait["sticker"] == True: md+="│╠══[  ON  ] sᴛɪᴄᴋᴇʀ✔️\n"
-                                else: md+="│╠══[ OFF ] sᴛɪᴄᴋᴇʀ❌\n"
+                                else: md+="│[ OFF ] sᴛɪᴄᴋᴇʀ❌\n"
                                 if wait["contact"] == True: md+="│╠══[  ON  ] ᴄᴏɴᴛᴀᴄᴛ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴄᴏɴᴛᴀᴄᴛ❌\n"
+                                else: md+="│[ OFF ] ᴄᴏɴᴛᴀᴄᴛ❌\n"
                                 if wait["detectMention"] == True: md+="│╠══[  ON  ] ʀᴇsᴘᴏɴ✔️\n"
-                                else: md+="│╠══[ OFF ] ʀᴇsᴘᴏɴ❌\n"
+                                else: md+="│[ OFF ] ʀᴇsᴘᴏɴ❌\n"
                                 if wait["autoJoin"] == True: md+="│╠══[  ON  ] ᴀᴜᴛᴏᴊᴏɪɴ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴀᴜᴛᴏᴊᴏɪɴ❌\n"
+                                else: md+="│[ OFF ] ᴀᴜᴛᴏᴊᴏɪɴ❌\n"
                                 if settings["autoJoinTicket"] == True: md+="│╠══[  ON  ] ᴊᴏɪɴᴛɪᴄᴋᴇᴛ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴊᴏɪɴᴛɪᴄᴋᴇᴛ❌\n"
+                                else: md+="│[ OFF ] ᴊᴏɪɴᴛɪᴄᴋᴇᴛ❌\n"
                                 if settings["unsendMessage"] == True: md+="│╠══[  ON  ] ᴜɴsᴇɴᴅ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴜɴsᴇɴᴅ❌\n"
+                                else: md+="│[ OFF ] ᴜɴsᴇɴᴅ❌\n"
                                 if wait["autoAdd"] == True: md+="│╠══[  ON  ] ᴀᴜᴛᴏᴀᴅᴅ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴀᴜᴛᴏᴀᴅᴅ❌\n"
+                                else: md+="│[ OFF ] ᴀᴜᴛᴏᴀᴅᴅ❌\n"
                                 if msg.to in welcome: md+="│╠══[  ON  ] ᴡᴇʟᴄᴏᴍᴇ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴡᴇʟᴄᴏᴍᴇ❌\n"
+                                else: md+="│[ OFF ] ᴡᴇʟᴄᴏᴍᴇ❌\n"
                                 if wait["autoLeave"] == True: md+="│╠══[  ON  ] ᴀᴜᴛᴏʟᴇᴀᴠᴇ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴀᴜᴛᴏʟᴇᴀᴠᴇ❌\n"
+                                else: md+="│[ OFF ] ᴀᴜᴛᴏʟᴇᴀᴠᴇ❌\n"
                                 if msg.to in ghost: md+="│╠══[  ON  ] ɢʜᴏsᴛ✔️\n"
-                                else: md+="│╠══[ OFF ] ɢʜᴏsᴛ❌\n"
+                                else: md+="│[ OFF ] ɢʜᴏsᴛ❌\n"
                                 if msg.to in protectqr: md+="│╠══[  ON  ] ᴘʀᴏᴛᴇᴄᴛǫʀ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴘʀᴏᴛᴇᴄᴛǫʀ❌\n"
+                                else: md+="│[ OFF ] ᴘʀᴏᴛᴇᴄᴛǫʀ❌\n"
                                 if msg.to in protectjoin: md+="│╠══[  ON  ] ᴘʀᴏᴛᴇᴄᴛᴊᴏɪɴ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴘʀᴏᴛᴇᴄᴛᴊᴏɪɴ❌\n"
+                                else: md+="│[ OFF ] ᴘʀᴏᴛᴇᴄᴛᴊᴏɪɴ❌\n"
                                 if msg.to in protectkick: md+="│╠══[  ON  ] ᴘʀᴏᴛᴇᴄᴛᴋɪᴄᴋ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴘʀᴏᴛᴇᴄᴛᴋɪᴄᴋ❌\n"
+                                else: md+="│[ OFF ] ᴘʀᴏᴛᴇᴄᴛᴋɪᴄᴋ❌\n"
                                 if msg.to in protectinvite: md+="│╠══[  ON  ] ᴘʀᴏᴛᴇᴄᴛɪɴᴠɪᴛᴇ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴘʀᴏᴛᴇᴄᴛɪɴᴠɪᴛᴇ❌\n"
+                                else: md+="│[ OFF ] ᴘʀᴏᴛᴇᴄᴛɪɴᴠɪᴛᴇ❌\n"
                                 if msg.to in protectantijs: md+="│╠══[  ON  ] ᴊs✔️\n"
-                                else: md+="│╠══[ OFF ] ᴊs❌\n"                                
+                                else: md+="│[ OFF ] ᴊs❌\n"                                
                                 if msg.to in protectcancel: md+="│╠══[  ON  ] ᴘʀᴏᴛᴇᴄᴛᴄᴀɴᴄᴇʟ✔️\n"
-                                else: md+="│╠══[ OFF ] ᴘʀᴏᴛᴇᴄᴛᴄᴀɴᴄᴇʟ❌\n"
-                                md+= "│╚══[ TΣΔM βΩT PRΩTΣCTsᴋ ]"
+                                else: md+="│[ OFF ] ᴘʀᴏᴛᴇᴄᴛᴄᴀɴᴄᴇʟ❌\n"
+                                md+= "│[ MAI ]"
                                 cl.sendMessage(msg.to, md+"\n│ᴛᴀɴɢɢᴀʟ : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n│ᴊᴀᴍ  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")   
                                                                  
                         elif cmd == "creator" or text.lower() == 'creator':
