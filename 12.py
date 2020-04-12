@@ -4238,32 +4238,32 @@ def bot(op):
                             ret_ = "「 ᴅᴇᴛᴀɪʟ ᴘᴏsᴛɪɴɢᴀɴ 」"
                             if msg.contentMetadata["serviceType"] == "GB":
                                 contact = cl.getContact(sender)
-                                auth = "\n• ˢᵏℹ༓ᴘᴇɴᴜʟɪs : {}".format(str(contact.displayName))
+                                auth = "\n• ℹ༓ᴘᴇɴᴜʟɪs : {}".format(str(contact.displayName))
                             else:
-                                auth = "\n• ˢᵏℹ ༓ᴘᴇɴᴜʟɪs : {}".format(str(msg.contentMetadata["serviceName"]))
+                                auth = "\n• ℹ ༓ᴘᴇɴᴜʟɪs : {}".format(str(msg.contentMetadata["serviceName"]))
                             ret_ += auth
                             if "stickerId" in msg.contentMetadata:
-                                stck = "\n• ˢᵏℹ༓sᴛɪᴄᴋᴇʀ : https://line.me/R/shop/detail/{}".format(str(msg.contentMetadata["packageId"]))
+                                stck = "\n• ℹ༓sᴛɪᴄᴋᴇʀ : https://line.me/R/shop/detail/{}".format(str(msg.contentMetadata["packageId"]))
                                 ret_ += stck
                             if "mediaOid" in msg.contentMetadata:
                                 object_ = msg.contentMetadata["mediaOid"].replace("svc=myhome|sid=h|","")
                                 if msg.contentMetadata["mediaType"] == "V":
                                     if msg.contentMetadata["serviceType"] == "GB":
-                                        ourl = "\n• ˢᵏℹ༓ Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
-                                        murl = "\n• ˢᵏℹ༓Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(msg.contentMetadata["mediaOid"]))
+                                        ourl = "\n• ℹ༓ Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
+                                        murl = "\n• ℹ༓Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(msg.contentMetadata["mediaOid"]))
                                     else:
-                                        ourl = "\n• ˢᵏℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
-                                        murl = "\n• ˢᵏℹ༓Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(object_))
+                                        ourl = "\n• ℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
+                                        murl = "\n• ℹ༓Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(object_))
                                     ret_ += murl
                                 else:
                                     if msg.contentMetadata["serviceType"] == "GB":
-                                        ourl = "\n• ˢᵏℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
+                                        ourl = "\n• ℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
                                     else:
-                                        ourl = "\n• ˢᵏℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
+                                        ourl = "\n• ℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
                                 ret_ += ourl
                             if "text" in msg.contentMetadata:
-                                text = "\n• ˢᵏℹ༓Tulisan : {}".format(str(msg.contentMetadata["text"]))
-                                purl = "\n• ˢᵏℹ༓Post URL : {}".format(str(msg.contentMetadata["postEndUrl"]).replace("line://","https://line.me/R/"))
+                                text = "\n• ℹ༓Tulisan : {}".format(str(msg.contentMetadata["text"]))
+                                purl = "\n• ℹ༓Post URL : {}".format(str(msg.contentMetadata["postEndUrl"]).replace("line://","https://line.me/R/"))
                                 ret_ += purl
                                 ret_ += text
                                 url = msg.contentMetadata['postEndUrl']
@@ -4557,11 +4557,6 @@ def bot(op):
                             del Setmain["SKfoto"][g1MID]
                             g1.updateProfilePicture(path)
                             g1.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif g2MID in Setmain["SKfoto"]:
-                            path = g2.downloadObjectMsg(msg_id)
-                            del Setmain["SKfoto"][g2MID]
-                            g2.updateProfilePicture(path)
-                            g2.sendMessage(msg.to,"Foto berhasil dirubah")
                             
                if msg.contentType == 1:
                  if msg._from in admin:
@@ -4576,8 +4571,7 @@ def bot(op):
                      path8 = k8.downloadObjectMsg(msg_id)
                      path9 = k9.downloadObjectMsg(msg_id)
                      path10 = k10.downloadObjectMsg(msg_id)
-                     path11 = g1.downloadObjectMsg(msg_id)
-                     path12 = g2.downloadObjectMsg(msg_id)             
+                     path11 = g1.downloadObjectMsg(msg_id)            
                      settings["changePicture"] = False
                      k1.updateProfilePicture(path1)
                      k1.sendMessage(msg.to, "ᴀsɪsᴛ 1 ʙᴇʀʜᴀsɪʟ ᴜᴘᴅᴀᴛᴇ ғᴏᴛᴏ")
@@ -4601,8 +4595,6 @@ def bot(op):
                      k10.sendMessage(msg.to, "ᴀsɪsᴛ 10 ʙᴇʀʜᴀsɪʟ ᴜᴘᴅᴀᴛᴇ ғᴏᴛᴏ")
                      g1.updateProfilePicture(path11)
                      g1.sendMessage(msg.to, "ʜᴀɴᴛᴜ 1 ʙᴇʀʜᴀsɪʟ ᴜᴘᴅᴀᴛᴇ ғᴏᴛᴏ")
-                     g2.updateProfilePicture(path12)
-                     g2.sendMessage(msg.to, "ʜᴀɴᴛᴜ 2 ʙᴇʀʜᴀsɪʟ ᴜᴘᴅᴀᴛᴇ ғᴏᴛᴏ")
                      
 
                if msg.contentType == 0:
@@ -4743,163 +4735,6 @@ def bot(op):
                                    cl.sendVideoWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath)+'/vp.small')
                                else:
                                    cl.sendImageWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath))
-                                                       
-                        elif cmd == "addbot":
-                          if msg._from in admin:
-                            try:
-                                cl.findAndAddContactsByMid(Amid)
-                                cl.findAndAddContactsByMid(Bmid)
-                                cl.findAndAddContactsByMid(Cmid)
-                                cl.findAndAddContactsByMid(Dmid)
-                                cl.findAndAddContactsByMid(Emid)
-                                cl.findAndAddContactsByMid(Fmid) 
-                                cl.findAndAddContactsByMid(Gmid)
-                                cl.findAndAddContactsByMid(Hmid)
-                                cl.findAndAddContactsByMid(Imid)
-                                cl.findAndAddContactsByMid(Jmid)
-                                cl.findAndAddContactsByMid(g1MID)
-                                cl.findAndAddContactsByMid(g2MID)                                                          
-                                k1.findAndAddContactsByMid(mid)                                                               
-                                k1.findAndAddContactsByMid(Cmid)
-                                k1.findAndAddContactsByMid(Dmid)
-                                k1.findAndAddContactsByMid(Emid)
-                                k1.findAndAddContactsByMid(Fmid)                                                              
-                                k1.findAndAddContactsByMid(Gmid)
-                                k1.findAndAddContactsByMid(Hmid)                                
-                                k1.findAndAddContactsByMid(Imid)
-                                k1.findAndAddContactsByMid(Jmid)
-                                k1.findAndAddContactsByMid(g1MID)
-                                k1.findAndAddContactsByMid(g2MID) 
-                                k2.findAndAddContactsByMid(mid)                                                             
-                                k2.findAndAddContactsByMid(Bmid)
-                                k2.findAndAddContactsByMid(Dmid)
-                                k2.findAndAddContactsByMid(Emid)
-                                k2.findAndAddContactsByMid(Fmid)                                                              
-                                k2.findAndAddContactsByMid(Gmid)
-                                k2.findAndAddContactsByMid(Hmid)                                
-                                k2.findAndAddContactsByMid(Imid)
-                                k2.findAndAddContactsByMid(Jmid)
-                                k2.findAndAddContactsByMid(g1MID)
-                                k2.findAndAddContactsByMid(g2MID)
-                                k3.findAndAddContactsByMid(mid)                                
-                                k3.findAndAddContactsByMid(Bmid)                              
-                                k3.findAndAddContactsByMid(Dmid)
-                                k3.findAndAddContactsByMid(Emid)
-                                k3.findAndAddContactsByMid(Fmid)                                                              
-                                k3.findAndAddContactsByMid(Gmid)
-                                k3.findAndAddContactsByMid(Hmid)                                
-                                k3.findAndAddContactsByMid(Imid)
-                                k3.findAndAddContactsByMid(Jmid)
-                                k3.findAndAddContactsByMid(g1MID)
-                                k3.findAndAddContactsByMid(g2MID) 
-                                k4.findAndAddContactsByMid(mid)                                
-                                k4.findAndAddContactsByMid(Bmid)
-                                k4.findAndAddContactsByMid(Cmid)                                
-                                k4.findAndAddContactsByMid(Emid)
-                                k4.findAndAddContactsByMid(Fmid)                                                              
-                                k4.findAndAddContactsByMid(Gmid)
-                                k4.findAndAddContactsByMid(Hmid)                                
-                                k4.findAndAddContactsByMid(Imid)
-                                k4.findAndAddContactsByMid(Jmid)
-                                k4.findAndAddContactsByMid(g1MID)
-                                k4.findAndAddContactsByMid(g2MID) 
-                                k5.findAndAddContactsByMid(mid)                                
-                                k5.findAndAddContactsByMid(Bmid)
-                                k5.findAndAddContactsByMid(Cmid)
-                                k5.findAndAddContactsByMid(Dmid)                                
-                                k5.findAndAddContactsByMid(Fmid)                                                              
-                                k5.findAndAddContactsByMid(Gmid)
-                                k5.findAndAddContactsByMid(Hmid)                                
-                                k5.findAndAddContactsByMid(Imid)
-                                k5.findAndAddContactsByMid(Jmid)
-                                k5.findAndAddContactsByMid(g1MID)
-                                k5.findAndAddContactsByMid(g2MID) 
-                                k6.findAndAddContactsByMid(mid)                                
-                                k6.findAndAddContactsByMid(Bmid)
-                                k6.findAndAddContactsByMid(Cmid)
-                                k6.findAndAddContactsByMid(Dmid)
-                                k6.findAndAddContactsByMid(Emid)
-                                k6.findAndAddContactsByMid(Fmid)                                                              
-                                k6.findAndAddContactsByMid(Gmid)
-                                k6.findAndAddContactsByMid(Hmid)                                
-                                k6.findAndAddContactsByMid(Imid)
-                                k6.findAndAddContactsByMid(Jmid)
-                                k6.findAndAddContactsByMid(g1MID)
-                                k6.findAndAddContactsByMid(g2MID)
-                                k7.findAndAddContactsByMid(mid)                                
-                                k7.findAndAddContactsByMid(Bmid)
-                                k7.findAndAddContactsByMid(Cmid)
-                                k7.findAndAddContactsByMid(Dmid)
-                                k7.findAndAddContactsByMid(Emid)
-                                k7.findAndAddContactsByMid(Fmid)                                                              
-                                k7.findAndAddContactsByMid(Gmid)
-                                k7.findAndAddContactsByMid(Hmid)                                
-                                k7.findAndAddContactsByMid(Imid)
-                                k7.findAndAddContactsByMid(Jmid)
-                                k7.findAndAddContactsByMid(g1MID)
-                                k7.findAndAddContactsByMid(g2MID) 
-                                k8.findAndAddContactsByMid(mid)                                
-                                k8.findAndAddContactsByMid(Bmid)
-                                k8.findAndAddContactsByMid(Cmid)
-                                k8.findAndAddContactsByMid(Dmid)
-                                k8.findAndAddContactsByMid(Emid)
-                                k8.findAndAddContactsByMid(Fmid)                                                              
-                                k8.findAndAddContactsByMid(Gmid)
-                                k8.findAndAddContactsByMid(Hmid)                                
-                                k8.findAndAddContactsByMid(Imid)
-                                k8.findAndAddContactsByMid(Jmid)
-                                k8.findAndAddContactsByMid(g1MID)
-                                k8.findAndAddContactsByMid(g2MID) 
-                                k9.findAndAddContactsByMid(mid)                                
-                                k9.findAndAddContactsByMid(Bmid)
-                                k9.findAndAddContactsByMid(Cmid)
-                                k9.findAndAddContactsByMid(Dmid)
-                                k9.findAndAddContactsByMid(Emid)
-                                k9.findAndAddContactsByMid(Fmid)                                                              
-                                k9.findAndAddContactsByMid(Gmid)
-                                k9.findAndAddContactsByMid(Hmid)                                
-                                k9.findAndAddContactsByMid(Imid)
-                                k9.findAndAddContactsByMid(Jmid)
-                                k9.findAndAddContactsByMid(g1MID)
-                                k9.findAndAddContactsByMid(g2MID) 
-                                k10.findAndAddContactsByMid(mid)                                
-                                k10.findAndAddContactsByMid(Bmid)
-                                k10.findAndAddContactsByMid(Cmid)
-                                k10.findAndAddContactsByMid(Dmid)
-                                k10.findAndAddContactsByMid(Emid)
-                                k10.findAndAddContactsByMid(Fmid)                                                              
-                                k10.findAndAddContactsByMid(Gmid)
-                                k10.findAndAddContactsByMid(Hmid)                                
-                                k10.findAndAddContactsByMid(Imid)
-                                k10.findAndAddContactsByMid(Jmid)
-                                k10.findAndAddContactsByMid(g1MID)
-                                k10.findAndAddContactsByMid(g2MID) 
-                                g1.findAndAddContactsByMid(mid)                                
-                                g1.findAndAddContactsByMid(Bmid)
-                                g1.findAndAddContactsByMid(Cmid)
-                                g1.findAndAddContactsByMid(Dmid)
-                                g1.findAndAddContactsByMid(Emid)
-                                g1.findAndAddContactsByMid(Fmid)                                                              
-                                g1.findAndAddContactsByMid(Gmid)
-                                g1.findAndAddContactsByMid(Hmid)                                
-                                g1.findAndAddContactsByMid(Imid)
-                                g1.findAndAddContactsByMid(Jmid)                                
-                                g1.findAndAddContactsByMid(g2MID) 
-                                g2.findAndAddContactsByMid(mid)                                
-                                g2.findAndAddContactsByMid(Bmid)
-                                g2.findAndAddContactsByMid(Cmid)
-                                g2.findAndAddContactsByMid(Dmid)
-                                g2.findAndAddContactsByMid(Emid)
-                                g2.findAndAddContactsByMid(Fmid)                                                              
-                                g2.findAndAddContactsByMid(Gmid)
-                                g2.findAndAddContactsByMid(Hmid)                                
-                                g2.findAndAddContactsByMid(Imid)
-                                g2.findAndAddContactsByMid(Jmid)
-                                g2.findAndAddContactsByMid(g1MID)
-                                g2.findAndAddContactsByMid(g2MID)                                                               
-                                cl.sendMessage(to,"Sucsess!!!")
-                            except:
-                                cl.sendMessage(to,"Sucess!! add all bots...")
                                 
                         elif cmd  == "mybot":
                           if msg._from in admin:
@@ -4915,7 +4750,6 @@ def bot(op):
                               cl.sendContact(to, Imid)
                               cl.sendContact(to, Jmid)
                               cl.sendContact(to, g1MID)
-                              cl.sendContact(to, g2MID)
                               
                         elif cmd  == "midbot":
                           if msg._from in admin:
@@ -4935,7 +4769,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                start = time.time()
-                               cl.sendMessage(to, "bot protect🏁")
+                               cl.sendMessage(to, "Speed...🏁")
                                elapsed_time = time.time() - start
                                k1.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start
@@ -4956,8 +4790,52 @@ def bot(op):
                                k9.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start       
                                k10.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")      
-                               
-                        elif cmd == "#clearban" or text.lower() == '#hapusbl':
+
+                        elif cmd == "sb":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                get_profile_time_start = time.time()
+                                get_profile = cl.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k1.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                                get_profile_time_start = time.time()
+                                get_profile = cl.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k2.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                                get_profile_time_start = time.time()
+                                get_profile = cl.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k3.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                                get_profile_time_start = time.time()
+                                get_profile = cl.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k4.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                                get_profile_time_start = time.time()
+                                get_profile = cl.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k5.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                                get_profile_time_start = time.time()
+                                get_profile = cl.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k6.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                                get_profile_time_start = time.time()
+                                get_profile = cl.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k7.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                                get_profile_time_start = time.time()
+                                get_profile = cl.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k8.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                                get_profile_time_start = time.time()
+                                get_profile = cl.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k9.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                                get_profile_time_start = time.time()
+                                get_profile = cl.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k10.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+
+                        elif cmd == "cb" or text.lower() == '#hapusbl':
                           if wait["selfbot"] == True:
                             if msg._from in admin:                          	
                               wait["blacklist"] = {}            
@@ -4972,7 +4850,7 @@ def bot(op):
                               k7.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
                               k8.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
                               k9.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
-                              k9.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
+                              k10.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
                               
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
@@ -4991,6 +4869,33 @@ def bot(op):
                                try:
                                    cl.removeAllMessages(op.param2)                                  
                                    cl.sendMessage(msg.to,"Chat sudah d bersihkan 👍")                                  
+                               except:
+                                   pass
+
+                        elif text.lower() == "ลบแชทคิก":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                               try:
+                                   k1.removeAllMessages(op.param2)
+                                   k2.removeAllMessages(op.param2)
+                                   k3.removeAllMessages(op.param2)
+                                   k4.removeAllMessages(op.param2)
+                                   k5.removeAllMessages(op.param2)
+                                   k6.removeAllMessages(op.param2)
+                                   k7.removeAllMessages(op.param2)
+                                   k8.removeAllMessages(op.param2)
+                                   k9.removeAllMessages(op.param2)
+                                   k10.removeAllMessages(op.param2)
+                                   k1.sendText(msg.to,"Chat dibersihkan...")
+                                   k2.sendText(msg.to,"Chat dibersihkan...")
+                                   k3.sendText(msg.to,"Chat dibersihkan...")
+                                   k4.sendText(msg.to,"Chat dibersihkan...")
+                                   k5.sendText(msg.to,"Chat dibersihkan...")
+                                   k6.sendText(msg.to,"Chat dibersihkan...")
+                                   k7.sendText(msg.to,"Chat dibersihkan...")
+                                   k8.sendText(msg.to,"Chat dibersihkan...")
+                                   k9.sendText(msg.to,"Chat dibersihkan...")
+                                   k10.sendText(msg.to,"Chat dibersihkan...")
                                except:
                                    pass
 
@@ -5157,7 +5062,7 @@ def bot(op):
                                    ma += "" + str(a) + ". " +G.name+ "\n"
                                cl.sendMessage(msg.to,"🔰ɢʀᴜᴘʟɪsᴛ 🔰\n\n"+ma+"\nTotal"+str(len(gid))+" Groups")
 
-                        elif cmd == "curl":
+                        elif cmd == "ปิดลิ้ง":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
                                 if msg.toType == 2:
@@ -5166,7 +5071,7 @@ def bot(op):
                                    cl.updateGroup(X)
                                    cl.sendMessage(msg.to, "Url Closed")
 
-                        elif cmd == "ourl":
+                        elif cmd == "เปิดลิ้ง":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
                                 if msg.toType == 2:
@@ -5363,16 +5268,7 @@ def bot(op):
                                 profile.displayName = string
                                 g1.updateProfile(profile)
                                 g1.sendMessage(msg.to,"Nama diganti jadi " + string + "")
-                                
-                        elif cmd.startswith("ชื่อ12: "):
-                          if msg._from in admin:
-                            separate = msg.text.split(" ")
-                            string = msg.text.replace(separate[0] + " ","")
-                            if len(string) <= 10000000000:
-                                profile = g2.getProfile()
-                                profile.displayName = string
-                                g2.updateProfile(profile)
-                                g2.sendMessage(msg.to,"Nama diganti jadi " + string + "")                    
+                  
 #===========BOT UPDATE============#
                         elif cmd == "mention" or text.lower() == 'แทค':
                           if wait["selfbot"] == True:
@@ -5494,6 +5390,7 @@ def bot(op):
                                    for p in range (140, len(nama)-1):
                                        nm8 += [nama[p]]
                                    mentionMembers(msg.to, nm8)
+
                         elif cmd == "รายชื่อบอท":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff:
@@ -5505,7 +5402,7 @@ def bot(op):
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
                                 cl.sendMessage(msg.to,"🔰ʙᴏᴛʟɪsᴛ🔰\n\n\n"+ma+"\n%s ʙᴏᴛs" %(str(len(Bots))))
                    
-                        elif cmd == "รายชื่อสตาฟ":
+                        elif cmd == "รายชื่อแอด":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff:
                                 ma = ""
@@ -5580,7 +5477,7 @@ def bot(op):
                                     g = g + 1
                                     end = '\n'
                                     mg += str(g) + ". " +cl.getGroup(group).name + "\n"
-                                cl.sendMessage(msg.to,"⛎ʟɪsᴛ ᴘʀᴏᴛᴇᴄᴛ Sɪʟᴇɴᴛᵏᶦˡˡᵉʳ⛎\n\n🔒ᴘʀᴏᴛᴇᴄᴛ ǫʀ:\n"+ma+"\n🔒ᴘʀᴏᴛᴇᴄᴛ ɪɴᴠɪᴛᴇ:\n"+mb+"\n🔒ᴘʀᴏᴛᴇᴄᴛᴀɴᴛɪᴋɪᴄᴋᴇʀ:\n"+mc+"\n🔒ᴘʀᴏᴛᴇᴄᴛᴋɪᴄᴋ:\n"+md+"\n🔒ᴘʀᴏᴛᴇᴄᴛᴄᴀɴᴄᴇʟ:\n"+me+"\n🔒ᴘʀᴏᴛᴇᴄᴛᴊᴏɪɴ:\n"+mf+"\n🔒ɢʜᴏsᴛ:\n"+mg+"\n\n⛎ᴘʀᴏᴛᴇᴄᴛ ʟɪsᴛ %s ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛ⛎" %(str(len(protectqr)+len(protectinvite)+len(protectantijs)+len(protectcancel)+len(protectkick)+len(protectjoin)+len(ghost))))
+                                cl.sendMessage(msg.to,"⛎ʟɪsᴛ ᴘʀᴏᴛᴇᴄᴛ⛎\n\n🔒ᴘʀᴏᴛᴇᴄᴛ ǫʀ:\n"+ma+"\n🔒ᴘʀᴏᴛᴇᴄᴛ ɪɴᴠɪᴛᴇ:\n"+mb+"\n🔒ᴘʀᴏᴛᴇᴄᴛᴀɴᴛɪᴋɪᴄᴋᴇʀ:\n"+mc+"\n🔒ᴘʀᴏᴛᴇᴄᴛᴋɪᴄᴋ:\n"+md+"\n🔒ᴘʀᴏᴛᴇᴄᴛᴄᴀɴᴄᴇʟ:\n"+me+"\n🔒ᴘʀᴏᴛᴇᴄᴛᴊᴏɪɴ:\n"+mf+"\n🔒ɢʜᴏsᴛ:\n"+mg+"\n\n⛎ᴘʀᴏᴛᴇᴄᴛ ʟɪsᴛ %s ɢʀᴏᴜᴘ⛎" %(str(len(protectqr)+len(protectinvite)+len(protectantijs)+len(protectcancel)+len(protectkick)+len(protectjoin)+len(ghost))))
                                 
                         elif cmd == "b":
                           if wait["selfbot"] == True:
@@ -5648,16 +5545,16 @@ def bot(op):
                         elif cmd == "bb":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               k1.sendMessage(msg.to, "۞❂✪₷ιlΣNƬ ₭ιll₠₹ ⋮➲➤")
-                               k2.sendMessage(msg.to, "۞❂✪₷ιlΣNƬ ₭ιll₠₹ ⋮➲➤")
-                               k3.sendMessage(msg.to, "۞❂✪₷ιlΣNƬ ₭ιll₠₹ ⋮➲➤")
-                               k4.sendMessage(msg.to, "۞❂✪₷ιlΣNƬ ₭ιll₠₹ ⋮➲➤")
-                               k5.sendMessage(msg.to, "۞❂✪₷ιlΣNƬ ₭ιll₠₹ ⋮➲➤")
-                               k6.sendMessage(msg.to, "۞❂✪₷ιlΣNƬ ₭ιll₠₹ ⋮➲➤")
-                               k7.sendMessage(msg.to, "۞❂✪₷ιlΣNƬ ₭ιll₠₹ ⋮➲➤")
-                               k8.sendMessage(msg.to, "۞❂✪₷ιlΣNƬ ₭ιll₠₹ ⋮➲➤")
-                               k9.sendMessage(msg.to, "۞❂✪₷ιlΣNƬ ₭ιll₠₹ ⋮➲➤")
-                               k10.sendMessage(msg.to, "۞❂✪₷ιlΣNƬ ₭ιll₠₹ ⋮➲➤")
+                               k1.sendMessage(msg.to, "۞❂✪ อยู่ค่ะเจ้านาย.. ⋮➲➤")
+                               k2.sendMessage(msg.to, "۞❂✪ อยู่ค่ะเจ้านาย.. ⋮➲➤")
+                               k3.sendMessage(msg.to, "۞❂✪ อยู่ค่ะเจ้านาย.. ⋮➲➤")
+                               k4.sendMessage(msg.to, "۞❂✪ อยู่ค่ะเจ้านาย.. ⋮➲➤")
+                               k5.sendMessage(msg.to, "۞❂✪ อยู่ค่ะเจ้านาย.. ⋮➲➤")
+                               k6.sendMessage(msg.to, "۞❂✪ อยู่ค่ะเจ้านาย.. ⋮➲➤")
+                               k7.sendMessage(msg.to, "۞❂✪ อยู่ค่ะเจ้านาย.. ⋮➲➤")
+                               k8.sendMessage(msg.to, "۞❂✪ อยู่ค่ะเจ้านาย.. ⋮➲➤")
+                               k9.sendMessage(msg.to, "۞❂✪ อยู่ค่ะเจ้านาย.. ⋮➲➤")
+                               k10.sendMessage(msg.to, "۞❂✪ อยู่ค่ะเจ้านาย.. ⋮➲➤")
                                                        
                         elif cmd == "bye1":
                           if wait["selfbot"] == True:
@@ -5739,15 +5636,12 @@ def bot(op):
                                ticket = cl.reissueGroupTicket(to)
                                g1.acceptGroupInvitationByTicket(to,format(str(ticket)))
                                time.sleep(0.01)
-                               g2.acceptGroupInvitationByTicket(to,format(str(ticket)))
-                               time.sleep(0.01)
                                
                         elif cmd == "g out":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
                                 g1.leaveGroup(msg.to)
-                                g2.leaveGroup(msg.to)
                                 
                         elif cmd == ".bye":
                           if wait["selfbot"] == True:
@@ -5871,7 +5765,7 @@ def bot(op):
                                start = time.time()                               
                                cl.sendMessage(msg.to, "ѕpeed....")                               
                                elapsed_time = time.time() - start
-                               cl.sendMessage(msg.to, "\n{}".format(str(elapsed_time)))
+                               cl.sendMessage(msg.to, "{}".format(str(elapsed_time)))
                                
                         elif cmd == "lurk:on":
                           if wait["selfbot"] == True:
@@ -6451,9 +6345,9 @@ def bot(op):
                                   cl.sendMessage(msg.to, None, contentMetadata={'mid': conn.mid}, contentType=13)
 
 #===========Protection============#
-                          elif 'ต้อนรับ ' in msg.text:
+                          elif 'Welcome ' in msg.text:
                            if msg._from in admin:
-                              spl = msg.text.replace('ต้อนรับ ','')
+                              spl = msg.text.replace('Welcome ','')
                               if spl == 'on':
                                   if msg.to in welcome:
                                        msgs = "Welcome Msg sudah aktif"
@@ -6611,9 +6505,9 @@ def bot(op):
                                          msgs = "Hantu sudah tidak aktif"
                                     cl.sendMessage(msg.to, "「 Status Hantu 」\n" + msgs)
                                     
-                        elif 'pt ' in msg.text:
+                        elif 'pro ' in msg.text:
                            if msg._from in admin:
-                              spl = msg.text.replace('pt ','')
+                              spl = msg.text.replace('pro ','')
                               if spl == 'on':
                                   if msg.to in protectqr:
                                        msgs = ""
@@ -6717,11 +6611,11 @@ def bot(op):
                                            invsend = 0
                                            Ticket = cl.reissueGroupTicket(msg.to)
                                            g1.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                           g2.acceptGroupInvitationByTicket(msg.to,Ticket)
                                            g1.kickoutFromGroup(msg.to, [target])
-                                           g2.kickoutFromGroup(msg.to, [target])
+                                           g1.kickoutFromGroup(msg.to, [target])
+                                           g1.kickoutFromGroup(msg.to, [target])
+                                           g1.kickoutFromGroup(msg.to, [target])
                                            g1.leaveGroup(msg.to)
-                                           g2.leaveGroup(msg.to)
                                            X = cl.getGroup(msg.to)
                                            X.preventedJoinByTicket = True
                                            cl.updateGroup(X)
@@ -6764,7 +6658,7 @@ def bot(op):
                                                except Exception as error:
                                                    cl.sendMessage(msg.to, str(error))
 
-                        elif text.lower() == 'silentkiller':
+                        elif text.lower() == '/ss/':
                            if msg._from in owner or msg._from in admin or msg._from in staff:
                            	if msg.toType == 2:
                                   ginfo = cl.getGroup(msg.to)
@@ -6785,7 +6679,6 @@ def bot(op):
                                   k9.acceptGroupInvitationByTicket(msg.to,Ticket)
                                   k10.acceptGroupInvitationByTicket(msg.to,Ticket)
                                   g1.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                  g2.acceptGroupInvitationByTicket(msg.to,Ticket)
                                   _name = text.lower().replace('silentkiller','')
                                   gs = k1.getGroup(msg.to)
                                   gs = k2.getGroup(msg.to)
@@ -6798,7 +6691,6 @@ def bot(op):
                                   gs = k9.getGroup(msg.to)
                                   gs = k10.getGroup(msg.to)
                                   gs = g1.getGroup(msg.to)
-                                  gs = g2.getGroup(msg.to)
                                   targets = []
                                   for g in gs.members:
                                   	if _name in g.displayName:
@@ -7319,11 +7211,11 @@ def bot(op):
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
                                 cl.sendMessage(msg.to,"Blacklist\n\n"+ma+"\n %s User" %(str(len(wait["blacklist"]))))
 
-                        elif cmd == "talkbanlist" or text.lower() == 'talkbanlist':
+                        elif cmd == "talkbanlist" or text.lower() == 'ดำ':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                               if wait["Talkblacklist"] == {}:
-                                cl.sendMessage(msg.to,"Tidak ada Talkban user")
+                                cl.sendMessage(msg.to,"รายชื่อคนติดดำ")
                               else:
                                 ma = ""
                                 a = 0
@@ -7331,24 +7223,44 @@ def bot(op):
                                     a = a + 1
                                     end = '\n'
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                cl.sendMessage(msg.to," Talkban User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
+                                k1.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
+                                k2.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
+                                k3.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
+                                k4.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
+                                k5.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
+                                k6.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
+                                k7.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
+                                k8.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
+                                k9.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
+                                k10.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
 
-                        elif cmd == "bl" or text.lower() == 'bc':
+                        elif cmd == "blc" or text.lower() == 'bc':
                           if wait["selfbot"] == True:
-                            if msg._from in owner:
+                            if msg._from in admin:
                               if wait["blacklist"] == {}:
-                                    cl.sendMessage(msg.to,"blacklist")
+                                    cl.sendMessage(msg.to,"Tidak ada blacklist")
                               else:
                                     ma = ""
                                     for i in wait["blacklist"]:
                                         ma = cl.getContact(i)
                                         cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
-                                        
-                        elif cmd == "clearban" or text.lower() == 'cb':
+
+                        elif cmd == "clearban" or text.lower() == 'ล้างดำ':
                           if wait["selfbot"] == True:
-                            if msg._from in creator or msg._from in owner or msg._from in admin:
-                              cl.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"]))))
+                            if msg._from in admin:
                               wait["blacklist"] = {}
+                              ragets = cl.getContacts(wait["blacklist"])
+                              mc = "「%i」User Blacklist" % len(ragets)
+                              k1.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k2.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k3.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k4.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k5.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k6.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k7.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k8.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k9.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k10.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
                               
                         elif text.lower() == rname["rname"]+" bl" or text.lower() == sname["sname"]+" bl":
                           if wait["selfbot"] == True:
@@ -7376,10 +7288,6 @@ def bot(op):
                               bl['blacklist'] = {}
                               with open('bl.json', 'w') as fp:
                                   json.dump(bl, fp, sort_keys=True, indent=4)
-                        
-                        elif text.lower() == 'dz':
-                               cl.sendMessage(msg.to, " Selfbot Protect Premium")
-                               cl.sendMessage(msg.to, " My Owner: line.me/ti/p/~teambotprotect")
 #===========COMMAND SET============#
                         elif msg.contentType == 16:
                            if wait["Timeline"] == True:
@@ -7558,7 +7466,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = cl.findGroupByTicket(ticket_id)
                                      cl.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     cl.sendMessage(msg.to, "Pᴀsᴜᴋᴀɴ Sɪʟᴇɴᴛᴷᶦˡˡᵉʳ ɢᴏ : %s" % str(group.name))
+                                     cl.sendMessage(msg.to, "ดีครับมาใหม่นะ : %s" % str(group.name))
                                      group1 = cl.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7566,7 +7474,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k1.findGroupByTicket(ticket_id)
                                      k1.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k1.sendMessage(msg.to, "Asɪsᴛ 1 ɢᴏ : %s" % str(group.name))
+                                     k1.sendMessage(msg.to, "ดีค่ะหนูมาใหม่นะ.. : %s" % str(group.name))
                                      groupl = k1.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7574,7 +7482,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k2.findGroupByTicket(ticket_id)
                                      k2.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k2.sendMessage(msg.to, "Asɪsᴛ 2 ɢᴏ : %s" % str(group.name))
+                                     k2.sendMessage(msg.to, "ดีค่ะหนูมาใหม่นะ.. : %s" % str(group.name))
                                      groupl = k2.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7582,7 +7490,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k3.findGroupByTicket(ticket_id)
                                      k3.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k3.sendMessage(msg.to, "Asɪsᴛ 3 ɢᴏ : %s" % str(group.name))
+                                     k3.sendMessage(msg.to, "ดีค่ะหนูมาใหม่นะ.. : %s" % str(group.name))
                                      groupl = k3.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7590,7 +7498,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k4.findGroupByTicket(ticket_id)
                                      k4.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k4.sendMessage(msg.to, "Asɪsᴛ 4 ɢᴏ : %s" % str(group.name))
+                                     k4.sendMessage(msg.to, "ดีค่ะหนูมาใหม่นะ.. : %s" % str(group.name))
                                      groupl = k4.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7598,12 +7506,12 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k5.findGroupByTicket(ticket_id)
                                      k5.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k5.sendMessage(msg.to, "Asɪsᴛ 5 ɢᴏ : %s" % str(group.name))
+                                     k5.sendMessage(msg.to, "ดีค่ะหนูมาใหม่นะ.. : %s" % str(group.name))
                                      groupl = k5.findGroupByTicket(ticket_id)
                                  for ticket_id in n_links:
                                      group = k6.findGroupByTicket(ticket_id)
                                      k6.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k6.sendMessage(msg.to, "Asɪsᴛ 6 ɢᴏ : %s" % str(group.name))
+                                     k6.sendMessage(msg.to, "ดีค่ะหนูมาใหม่นะ.. : %s" % str(group.name))
                                      groupl = k6.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7611,7 +7519,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k7.findGroupByTicket(ticket_id)
                                      k7.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k7.sendMessage(msg.to, "Asɪsᴛ 7 ɢᴏ : %s" % str(group.name))
+                                     k7.sendMessage(msg.to, "ดีค่ะหนูมาใหม่นะ.. : %s" % str(group.name))
                                      groupl = k7.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7619,7 +7527,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k8.findGroupByTicket(ticket_id)
                                      k8.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k8.sendMessage(msg.to, "Asɪsᴛ 8 ɢᴏ : %s" % str(group.name))
+                                     k8.sendMessage(msg.to, "ดีค่ะหนูมาใหม่นะ.. : %s" % str(group.name))
                                      groupl = k8.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7627,7 +7535,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k9.findGroupByTicket(ticket_id)
                                      k9.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k9.sendMessage(msg.to, "Asɪsᴛ 9 ɢᴏ : %s" % str(group.name))
+                                     k9.sendMessage(msg.to, "ดีค่ะหนูมาใหม่นะ.. : %s" % str(group.name))
                                      groupl = k9.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7635,7 +7543,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k10.findGroupByTicket(ticket_id)
                                      k10.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k10.sendMessage(msg.to, "Asɪsᴛ 10 ɢᴏ : %s" % str(group.name))
+                                     k10.sendMessage(msg.to, "ดีค่ะหนูมาใหม่นะ.. : %s" % str(group.name))
                                      groupl = k10.findGroupByTicket(ticket_id)
                                      
     except Exception as error:
