@@ -1948,65 +1948,6 @@ def bot(op):
                                                 except:
                                                     pass
                 return
-        if op.type == 19:
-            if mid in op.param3:
-                if op.param2 in Bots:
-                    pass
-                if op.param2 in owner:
-                    pass
-                if op.param2 in admin:
-                    pass
-                if op.param2 in staff:
-                    pass
-                else:
-                    bl['blacklist'][op.param2] = True
-                    with open('bl.json', 'w') as fp:
-                        json.dump(bl, fp, sort_keys=True, indent=4)
-                    try:
-                        g1.acceptGroupInvitation(op.param1)
-                        g1.findAndAddContactsByMid(op.param3)
-                        g2.acceptGroupInvitation(op.param1)
-                        g2.findAndAddContactsByMid(op.param3)
-                        g1.inviteIntoGroup(op.param1,[op.param3])
-                        g2.inviteIntoGroup(op.param1,[op.param3])
-                        cl.acceptGroupInvitation(op.param1)
-                        x = g1.getGroup(op.param1)
-                        x = g2.getGroup(op.param1)
-                        x.preventedJoinByTicket = False
-                        g1.updateGroup(x)
-                        g2.updateGroup(x)
-                        invsend = 0
-                        Ti = g1.reissueGroupTicket(op.param1)
-                        Ti = g2.reissueGroupTicket(op.param1)
-                        cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k1.kickoutFromGroup(op.param1,[op.param2])
-                        k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k2.kickoutFromGroup(op.param1,[op.param2])
-                        k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k3.kickoutFromGroup(op.param1,[op.param2])
-                        k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k4.kickoutFromGroup(op.param1,[op.param2])
-                        k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k5.kickoutFromGroup(op.param1,[op.param2])
-                        k6.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k6.kickoutFromGroup(op.param1,[op.param2])
-                        k7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k7.kickoutFromGroup(op.param1,[op.param2])
-                        k8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k8.kickoutFromGroup(op.param1,[op.param2])
-                        k9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k9.kickoutFromGroup(op.param1,[op.param2])
-                        k10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k10.kickoutFromGroup(op.param1,[op.param2])
-                        Ticket = g1.reissueGroupTicket(op.param1)
-                        Ticket = g2.reissueGroupTicket(op.param1)
-                        g1.leaveGroup(op.param1)
-                        g2.leaveGroup(op.param1)
-                        random.choice(ABC).inviteIntoGroup(op.param1,[g1MID,g2MID])
-                    except:
-                        random.choice(ABC).findAndAddContactsByMid(op.param3)
-                        random.choice(ABC).inviteIntoGroup(op.param1,[g1MID,g2MID])
 #====================================================================                  
         if op.type == 19:
             if mid in op.param3:
