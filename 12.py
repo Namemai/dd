@@ -4938,7 +4938,7 @@ def bot(op):
                                restartBot()
                                cl.sendMessage(msg.to, "Done...")
                             
-                        elif cmd == "ทีม":
+                        elif cmd == "ออน":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
                                eltime = time.time() - mulai
@@ -5527,7 +5527,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in creator or msg._from in owner or msg._from in admin:
                                 try:
-                                    anggota = [Amid,Bmid,Cmid,Dmid,Emid,Gmid,Hmid,Imid,Jmid]
+                                    anggota = [Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid]
                                     cl.inviteIntoGroup(msg.to, anggota)
                                     k1.acceptGroupInvitation(msg.to)
                                     k2.acceptGroupInvitation(msg.to)
