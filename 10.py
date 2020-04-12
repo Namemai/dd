@@ -5078,6 +5078,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                start = time.time()
+                               cl.sendMessage(to, "bot protect🏁")
                                elapsed_time = time.time() - start
                                k1.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start
@@ -5097,7 +5098,7 @@ def bot(op):
                                elapsed_time = time.time() - start
                                k9.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                                elapsed_time = time.time() - start       
-                               k10.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")      
+                               k10.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]") 
                                
                         elif cmd == "cb" or text.lower() == '#hapusbl':
                           if wait["selfbot"] == True:
