@@ -25,10 +25,10 @@ print("""
 cl = LINE("06555mai@gmail.com","mai06555mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Selfbot Login ]\033[0m"""%(Bot_startTime))
 
-k1 = LINE("mnn84815@bcaoo.com","mai06555mai")
+k1 = LINE("zgf09103@zzrgg.com","mai06555mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist1 Login ]\033[0m"""%(Bot_startTime))
 
-k2 = LINE("uwc45303@zzrgg.com","mai06555mai")
+k2 = LINE("qmq37236@eoopy.com","mai06555mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist2 Login ]\033[0m"""%(Bot_startTime))
 
 k3 = LINE("ckz89175@bcaoo.com","mai06555mai")
@@ -58,8 +58,6 @@ print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist10
 g1 = LINE("lln71685@bcaoo.com","mai06555mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Kicker1 Login ]\033[0m"""%(Bot_startTime))
 
-g2 = LINE("axd16254@zzrgg.com","mai06555mai")
-print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Kicker2 Login ]\033[0m"""%(Bot_startTime))
 #==========================[[PAKE TOKEN CHROMEOS 2.1.5]]=========================
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m
 
@@ -77,7 +75,6 @@ staff = ["uc66e45201d1612eb4ce7b3a86bac4685"]
 #==============================================================================
 lineProfile = cl.getProfile()
 mid = cl.getProfile().mid
-mid = cl.getProfile().mid
 Amid = k1.getProfile().mid
 Bmid = k2.getProfile().mid
 Cmid = k3.getProfile().mid
@@ -88,12 +85,11 @@ Gmid = k7.getProfile().mid
 Hmid = k8.getProfile().mid
 Imid = k9.getProfile().mid
 Jmid = k10.getProfile().mid   
-g1MID = g1.getProfile().mid
-g2MID = g2.getProfile().mid                 
+g1MID = g1.getProfile().mid               
 KAC = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10]
 ABC = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10]
-KICKER = [g1,g2]           
-Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid,g1MID,g2MID]
+KICKER = [g1]           
+Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid,g1MID]
 Saint = admin + owner + staff
 Team = creator + owner + admin + staff + Bots
 Setbot = codecs.open("setting.json","r","utf-8")
@@ -1706,12 +1702,11 @@ def bot(op):
             	        invsend = 0
             	        Ticket = cl.reissueGroupTicket(op.param1)
             	        g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-            	        g2.acceptGroupInvitationByTicket(op.param1,Ticket)
             	        try:
             	            g1.kickoutFromGroup(op.param1,[op.param2])
             	        except:
             	            try:
-            	                g2.kickoutFromGroup(op.param1,[op.param2])
+            	                g1.kickoutFromGroup(op.param1,[op.param2])
             	            except:
             	                pass
             	        bl["blacklist"][op.param2] = True
@@ -1720,14 +1715,12 @@ def bot(op):
             	            g1.inviteIntoGroup(op.param1,[op.param3])
             	        except:
             	            try:
-            	                g2.findAndAddContactsByMid(op.param3)
-            	                g2.inviteIntoGroup(op.param1,[op.param3])
+            	                g1.findAndAddContactsByMid(op.param3)
+            	                g1.inviteIntoGroup(op.param1,[op.param3])
             	            except:
             	                g1.sendMessage(op.param1,"Bl succes")
             	                g1.leaveGroup(op.param1)
-            	                g2.leaveGroup(op.param1)
             	        g1.leaveGroup(op.param1)
-            	        g2.leaveGroup(op.param1)
             	        X = cl.getGroup(op.param1)
             	        X.preventedJoinByTicket = True
             	        cl.updateGroup(X)
@@ -1739,8 +1732,7 @@ def bot(op):
                 if mid in op.param3:
                     if op.param2 not in Bots and op.param2 not in Saint and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                         try:
-                            g1.acceptGroupInvitation(op.param1)   
-                            g2.acceptGroupInvitation(op.param1)                                                                              
+                            g1.acceptGroupInvitation(op.param1)                                                                                 
                             G = g1.getGroup(op.param1)
                             G.preventedJoinByTicket = False
                             g1.updateGroup(G)
@@ -1757,9 +1749,8 @@ def bot(op):
                             k9.acceptGroupInvitationByTicket(op.param1,Ticket)	
                             k10.acceptGroupInvitationByTicket(op.param1,Ticket)
                             bl["blacklist"][op.param2] = True
-                            g1.leaveGroup(op.param1)
-                            g2.leaveGroup(op.param1)                           
-                            cl.inviteIntoGroup(op.param1,[g1MID,g2MID])                                                  
+                            g1.leaveGroup(op.param1)                           
+                            cl.inviteIntoGroup(op.param1,[g1MID])                                                  
                         except:
                             pass
                             
@@ -1792,12 +1783,11 @@ def bot(op):
                     if op.param2 not in Bots and op.param2 not in Saint and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                         bl["blacklist"][op.param2] = True
                         try:
-                            g1.inviteIntoGroup(op.param1,[g2MID])
+                            g1.inviteIntoGroup(op.param1,[mid])
                             g1.kickoutFromGroup(op.param1,[op.param2])
                         except:
                             try:
-                                g2.inviteIntoGroup(op.param1,[g1MID])
-                                g2.kickoutFromGroup(op.param1,[op.param2])
+                                cl.inviteIntoGroup(op.param1,[g1MID])
                             except:
                                 pass
                                
