@@ -2055,8 +2055,52 @@ def bot(op):
                                                         k5.acceptGroupInvitation(op.param1)
                                                     except:
                                                         pass
-
-                                                            
+#===================================================================================================
+            if admin in op.param3:
+                if op.param2 in Bots:
+                    pass
+                if op.param2 in owner:
+                    pass
+                if op.param2 in admin:
+                    pass
+                if op.param2 in staff:
+                    pass
+                else:
+                    bl['blacklist'][op.param2] = True
+                    with open('bl.json', 'w') as fp:
+                        json.dump(bl, fp, sort_keys=True, indent=4)
+                    try:
+                        cl.kickoutFromGroup(op.param1,[op.param2])
+                        cl.findAndAddContactsByMid(op.param1,admin)
+                        cl.inviteIntoGroup(op.param1,admin)
+                    except:
+                        try:
+                            k1.kickoutFromGroup(op.param1,[op.param2])
+                            k1.findAndAddContactsByMid(op.param1,admin)
+                            k1.inviteIntoGroup(op.param1,admin)
+                        except:
+                            try:
+                                k2.kickoutFromGroup(op.param1,[op.param2])
+                                k2.findAndAddContactsByMid(op.param1,admin)
+                                k2.inviteIntoGroup(op.param1,admin)
+                            except:
+                                try:
+                                    k3.kickoutFromGroup(op.param1,[op.param2])
+                                    k3.findAndAddContactsByMid(op.param1,admin)
+                                    k3.inviteIntoGroup(op.param1,admin)
+                                except:
+                                    try:
+                                        k4.kickoutFromGroup(op.param1,[op.param2])
+                                        k4.findAndAddContactsByMid(op.param1,admin)
+                                        k4.inviteIntoGroup(op.param1,admin)
+                                    except:
+                                        try:
+                                            k5.kickoutFromGroup(op.param1,[op.param2])
+                                            k5.findAndAddContactsByMid(op.param1,admin)
+                                            k5.inviteIntoGroup(op.param1,admin)
+                                        except:
+                                            pass 
+#==================================================================== 
                 return
                 
         if op.type == 55:
@@ -2076,8 +2120,7 @@ def bot(op):
                                 try:
                                      k5.cancelGroupInvitation(op.param1,[op.param3])
                                 except:
-                                    pass
-#====================================================================                                                                
+                                    pass                                                               
 #===================================================================================================              
         if op.type == 25 or op.type == 26:
           if settings['SpamInvite'] == True:
