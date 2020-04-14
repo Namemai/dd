@@ -1003,7 +1003,84 @@ def bot(op):
                                                 k5.updateGroup(X)
                                                 cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                     except:
-                                        pass                                                                   
+                                        pass   
+#====================================================================
+                return
+
+        if op.type == 13:
+            if op.param2 in wait["blacklist"]:
+                if op.param2 in Bots:
+                    pass
+                if op.param2 in owner:
+                    pass
+                if op.param2 in admin:
+                    pass
+                if op.param2 in staff:
+                    pass
+                else:
+                    bl['blacklist'][op.param2] = True
+                    with open('bl.json', 'w') as fp:
+                        json.dump(bl, fp, sort_keys=True, indent=4)                
+                    try:
+                        k1.cancelGroupInvitation(op.param1,[op.param2])
+                    except:
+                        try:
+                            k2.cancelGroupInvitation(op.param1,[op.param2])
+                        except:
+                            try:
+                                k3.cancelGroupInvitation(op.param1,[op.param2])
+                            except:
+                                try:
+                                    k4.cancelGroupInvitation(op.param1,[op.param2])
+                                except:
+                                    try:
+                                        k5.cancleGroupInvitation(op.param1,[op.param2])
+                                    except:
+                                        try:
+                                            cl.cancleGroupInvitation(op.param1,[op.param2])
+                                        except:
+                                            pass
+        if op.type == 13:
+            if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                bl['blacklist'][op.param2] = True
+                with open('bl.json', 'w') as fp:
+                    json.dump(bl, fp, sort_keys=True, indent=4)
+                try:
+                    if op.param3 not in bl['blacklist']:
+                        k1.cancelGroupInvitation(op.param1,[op.param3])
+                        k1.kickoutFromGroup(op.param1, [op.param2])
+                except:
+                        try:
+                            if op.param3 not in bl['blacklist']:
+                                k2.cancelGroupInvitation(op.param1,[op.param3])
+                                k2.kickoutFromGroup(op.param1,[op.param2])
+                        except:
+                            try:
+                                if op.param3 not in bl['blacklist']:
+                                    k3.cancelGroupInvitation(op.param1,[op.param3])
+                                    k3.kickoutFromGroup(op.param1,[op.param2])
+                            except:
+                                try:
+                                    if op.param3 not in bl['blacklist']:
+                                        k4.cancelGroupInvitation(op.param1,[op.param3])
+                                        k4.kickoutFromGroup(op.param1,[op.param2])
+                                except:
+                                    try:
+                                        if op.param3 not in bl['blacklist']:
+                                            k5.cancelGroupInvitation(op.param1,[op.param3])
+                                            k5.kickoutFromGroup(op.param1,[op.param2])
+                                    except:
+                                        try:
+                                            if op.param3 not in bl['blacklist']:
+                                                cl.cancelGroupInvitation(op.param1,[op.param3])
+                                        except:
+                                            pass
+        if op.type == 13:
+            if op.param3 in bl['blacklist']:
+                    try:
+                        random.choice(ABC).cancelGroupInvitation(op.param1,[op.param3])
+                    except:
+                        pass
 #====================================================================                            
         if op.type == 13:
             if mid in op.param3:
