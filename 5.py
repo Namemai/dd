@@ -22,7 +22,7 @@ print("""
 \033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Start Bot ]\033[0m    
 """%(Bot_startTime))
 #==============================================================
-cl = LINE("lln71685@bcaoo.com","mai06555mai")
+cl = LINE("igy84654@bcaoo.com","mai06555mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Selfbot Login ]\033[0m"""%(Bot_startTime))
 
 k1 = LINE("uyp64624@bcaoo.com","mai06555mai")
@@ -34,10 +34,10 @@ print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist2 
 k3 = LINE("vnv41146@eoopy.com","mai06555mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist3 Login ]\033[0m"""%(Bot_startTime))
 
-k4 = LINE("ffn61639@zzrgg.com","mai06555mai")
+k4 = LINE("hqo70060@bcaoo.com","mai06555mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist4 Login ]\033[0m"""%(Bot_startTime))
 
-k5 = LINE("lzm74343@bcaoo.com","mai06555mai")
+k5 = LINE("noy63038@zzrgg.com","mai06555mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist5 Login ]\033[0m"""%(Bot_startTime))
 
 #==========================[[PAKE TOKEN CHROMEOS 2.1.5]]=========================
