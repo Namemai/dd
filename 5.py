@@ -62,8 +62,8 @@ Bmid = k2.getProfile().mid
 Cmid = k3.getProfile().mid
 Dmid = k4.getProfile().mid
 Emid = k5.getProfile().mid               
-KAC = [k1,k2,k3,k4,k5]
-ABC = [k1,k2,k3,k4,k5]           
+KAC = [cl,k1,k2,k3,k4,k5]
+ABC = [cl,k1,k2,k3,k4,k5]           
 Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid]
 Saint = admin + owner + staff
 Team = creator + owner + admin + staff + Bots
@@ -1466,11 +1466,13 @@ def bot(op):
                     bl['blacklist'][op.param2] = True
                     with open('bl.json', 'w') as fp:
                         json.dump(bl, fp, sort_keys=True, indent=4)
-                    try:                  	
-                        k1.kickoutFromGroup(op.param1,[op.param2])
-                        k1.inviteIntoGroup(op.param1,[op.param3])
-                        cl.acceptGroupInvitation(op.param1)
-                        bl['blacklist'][op.param2] = True
+                    try:
+                        cl.inviteIntoGroup(op.param1,[Amid,Bmid,Cmid,Dmid,Emid])
+                        k1.acceptGroupInvitation(op.param1)
+                        k2.acceptGroupInvitation(op.param1)
+                        k3.acceptGroupInvitation(op.param1)
+                        k4.acceptGroupInvitation(op.param1)
+                        k5.acceptGroupInvitation(op.param1)
                     except:
                         try:
                             k2.kickoutFromGroup(op.param1,[op.param2])
@@ -1543,7 +1545,6 @@ def bot(op):
                         k3.acceptGroupInvitation(op.param1)
                         k4.acceptGroupInvitation(op.param1)
                         k5.acceptGroupInvitation(op.param1)
-                        bl['blacklist'][op.param2] = True
                     except:
                         try:
                             k2.kickoutFromGroup(op.param1,[op.param2])
@@ -1552,7 +1553,6 @@ def bot(op):
                             k3.acceptGroupInvitation(op.param1)
                             k4.acceptGroupInvitation(op.param1)
                             k5.acceptGroupInvitation(op.param1)
-                            bl['blacklist'][op.param2] = True
                         except:
                             try:
                                 k3.kickoutFromGroup(op.param1,[op.param2])
@@ -1561,7 +1561,6 @@ def bot(op):
                                 k2.acceptGroupInvitation(op.param1)
                                 k4.acceptGroupInvitation(op.param1)
                                 k5.acceptGroupInvitation(op.param1)
-                                bl['blacklist'][op.param2] = True
                             except:
                                 try:
                                     k4.kickoutFromGroup(op.param1,[op.param2])
@@ -1570,7 +1569,6 @@ def bot(op):
                                     k2.acceptGroupInvitation(op.param1)
                                     k3.acceptGroupInvitation(op.param1)
                                     k5.acceptGroupInvitation(op.param1)
-                                    bl['blacklist'][op.param2] = True
                                 except:
                                     try:
                                         k5.kickoutFromGroup(op.param1,[op.param2])
@@ -1579,7 +1577,6 @@ def bot(op):
                                         k2.acceptGroupInvitation(op.param1)
                                         k3.acceptGroupInvitation(op.param1)
                                         k4.acceptGroupInvitation(op.param1)
-                                        bl['blacklist'][op.param2] = True
                                     except:
                                         try:
                                             k1.kickoutFromGroup(op.param1,[op.param2])
@@ -1588,7 +1585,6 @@ def bot(op):
                                             k3.acceptGroupInvitation(op.param1)
                                             k4.acceptGroupInvitation(op.param1)
                                             k5.acceptGroupInvitation(op.param1)
-                                            bl['blacklist'][op.param2] = True
                                         except:
                                             try:
                                                 k2.kickoutFromGroup(op.param1,[op.param2])
@@ -1597,7 +1593,6 @@ def bot(op):
                                                 k3.acceptGroupInvitation(op.param1)
                                                 k4.acceptGroupInvitation(op.param1)
                                                 k5.acceptGroupInvitation(op.param1)
-                                                bl['blacklist'][op.param2] = True
                                             except:
                                                 try:
                                                     k3.kickoutFromGroup(op.param1,[op.param2])
@@ -1606,7 +1601,6 @@ def bot(op):
                                                     k2.acceptGroupInvitation(op.param1)
                                                     k4.acceptGroupInvitation(op.param1)
                                                     k5.acceptGroupInvitation(op.param1)
-                                                    bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
                                                         k4.kickoutFromGroup(op.param1,[op.param2])
@@ -1615,8 +1609,6 @@ def bot(op):
                                                         k2.acceptGroupInvitation(op.param1)
                                                         k3.acceptGroupInvitation(op.param1)
                                                         k5.acceptGroupInvitation(op.param1)
-                                                        k4.kickoutFromGroup(op.param1,[op.param2])
-                                                        bl['blacklist'][op.param2] = True
                                                     except:
                                                         try:
                                                             k5.kickoutFromGroup(op.param1,[op.param2])
@@ -1625,7 +1617,6 @@ def bot(op):
                                                             k2.acceptGroupInvitation(op.param1)
                                                             k3.acceptGroupInvitation(op.param1)
                                                             k4.acceptGroupInvitation(op.param1)
-                                                            bl['blacklist'][op.param2] = True
                                                         except:
                                                             pass 
                                                                                                                       
@@ -1651,7 +1642,6 @@ def bot(op):
                         k3.acceptGroupInvitation(op.param1)
                         k4.acceptGroupInvitation(op.param1)
                         k5.acceptGroupInvitation(op.param1)
-                        bl['blacklist'][op.param2] = True
                     except:
                         try:
                             k3.kickoutFromGroup(op.param1,[op.param2])
@@ -1660,7 +1650,6 @@ def bot(op):
                             k2.acceptGroupInvitation(op.param1)
                             k4.acceptGroupInvitation(op.param1)
                             k5.acceptGroupInvitation(op.param1)
-                            bl['blacklist'][op.param2] = True
                         except:
                             try:
                                 k4.kickoutFromGroup(op.param1,[op.param2])
@@ -1669,8 +1658,6 @@ def bot(op):
                                 k2.acceptGroupInvitation(op.param1)
                                 k3.acceptGroupInvitation(op.param1)
                                 k5.acceptGroupInvitation(op.param1)
-                                k4.kickoutFromGroup(op.param1,[op.param2])
-                                bl['blacklist'][op.param2] = True
                             except:
                                 try:
                                     k5.kickoutFromGroup(op.param1,[op.param2])
@@ -1679,7 +1666,6 @@ def bot(op):
                                     k2.acceptGroupInvitation(op.param1)
                                     k3.acceptGroupInvitation(op.param1)
                                     k4.acceptGroupInvitation(op.param1)
-                                    bl['blacklist'][op.param2] = True
                                 except:
                                     try:
                                         k1.kickoutFromGroup(op.param1,[op.param2])
@@ -1688,7 +1674,6 @@ def bot(op):
                                         k3.acceptGroupInvitation(op.param1)
                                         k4.acceptGroupInvitation(op.param1)
                                         k5.acceptGroupInvitation(op.param1)
-                                        bl['blacklist'][op.param2] = True
                                     except:
                                         try:
                                             k2.kickoutFromGroup(op.param1,[op.param2])
@@ -1697,7 +1682,6 @@ def bot(op):
                                             k3.acceptGroupInvitation(op.param1)
                                             k4.acceptGroupInvitation(op.param1)
                                             k5.acceptGroupInvitation(op.param1)
-                                            bl['blacklist'][op.param2] = True
                                         except:
                                             try:
                                                 k3.kickoutFromGroup(op.param1,[op.param2])
@@ -1706,7 +1690,6 @@ def bot(op):
                                                 k2.acceptGroupInvitation(op.param1)
                                                 k4.acceptGroupInvitation(op.param1)
                                                 k5.acceptGroupInvitation(op.param1)
-                                                bl['blacklist'][op.param2] = True
                                             except:
                                                 try:
                                                     k4.kickoutFromGroup(op.param1,[op.param2])
@@ -1715,7 +1698,6 @@ def bot(op):
                                                     k2.acceptGroupInvitation(op.param1)
                                                     k3.acceptGroupInvitation(op.param1)
                                                     k5.acceptGroupInvitation(op.param1)
-                                                    bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
                                                         k5.kickoutFromGroup(op.param1,[op.param2])
@@ -1724,7 +1706,6 @@ def bot(op):
                                                         k2.acceptGroupInvitation(op.param1)
                                                         k3.acceptGroupInvitation(op.param1)
                                                         k4.acceptGroupInvitation(op.param1)
-                                                        bl['blacklist'][op.param2] = True
                                                     except:
                                                         pass
                                                                
@@ -1750,7 +1731,6 @@ def bot(op):
                         k2.acceptGroupInvitation(op.param1)
                         k4.acceptGroupInvitation(op.param1)
                         k5.acceptGroupInvitation(op.param1)
-                        bl['blacklist'][op.param2] = True
                     except:
                         try:
                             k4.kickoutFromGroup(op.param1,[op.param2])
@@ -1759,7 +1739,6 @@ def bot(op):
                             k2.acceptGroupInvitation(op.param1)
                             k3.acceptGroupInvitation(op.param1)
                             k5.acceptGroupInvitation(op.param1)
-                            bl['blacklist'][op.param2] = True
                         except:
                             try:
                                 k5.kickoutFromGroup(op.param1,[op.param2])
@@ -1768,7 +1747,6 @@ def bot(op):
                                 k2.acceptGroupInvitation(op.param1)
                                 k3.acceptGroupInvitation(op.param1)
                                 k4.acceptGroupInvitation(op.param1)
-                                bl['blacklist'][op.param2] = True
                             except:
                                 try:
                                     k1.kickoutFromGroup(op.param1,[op.param2])
@@ -1777,7 +1755,6 @@ def bot(op):
                                     k3.acceptGroupInvitation(op.param1)
                                     k4.acceptGroupInvitation(op.param1)
                                     k5.acceptGroupInvitation(op.param1)
-                                    bl['blacklist'][op.param2] = True
                                 except:
                                     try:
                                         k2.kickoutFromGroup(op.param1,[op.param2])
@@ -1786,7 +1763,6 @@ def bot(op):
                                         k3.acceptGroupInvitation(op.param1)
                                         k4.acceptGroupInvitation(op.param1)
                                         k5.acceptGroupInvitation(op.param1)
-                                        bl['blacklist'][op.param2] = True
                                     except:
                                         try:
                                             k3.kickoutFromGroup(op.param1,[op.param2])
@@ -1795,7 +1771,6 @@ def bot(op):
                                             k2.acceptGroupInvitation(op.param1)
                                             k4.acceptGroupInvitation(op.param1)
                                             k5.acceptGroupInvitation(op.param1)
-                                            bl['blacklist'][op.param2] = True
                                         except:
                                             try:                                                
                                                 k4.kickoutFromGroup(op.param1,[op.param2])
@@ -1804,7 +1779,6 @@ def bot(op):
                                                 k2.acceptGroupInvitation(op.param1)
                                                 k3.acceptGroupInvitation(op.param1)
                                                 k5.acceptGroupInvitation(op.param1)
-                                                bl['blacklist'][op.param2] = True
                                             except:
                                                 try:
                                                     k5.kickoutFromGroup(op.param1,[op.param2])
@@ -1813,7 +1787,6 @@ def bot(op):
                                                     k2.acceptGroupInvitation(op.param1)
                                                     k3.acceptGroupInvitation(op.param1)
                                                     k4.acceptGroupInvitation(op.param1)
-                                                    bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
                                                         k1.kickoutFromGroup(op.param1,[op.param2])
@@ -1822,7 +1795,6 @@ def bot(op):
                                                         k3.acceptGroupInvitation(op.param1)
                                                         k4.acceptGroupInvitation(op.param1)
                                                         k5.acceptGroupInvitation(op.param1)
-                                                        bl['blacklist'][op.param2] = True
                                                     except:
                                                         pass
                                                                                          
@@ -1847,7 +1819,6 @@ def bot(op):
                         k2.acceptGroupInvitation(op.param1)
                         k3.acceptGroupInvitation(op.param1)
                         k5.acceptGroupInvitation(op.param1)
-                        bl['blacklist'][op.param2] = True
                     except:
                         try:
                             k5.kickoutFromGroup(op.param1,[op.param2])
@@ -1856,7 +1827,6 @@ def bot(op):
                             k2.acceptGroupInvitation(op.param1)
                             k3.acceptGroupInvitation(op.param1)
                             k4.acceptGroupInvitation(op.param1)
-                            bl['blacklist'][op.param2] = True
                         except:
                             try:
                                 k1.kickoutFromGroup(op.param1,[op.param2])
@@ -1865,7 +1835,6 @@ def bot(op):
                                 k3.acceptGroupInvitation(op.param1)
                                 k4.acceptGroupInvitation(op.param1)
                                 k5.acceptGroupInvitation(op.param1)
-                                bl['blacklist'][op.param2] = True
                             except:
                                 try:
                                     k2.kickoutFromGroup(op.param1,[op.param2])
@@ -1874,7 +1843,6 @@ def bot(op):
                                     k3.acceptGroupInvitation(op.param1)
                                     k4.acceptGroupInvitation(op.param1)
                                     k5.acceptGroupInvitation(op.param1)
-                                    bl['blacklist'][op.param2] = True
                                 except:
                                     try:
                                         k3.kickoutFromGroup(op.param1,[op.param2])
@@ -1883,7 +1851,6 @@ def bot(op):
                                         k2.acceptGroupInvitation(op.param1)
                                         k4.acceptGroupInvitation(op.param1)
                                         k5.acceptGroupInvitation(op.param1)
-                                        bl['blacklist'][op.param2] = True
                                     except:
                                         try:
                                             k4.kickoutFromGroup(op.param1,[op.param2])
@@ -1892,7 +1859,6 @@ def bot(op):
                                             k2.acceptGroupInvitation(op.param1)
                                             k3.acceptGroupInvitation(op.param1)
                                             k5.acceptGroupInvitation(op.param1)
-                                            bl['blacklist'][op.param2] = True
                                         except:
                                             try:
                                                 k5.kickoutFromGroup(op.param1,[op.param2])
@@ -1901,7 +1867,6 @@ def bot(op):
                                                 k2.acceptGroupInvitation(op.param1)
                                                 k3.acceptGroupInvitation(op.param1)
                                                 k4.acceptGroupInvitation(op.param1)
-                                                bl['blacklist'][op.param2] = True
                                             except:
                                                 try:
                                                     k1.kickoutFromGroup(op.param1,[op.param2])
@@ -1910,7 +1875,6 @@ def bot(op):
                                                     k3.acceptGroupInvitation(op.param1)
                                                     k4.acceptGroupInvitation(op.param1)
                                                     k5.acceptGroupInvitation(op.param1)
-                                                    bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
                                                         k2.kickoutFromGroup(op.param1,[op.param2])
@@ -1919,7 +1883,6 @@ def bot(op):
                                                         k3.acceptGroupInvitation(op.param1)
                                                         k4.acceptGroupInvitation(op.param1)
                                                         k5.acceptGroupInvitation(op.param1)
-                                                        bl['blacklist'][op.param2] = True
                                                     except:
                                                         pass
                                                             
@@ -1944,7 +1907,6 @@ def bot(op):
                         k2.acceptGroupInvitation(op.param1)
                         k3.acceptGroupInvitation(op.param1)
                         k4.acceptGroupInvitation(op.param1)
-                        bl['blacklist'][op.param2] = True
                     except:
                         try:
                             k4.kickoutFromGroup(op.param1,[op.param2])
@@ -1953,7 +1915,6 @@ def bot(op):
                             k2.acceptGroupInvitation(op.param1)
                             k3.acceptGroupInvitation(op.param1)
                             k5.acceptGroupInvitation(op.param1)
-                            bl['blacklist'][op.param2] = True
                         except:
                             try:
                                 k3.kickoutFromGroup(op.param1,[op.param2])
@@ -1962,7 +1923,6 @@ def bot(op):
                                 k2.acceptGroupInvitation(op.param1)
                                 k4.acceptGroupInvitation(op.param1)
                                 k5.acceptGroupInvitation(op.param1)
-                                bl['blacklist'][op.param2] = True
                             except:
                                 try:
                                     k2.kickoutFromGroup(op.param1,[op.param2])
@@ -1971,7 +1931,6 @@ def bot(op):
                                     k3.acceptGroupInvitation(op.param1)
                                     k4.acceptGroupInvitation(op.param1)
                                     k5.acceptGroupInvitation(op.param1)
-                                    bl['blacklist'][op.param2] = True
                                 except:
                                     try:
                                         k1.kickoutFromGroup(op.param1,[op.param2])
@@ -1980,7 +1939,6 @@ def bot(op):
                                         k3.acceptGroupInvitation(op.param1)
                                         k4.acceptGroupInvitation(op.param1)
                                         k5.acceptGroupInvitation(op.param1)
-                                        bl['blacklist'][op.param2] = True
                                     except:
                                         try:
                                             k5.kickoutFromGroup(op.param1,[op.param2])
@@ -1989,7 +1947,6 @@ def bot(op):
                                             k2.acceptGroupInvitation(op.param1)
                                             k3.acceptGroupInvitation(op.param1)
                                             k4.acceptGroupInvitation(op.param1)
-                                            bl['blacklist'][op.param2] = True
                                         except:
                                             try:
                                                 k4.kickoutFromGroup(op.param1,[op.param2])
@@ -1998,7 +1955,6 @@ def bot(op):
                                                 k2.acceptGroupInvitation(op.param1)
                                                 k3.acceptGroupInvitation(op.param1)
                                                 k5.acceptGroupInvitation(op.param1)
-                                                bl['blacklist'][op.param2] = True
                                             except:
                                                 try:
                                                     k3.kickoutFromGroup(op.param1,[op.param2])
@@ -2007,7 +1963,6 @@ def bot(op):
                                                     k2.acceptGroupInvitation(op.param1)
                                                     k4.acceptGroupInvitation(op.param1)
                                                     k5.acceptGroupInvitation(op.param1)
-                                                    bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
                                                         k2.kickoutFromGroup(op.param1,[op.param2])
@@ -2016,7 +1971,6 @@ def bot(op):
                                                         k3.acceptGroupInvitation(op.param1)
                                                         k4.acceptGroupInvitation(op.param1)
                                                         k5.acceptGroupInvitation(op.param1)
-                                                        bl['blacklist'][op.param2] = True
                                                     except:
                                                         pass
 
