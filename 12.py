@@ -3970,51 +3970,6 @@ def bot(op):
                                                                     k10.acceptGroupInvitation(op.param1)
                                                                 except:
                                                                     pass
-#===================================================================================================
-            if admin in op.param3:
-                if op.param2 in Bots:
-                    pass
-                if op.param2 in owner:
-                    pass
-                if op.param2 in admin:
-                    pass
-                if op.param2 in staff:
-                    pass
-                else:
-                    bl['blacklist'][op.param2] = True
-                    with open('bl.json', 'w') as fp:
-                        json.dump(bl, fp, sort_keys=True, indent=4)
-                    try:
-                        cl.kickoutFromGroup(op.param1,[op.param2])
-                        cl.findAndAddContactsByMid(op.param1,admin)
-                        cl.inviteIntoGroup(op.param1,admin)
-                    except:
-                        try:
-                            k1.kickoutFromGroup(op.param1,[op.param2])
-                            k1.findAndAddContactsByMid(op.param1,admin)
-                            k1.inviteIntoGroup(op.param1,admin)
-                        except:
-                            try:
-                                k2.kickoutFromGroup(op.param1,[op.param2])
-                                k2.findAndAddContactsByMid(op.param1,admin)
-                                k2.inviteIntoGroup(op.param1,admin)
-                            except:
-                                try:
-                                    k3.kickoutFromGroup(op.param1,[op.param2])
-                                    k3.findAndAddContactsByMid(op.param1,admin)
-                                    k3.inviteIntoGroup(op.param1,admin)
-                                except:
-                                    try:
-                                        k4.kickoutFromGroup(op.param1,[op.param2])
-                                        k4.findAndAddContactsByMid(op.param1,admin)
-                                        k4.inviteIntoGroup(op.param1,admin)
-                                    except:
-                                        try:
-                                            k5.kickoutFromGroup(op.param1,[op.param2])
-                                            k5.findAndAddContactsByMid(op.param1,admin)
-                                            k5.inviteIntoGroup(op.param1,admin)
-                                        except:
-                                            pass 
 #===================================================================================================                  
                 return
 
@@ -4956,22 +4911,22 @@ def bot(op):
                                 get_profile_time = time.time() - get_profile_time_start
                                 k10.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
 
-                        elif cmd == "cb" or text.lower() == '#hapusbl':
+                        elif cmd == "clearban" or text.lower() == 'cb':
                           if wait["selfbot"] == True:
-                            if msg._from in admin:                          	
-                              wait["blacklist"] = {}            
+                            if msg._from in admin:
+                              wait["blacklist"] = {}
                               ragets = cl.getContacts(wait["blacklist"])
-                              cl.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"]))))                             
-                              k1.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
-                              k2.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
-                              k3.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
-                              k4.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
-                              k5.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
-                              k6.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
-                              k7.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
-                              k8.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
-                              k9.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
-                              k10.sendMessage(msg.to,"Succes Bersihkan {} Daftar Blacklist".format(str(len(wait["blacklist"])))) 
+                              mc = "「%i」User Blacklist" % len(ragets)
+                              k1.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k2.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k3.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k4.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k5.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k6.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k7.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k8.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k9.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              k10.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
                               
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
@@ -7175,7 +7130,7 @@ def bot(op):
                         elif cmd == "talkbanlist" or text.lower() == 'ดำ':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              if wait["Talkblacklist"] == {}:
+                              if wait["blacklist"] == {}:
                                 cl.sendMessage(msg.to,"รายชื่อคนติดดำ")
                               else:
                                 ma = ""
@@ -7198,7 +7153,7 @@ def bot(op):
                         elif cmd == "blc" or text.lower() == 'bc':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              if wait["blacklist"] == {}:
+                              if bl["blacklist"] == {}:
                                     cl.sendMessage(msg.to,"Tidak ada blacklist")
                               else:
                                     ma = ""
@@ -7209,7 +7164,7 @@ def bot(op):
                         elif cmd == "clearban" or text.lower() == 'ล้างดำ':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              wait["blacklist"] = {}
+                              bl["blacklist"] = {}
                               ragets = cl.getContacts(wait["blacklist"])
                               mc = "「%i」User Blacklist" % len(ragets)
                               k1.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
