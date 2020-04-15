@@ -5802,22 +5802,13 @@ def bot(op):
                             except Exception as e:
                                 cl.sendMessage(to, str(e))         
                                         
-                        elif cmd == "silent1":
+                        elif cmd == "g":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 try:
                                     ginfo = cl.getGroup(msg.to)
                                     cl.inviteIntoGroup(msg.to, [g1MID])
-                                    cl.sendMessage(msg.to,"Succes invite di"+str(ginfo.name)+" Siap Stay")
-                                except:
-                                    pass
-                        elif cmd == "silent2":
-                          if wait["selfbot"] == True:
-                            if msg._from in admin:
-                                try:
-                                    ginfo = cl.getGroup(msg.to)
-                                    cl.inviteIntoGroup(msg.to, [g2MID])
-                                    cl.sendMessage(msg.to,"Succes invite di"+str(ginfo.name)+" Siap Stay")
+                                    cl.sendMessage(msg.to,"Succes invite"+str(ginfo.name)+" Siap Stay")
                                 except:
                                     pass
 #====================================================================                            
@@ -7127,7 +7118,7 @@ def bot(op):
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
                                 cl.sendMessage(msg.to,"Blacklist\n\n"+ma+"\n %s User" %(str(len(wait["blacklist"]))))
 
-                        elif cmd == "talkbanlist" or text.lower() == 'ดำ':
+                        elif cmd == "blacklist" or text.lower() == 'ดำ':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                               if wait["blacklist"] == {}:
@@ -7135,25 +7126,25 @@ def bot(op):
                               else:
                                 ma = ""
                                 a = 0
-                                for m_id in wait["Talkblacklist"]:
+                                for m_id in wait["blacklist"]:
                                     a = a + 1
                                     end = '\n'
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                k1.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
-                                k2.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
-                                k3.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
-                                k4.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
-                                k5.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
-                                k6.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
-                                k7.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
-                                k8.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
-                                k9.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
-                                k10.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["Talkblacklist"]))))
+                                k1.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                k2.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                k3.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                k4.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                k5.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                k6.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                k7.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                k8.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                k9.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                k10.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
 
                         elif cmd == "blc" or text.lower() == 'bc':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              if bl["blacklist"] == {}:
+                              if wait["blacklist"] == {}:
                                     cl.sendMessage(msg.to,"Tidak ada blacklist")
                               else:
                                     ma = ""
@@ -7164,7 +7155,7 @@ def bot(op):
                         elif cmd == "clearban" or text.lower() == 'ล้างดำ':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              bl["blacklist"] = {}
+                              wait["blacklist"] = {}
                               ragets = cl.getContacts(wait["blacklist"])
                               mc = "「%i」User Blacklist" % len(ragets)
                               k1.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
