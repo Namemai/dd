@@ -2083,8 +2083,6 @@ def bot(op):
                                                             k6.acceptGroupInvitationByTicket(op.param1,Ticket)	
                                                             k7.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                            g1.leaveGroup(op.param1)
-                                                            g2.leaveGroup(op.param1)
                                                             X = random.choice(ABC).getGroup(op.param1)
                                                             X.preventedJoinByTicket = True
                                                             random.choice(ABC).updateGroup(X) 
