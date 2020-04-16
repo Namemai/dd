@@ -1648,7 +1648,6 @@ def bot(op):
                                                                 pass
 
                 return
-                                                                                                 
             if Amid in op.param3:
                 if op.param2 in Bots:
                     pass
