@@ -3646,7 +3646,13 @@ def bot(op):
                             if msg._from in owner:
                                sep = text.split(" ")
                                pesan = text.replace(sep[0] + " ","")
-                               saya = cl.getGroupIdsJoined()
+                               saya = k1.getGroupIdsJoined()
+                               saya = k2.getGroupIdsJoined()
+                               saya = k3.getGroupIdsJoined()
+                               saya = k4.getGroupIdsJoined()
+                               saya = k5.getGroupIdsJoined()
+                               saya = k6.getGroupIdsJoined()
+                               saya = k7.getGroupIdsJoined()
                                for group in saya:
                                    k1.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
                                    k2.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
