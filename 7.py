@@ -3641,14 +3641,20 @@ def bot(op):
                                except:
                                    pass
 
-                        elif cmd.startswith("bcast: "):
+                        elif cmd.startswith("on: "):
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                                sep = text.split(" ")
                                pesan = text.replace(sep[0] + " ","")
                                saya = cl.getGroupIdsJoined()
                                for group in saya:
-                                   cl.sendMessage(group,"🔴Broadcast \n\n" + str(pesan))
+                                   k1.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
+                                   k2.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
+                                   k3.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
+                                   k4.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
+                                   k5.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
+                                   k6.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
+                                   k7.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
 
                         elif text.lower() == "sname":
                           if wait["selfbot"] == True:
@@ -4460,13 +4466,13 @@ def bot(op):
                             else:
                                 cl.sendMessage(msg.to, "Ketik lurking on dulu")
 
-                        elif cmd == "sider on":
+                        elif cmd == "อ่าน on":
                           if wait["selfbot"] == True:
                            if msg._from in owner or msg._from in admin or msg._from in staff:
                               try:
                                   tz = pytz.timezone("Asia/Jakarta")
                                   timeNow = datetime.now(tz=tz)
-                                  cl.sendMessage(msg.to, "Cek sider diaktifkan\n\nDate "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nTime  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")
+                                  cl.sendMessage(msg.to, "เริ่มเชคคนอ่าน\n\nปี "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nเวลา  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")
                                   del cctv['point'][msg.to]
                                   del cctv['sidermem'][msg.to]
                                   del cctv['cyduk'][msg.to]
@@ -4476,14 +4482,14 @@ def bot(op):
                               cctv['sidermem'][msg.to] = ""
                               cctv['cyduk'][msg.to]=True
 
-                        elif cmd == "sider off":
+                        elif cmd == "อ่าน off":
                           if wait["selfbot"] == True:
                            if msg._from in owner or msg._from in admin or msg._from in staff:
                               if msg.to in cctv['point']:
                                   tz = pytz.timezone("Asia/Jakarta")
                                   timeNow = datetime.now(tz=tz)
                                   cctv['cyduk'][msg.to]=False
-                                  cl.sendMessage(msg.to, "Cek sider dinonaktifkan\n\nDate "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nTime  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")
+                                  cl.sendMessage(msg.to, "Cek\n\nDate "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nTime  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")
                               else:
                                   cl.sendMessage(msg.to, "Sudak tidak aktif")
 
@@ -5088,46 +5094,6 @@ def bot(op):
                                     else:
                                          msgs = "Protect invite sudah tidak aktif"
                                     cl.sendMessage(msg.to, "「 Status Protect Invite 」\n" + msgs)
-                                    
-                        elif 'Js ' in msg.text:
-                           if msg._from in admin:
-                              spl = msg.text.replace('Js ','')
-                              if spl == 'on':
-                                  if msg.to in protectantijs:
-                                       msgs = "Protect Antikicker sudah aktif"
-                                  else:
-                                       protectantijs.append(msg.to)
-                                       ginfo = cl.getGroup(msg.to)
-                                       msgs = "Status : [ ✔ ]\nDi Group : " +str(ginfo.name)
-                                  cl.sendMessage(msg.to, "「 Status Protect Anti Kicker 」\n" + msgs)
-                              elif spl == 'off':
-                                    if msg.to in protectantijs:
-                                         protectantijs.remove(msg.to)
-                                         ginfo = cl.getGroup(msg.to)
-                                         msgs = "Status : [ ❌ ]\nDi Group : " +str(ginfo.name)
-                                    else:
-                                         msgs = "Protect Anti Kicker sudah tidak aktif"
-                                    cl.sendMessage(msg.to, "「 Status Protect Antikicker 」\n" + msgs)
-                                    
-                        elif 'G ' in msg.text:
-                           if msg._from in admin:
-                              spl = msg.text.replace('G ','')
-                              if spl == 'on':
-                                  if msg.to in ghost:
-                                       msgs = "Hantu sudah aktif"
-                                  else:
-                                       ghost.append(msg.to)
-                                       ginfo = cl.getGroup(msg.to)
-                                       msgs = "Status : [ ✔ ]\nDi Group : " +str(ginfo.name)
-                                  cl.sendMessage(msg.to, "「 Status Hantu  」\n" + msgs)
-                              elif spl == 'off':
-                                    if msg.to in ghost:
-                                         ghost.remove(msg.to)
-                                         ginfo = cl.getGroup(msg.to)
-                                         msgs = "Status : [ ❌ ]\nDi Group : " +str(ginfo.name)
-                                    else:
-                                         msgs = "Hantu sudah tidak aktif"
-                                    cl.sendMessage(msg.to, "「 Status Hantu 」\n" + msgs)
                                     
                         elif 'Pro ' in msg.text:
                            if msg._from in admin:
