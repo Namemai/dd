@@ -68,10 +68,10 @@ Login Time %s \033[0m\n\n"""%(Bot_startTime))
 #==============================================================================
 oepoll = OEPoll(cl)
 call = cl
-creator = ["uce3452158166e93bf8fed7190265e5d9"]
-owner = ["uce3452158166e93bf8fed7190265e5d9"]
-admin = ["uce3452158166e93bf8fed7190265e5d9"]
-staff = ["uce3452158166e93bf8fed7190265e5d9"]
+creator = ["u02b175e62fb53fd8547e712148e1d510"]
+owner = ["u02b175e62fb53fd8547e712148e1d510"]
+admin = ["u02b175e62fb53fd8547e712148e1d510"]
+staff = ["u02b175e62fb53fd8547e712148e1d510"]
 #==============================================================================
 lineProfile = cl.getProfile()
 mid = cl.getProfile().mid
@@ -86,8 +86,8 @@ Hmid = k8.getProfile().mid
 Imid = k9.getProfile().mid
 Jmid = k10.getProfile().mid   
 g1MID = g1.getProfile().mid               
-KAC = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10]
-ABC = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10]
+KAC = [cl,k1,k2,k3,k4,k5,k6,k7,k8,k9,k10]
+ABC = [cl,k1,k2,k3,k4,k5,k6,k7,k8,k9,k10]
 KICKER = [g1]           
 Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid,g1MID]
 Saint = admin + owner + staff
@@ -980,11 +980,12 @@ def bot(op):
         if op.type == 11:
             if op.param1 in protectqr:
                 try:
-                    if aditya.getGroup(op.param1).preventedJoinByTicket == False:
+                    if cl.getGroup(op.param1).preventedJoinByTicket == False:
                         if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                             cl.reissueGroupTicket(op.param1)
                             X = cl.getGroup(op.param1)
                             X.preventedJoinByTicket = True
+                            cl.kickoutFromGroup(op.param1, [op.param2])
                             cl.updateGroup(X)
                             cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                 except:
@@ -994,8 +995,9 @@ def bot(op):
                                 k1.reissueGroupTicket(op.param1)
                                 X = k1.getGroup(op.param1)
                                 X.preventedJoinByTicket = True
+                                k1.kickoutFromGroup(op.param1, [op.param2])
                                 k1.updateGroup(X)
-                                cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                k1.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                     except:
                         try:
                             if k2.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1003,8 +1005,9 @@ def bot(op):
                                     k2.reissueGroupTicket(op.param1)
                                     X = k2.getGroup(op.param1)
                                     X.preventedJoinByTicket = True
+                                    k2.kickoutFromGroup(op.param1, [op.param2])
                                     k2.updateGroup(X)
-                                    cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                    k2.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                         except:
                             try:
                                 if k3.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1012,8 +1015,9 @@ def bot(op):
                                         k3.reissueGroupTicket(op.param1)
                                         X = k3.getGroup(op.param1)
                                         X.preventedJoinByTicket = True
+                                        k3.kickoutFromGroup(op.param1, [op.param2])
                                         k3.updateGroup(X)
-                                        cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                        k3.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                             except:
                                 try:
                                     if k4.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1021,8 +1025,9 @@ def bot(op):
                                             k4.reissueGroupTicket(op.param1)
                                             X = k4.getGroup(op.param1)
                                             X.preventedJoinByTicket = True
+                                            k4.kickoutFromGroup(op.param1, [op.param2])
                                             k4.updateGroup(X)
-                                            cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                            k4.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                 except:
                                     try:
                                         if k5.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1030,8 +1035,9 @@ def bot(op):
                                                 k5.reissueGroupTicket(op.param1)
                                                 X = k5.getGroup(op.param1)
                                                 X.preventedJoinByTicket = True
+                                                k5.kickoutFromGroup(op.param1, [op.param2])
                                                 k5.updateGroup(X)
-                                                cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                k5.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                     except:
                                         try:
                                             if k6.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1039,8 +1045,9 @@ def bot(op):
                                                     k6.reissueGroupTicket(op.param1)
                                                     X = k6.getGroup(op.param1)
                                                     X.preventedJoinByTicket = True
+                                                    k6.kickoutFromGroup(op.param1, [op.param2])
                                                     k6.updateGroup(X)
-                                                    cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                    k6.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                         except:
                                             try:
                                                 if k7.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1048,8 +1055,9 @@ def bot(op):
                                                         k7.reissueGroupTicket(op.param1)
                                                         X = k7.getGroup(op.param1)
                                                         X.preventedJoinByTicket = True
+                                                        k7.kickoutFromGroup(op.param1, [op.param2])
                                                         k7.updateGroup(X)
-                                                        cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                        k7.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                             except:
                                                 try:
                                                     if k8.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1057,8 +1065,9 @@ def bot(op):
                                                             k8.reissueGroupTicket(op.param1)
                                                             X = k8.getGroup(op.param1)
                                                             X.preventedJoinByTicket = True
+                                                            k8.kickoutFromGroup(op.param1, [op.param2])
                                                             k8.updateGroup(X)
-                                                            cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                            k8.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                                 except:
                                                     try:
                                                         if k9.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1066,8 +1075,9 @@ def bot(op):
                                                                 k9.reissueGroupTicket(op.param1)
                                                                 X = k9.getGroup(op.param1)
                                                                 X.preventedJoinByTicket = True
+                                                                k9.kickoutFromGroup(op.param1, [op.param2])
                                                                 k9.updateGroup(X)
-                                                                cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                                k9.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                                     except:
                                                         try:
                                                             if k10.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1075,8 +1085,9 @@ def bot(op):
                                                                     k10.reissueGroupTicket(op.param1)
                                                                     X = k10.getGroup(op.param1)
                                                                     X.preventedJoinByTicket = True
+                                                                    k10.kickoutFromGroup(op.param1, [op.param2])
                                                                     k10.updateGroup(X)
-                                                                    cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                                    k10.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                                         except:
                                                             pass
 #====================================================================                            
@@ -4006,7 +4017,7 @@ def bot(op):
                 G = cl.getGroup(op.param1)	
                 G.preventedJoinByTicket = True		
                 random.choice(ABC).updateGroup(G)	
-                random.choice(ABC).sendMessage(op.param1,"mamam tu")					
+                random.choice(ABC).sendMessage(op.param1,"ติดดำถาวร")					
                 random.choice(ABC).sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)														
             else:
                 pass
@@ -4225,56 +4236,7 @@ def bot(op):
                         path = cl.getContact(msg.contentMetadata["mid"]).picturePath
                         image = 'http://dl.profile.line.naver.jp'+path
                         cl.sendMessage(msg.to,"Nama : " + msg.contentMetadata["displayName"] + "\nMID : " + msg.contentMetadata["mid"] + "\nStatus Msg : " + contact.statusMessage + "\nPicture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
-                        cl.sendImageWithURL(msg.to, image)
-                        
-        if op.type == 25 or op.type == 26:
-            msg = op.message
-            text = msg.text
-            msg_id = msg.id
-            receiver = msg.to
-            sender = msg._from
-            if msg.toType == 2:
-               if msg.toType == 0:
-                    to = msg._from
-               elif msg.toType == 2:
-                    to = msg.to
-               if msg.contentType == 16:
-                    if wait["Timeline"] == True:
-                            ret_ = "「 ᴅᴇᴛᴀɪʟ ᴘᴏsᴛɪɴɢᴀɴ 」"
-                            if msg.contentMetadata["serviceType"] == "GB":
-                                contact = cl.getContact(sender)
-                                auth = "\n• ℹ༓ᴘᴇɴᴜʟɪs : {}".format(str(contact.displayName))
-                            else:
-                                auth = "\n• ℹ ༓ᴘᴇɴᴜʟɪs : {}".format(str(msg.contentMetadata["serviceName"]))
-                            ret_ += auth
-                            if "stickerId" in msg.contentMetadata:
-                                stck = "\n• ℹ༓sᴛɪᴄᴋᴇʀ : https://line.me/R/shop/detail/{}".format(str(msg.contentMetadata["packageId"]))
-                                ret_ += stck
-                            if "mediaOid" in msg.contentMetadata:
-                                object_ = msg.contentMetadata["mediaOid"].replace("svc=myhome|sid=h|","")
-                                if msg.contentMetadata["mediaType"] == "V":
-                                    if msg.contentMetadata["serviceType"] == "GB":
-                                        ourl = "\n• ℹ༓ Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
-                                        murl = "\n• ℹ༓Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(msg.contentMetadata["mediaOid"]))
-                                    else:
-                                        ourl = "\n• ℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
-                                        murl = "\n• ℹ༓Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(object_))
-                                    ret_ += murl
-                                else:
-                                    if msg.contentMetadata["serviceType"] == "GB":
-                                        ourl = "\n• ℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
-                                    else:
-                                        ourl = "\n• ℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
-                                ret_ += ourl
-                            if "text" in msg.contentMetadata:
-                                text = "\n• ℹ༓Tulisan : {}".format(str(msg.contentMetadata["text"]))
-                                purl = "\n• ℹ༓Post URL : {}".format(str(msg.contentMetadata["postEndUrl"]).replace("line://","https://line.me/R/"))
-                                ret_ += purl
-                                ret_ += text
-                                url = msg.contentMetadata['postEndUrl']
-                            cl.sendMessage(to, str(ret_))
-                            cl.likePost(url[25:58], url[66:], likeType=1005)
-                            cl.createComment(url[25:58], url[66:], wait["comment"])                           
+                        cl.sendImageWithURL(msg.to, image)                         
 #=======================================================================
         if op.type == 25 or op.type == 26:
             msg = op.message
@@ -4510,57 +4472,57 @@ def bot(op):
                         if Amid in Setmain["SKfoto"]:
                             path = k1.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Amid]
-                            k1.updateProfilePicture(path)
+                            k1.updateProfilePicture(path1)
                             k1.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Bmid in Setmain["SKfoto"]:
                             path = k2.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Bmid]
-                            k2.updateProfilePicture(path)
+                            k2.updateProfilePicture(path2)
                             k2.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Cmid in Setmain["SKfoto"]:
                             path = k3.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Cmid]
-                            k3.updateProfilePicture(path)
+                            k3.updateProfilePicture(path3)
                             k3.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Dmid in Setmain["SKfoto"]:
                             path = k4.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Dmid]
-                            k4.updateProfilePicture(path)
+                            k4.updateProfilePicture(path4)
                             k4.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Emid in Setmain["SKfoto"]:
                             path = k5.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Emid]
-                            k5.updateProfilePicture(path)
+                            k5.updateProfilePicture(path5)
                             k5.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Fmid in Setmain["SKfoto"]:
                             path = k6.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Fmid]
-                            k6.updateProfilePicture(path)
+                            k6.updateProfilePicture(path6)
                             k6.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Gmid in Setmain["SKfoto"]:
                             path = k7.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Gmid]
-                            k7.updateProfilePicture(path)
+                            k7.updateProfilePicture(path7)
                             k7.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Hmid in Setmain["SKfoto"]:
                             path = k8.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Hmid]
-                            k8.updateProfilePicture(path)
+                            k8.updateProfilePicture(path8)
                             k8.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Imid in Setmain["SKfoto"]:
                             path = k9.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Imid]
-                            k9.updateProfilePicture(path)
+                            k9.updateProfilePicture(path9)
                             k9.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Jmid in Setmain["SKfoto"]:
                             path = k10.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Jmid]
-                            k10.updateProfilePicture(path)
+                            k10.updateProfilePicture(path10)
                             k10.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif g1MID in Setmain["SKfoto"]:
                             path = g1.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][g1MID]
-                            g1.updateProfilePicture(path)
+                            g1.updateProfilePicture(path11)
                             g1.sendMessage(msg.to,"Foto berhasil dirubah")
                             
                if msg.contentType == 1:
@@ -4691,7 +4653,7 @@ def bot(op):
                                sendMention(msg.to, sender, "ᴍʏ ᴄʀᴇᴀᴛᴏʀ\n\n")
                                cl.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
-                        elif cmd == "me" or text.lower() == 'มี':
+                        elif cmd == "me" or text.lower() == 'คท':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff:                                           
                                 msg.contentType = 13
@@ -4701,7 +4663,7 @@ def bot(op):
                                 image = 'http://dl.profile.line.naver.jp'+path
                                 cl.sendImageWithURL(msg.to, image)
                                 
-                        elif cmd == "gue":                       	
+                        elif cmd == "มี":                       	
                     	    if msg._from in owner or msg._from in admin or msg._from in staff: 
                               contact = cl.getContact(sender)
                               image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
@@ -4710,14 +4672,6 @@ def bot(op):
                                                                                                      
                         elif text.lower() == "mid":
                                cl.sendMessage(msg.to, msg._from)
-                        elif text.lower() == 'ass':
-                               cl.sendMessage(msg.to, "Assalamu'alaikum Wr. Wb")
-                               cl.sendMessage(msg.to, "السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ")
-                        elif text.lower() == 'wss':
-                               cl.sendMessage(msg.to, "Wa'alaikumsallam.Wr,Wb")
-                               cl.sendMessage(msg.to, "ُوَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ  ")
-                        elif text.lower() == 'bot':
-                               cl.sendMessage(msg.to, "вoтѕ ѕιap ѕтay😡")
 
                         elif ("Get id " in msg.text):
                           if wait["selfbot"] == True:
@@ -4846,16 +4800,7 @@ def bot(op):
                               wait["blacklist"] = {}
                               ragets = cl.getContacts(wait["blacklist"])
                               mc = "「%i」User Blacklist" % len(ragets)
-                              k1.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k2.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k3.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k4.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k5.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k6.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k7.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k8.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k9.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k10.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              cl.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
                               
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
@@ -4874,33 +4819,6 @@ def bot(op):
                                try:
                                    cl.removeAllMessages(op.param2)                                  
                                    cl.sendMessage(msg.to,"Chat sudah d bersihkan 👍")                                  
-                               except:
-                                   pass
-
-                        elif text.lower() == "ลบแชทคิก":
-                          if wait["selfbot"] == True:
-                            if msg._from in owner:
-                               try:
-                                   k1.removeAllMessages(op.param2)
-                                   k2.removeAllMessages(op.param2)
-                                   k3.removeAllMessages(op.param2)
-                                   k4.removeAllMessages(op.param2)
-                                   k5.removeAllMessages(op.param2)
-                                   k6.removeAllMessages(op.param2)
-                                   k7.removeAllMessages(op.param2)
-                                   k8.removeAllMessages(op.param2)
-                                   k9.removeAllMessages(op.param2)
-                                   k10.removeAllMessages(op.param2)
-                                   k1.sendText(msg.to,"Chat dibersihkan...")
-                                   k2.sendText(msg.to,"Chat dibersihkan...")
-                                   k3.sendText(msg.to,"Chat dibersihkan...")
-                                   k4.sendText(msg.to,"Chat dibersihkan...")
-                                   k5.sendText(msg.to,"Chat dibersihkan...")
-                                   k6.sendText(msg.to,"Chat dibersihkan...")
-                                   k7.sendText(msg.to,"Chat dibersihkan...")
-                                   k8.sendText(msg.to,"Chat dibersihkan...")
-                                   k9.sendText(msg.to,"Chat dibersihkan...")
-                                   k10.sendText(msg.to,"Chat dibersihkan...")
                                except:
                                    pass
 
@@ -5088,7 +5006,7 @@ def bot(op):
                                    cl.sendMessage(msg.to, "ɴᴀᴍᴀ : "+str(x.name)+ "\nᴜʀʟ ɢʀᴜᴘ: : http://line.me/R/ti/g/"+gurl)
 
 #===========BOT UPDATE FROFILE============#
-                        elif cmd == "upgrup":
+                        elif cmd == "upg":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff:
                               if msg.toType == 2:
@@ -5860,32 +5778,32 @@ def bot(op):
                                   cl.sendMessage(msg.to, "Sudak tidak aktif")
 
 #===========add img============# 
-                        elif cmd == "upgrup":
+                        elif cmd == "รูปกลุ่ม":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                               if msg.toType == 2:
                                 settings["groupPicture"] = True
-                                cl.sendMessage(msg.to,"ҡıяıṃ ɢѧṃṃɞѧя ȗṅṭȗҡ ṃєṅɢɢѧṅṭı ɢяȗק...")
+                                cl.sendMessage(msg.to,"ส่งรูปมาค่ะ...")
 
-                        elif cmd == "updatebot":
+                        elif cmd == "อัพบอท":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["changePicture"] = True
                                 cl.sendMessage(msg.to,"ҡıяıṃ ғȏṭȏ ȗṅṭȗҡ ṃєṅɢɢѧṅṭı ɞȏṭś.....")
                                               
-                        elif cmd == "changedual":
+                        elif cmd == "อัพวีดีโอ":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["ChangeVideoProfilevid"][msg._from] = True
-                                cl.sendMessage(msg.to,"ҡıяıṃ ṿıԀєȏ ṅʏѧ...")
+                                cl.sendMessage(msg.to,"ṿıԀєȏ ṅʏѧ...")
                                 
-                        elif cmd.startswith("changedualurl: "):
+                        elif cmd.startswith("อัพวีดีโอ: "):
                             if msg._from in admin:
                                 sep = msg.text.split(" ")
                                 url = msg.text.replace(sep[0] + " ","")                            
                                 cl.downloadFileURL(url,'path','video.mp4')
                                 settings["ChangeVideoProfilePicture"][msg._from] = True
-                                cl.sendMessage(msg.to, "ҡıяıṃ ғȏṭȏṅʏѧ.....")
+                                cl.sendMessage(msg.to, "ғȏṭȏṅʏѧ.....")
                                 
                      
 #==============add video==========================================================================
@@ -7059,25 +6977,16 @@ def bot(op):
                                     a = a + 1
                                     end = '\n'
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                k1.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k2.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k3.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k4.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k5.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k6.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k7.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k8.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k9.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k10.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                cl.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
 
                         elif cmd == "blc" or text.lower() == 'bc':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              if wait["blacklist"] == {}:
+                              if bl["blacklist"] == {}:
                                     cl.sendMessage(msg.to,"Tidak ada blacklist")
                               else:
                                     ma = ""
-                                    for i in wait["blacklist"]:
+                                    for i in bl["blacklist"]:
                                         ma = cl.getContact(i)
                                         cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
@@ -7087,16 +6996,7 @@ def bot(op):
                               wait["blacklist"] = {}
                               ragets = cl.getContacts(wait["blacklist"])
                               mc = "「%i」User Blacklist" % len(ragets)
-                              k1.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k2.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k3.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k4.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k5.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k6.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k7.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k8.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k9.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k10.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              cl.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
                               
                         elif text.lower() == rname["rname"]+" bl" or text.lower() == sname["sname"]+" bl":
                           if wait["selfbot"] == True:
