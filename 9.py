@@ -6143,15 +6143,15 @@ def bot(op):
                                     ma = ""
                                     for i in bl["blacklist"]:
                                         ma = cl.getContact(i)
-                                        cl.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                        cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
                         elif cmd == "clearban" or text.lower() == 'cb':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                               bl["blacklist"] = {}
                               ragets = cl.getContacts(bl["blacklist"])
-                              mc = "「%i」User Blacklist" % len(ragets)
-                              cl.sendMessage(msg.to,"ok " +mc)
+                              mc = "「%i」Blacklist" % len(ragets)
+                              cl.sendMessage(msg.to,"ลบบัญชีดำแล้วค่ะ" +mc)
                               
                         elif text.lower() == rname["rname"]+" bl" or text.lower() == sname["sname"]+" bl":
                           if wait["selfbot"] == True:
