@@ -1458,44 +1458,30 @@ def bot(op):
                         try:
                             if op.param3 not in bl["blacklist"]:
                                 k2.kickoutFromGroup(op.param1,[op.param2])
-                    	        k2.findAndAddContactsByMid(op.param3)
-            	                k2.inviteIntoGroup(op.param1,[op.param3])
                         except:
                             try:
                                 if op.param3 not in bl["blacklist"]:
                                     k3.kickoutFromGroup(op.param1,[op.param2])
-                    	            k3.findAndAddContactsByMid(op.param3)
-            	                    k3.inviteIntoGroup(op.param1,[op.param3])
                             except:
                                 try:
                                     if op.param3 not in bl["blacklist"]:
                                         k4.kickoutFromGroup(op.param1,[op.param2])
-                    	                k4.findAndAddContactsByMid(op.param3)
-            	                        k4.inviteIntoGroup(op.param1,[op.param3])
                                 except: 
                                     try:
                                         if op.param3 not in bl["blacklist"]:
                                             k5.kickoutFromGroup(op.param1,[op.param2])
-                          	            k5.findAndAddContactsByMid(op.param3)
-            	                            k5.inviteIntoGroup(op.param1,[op.param3])
                                     except:
                                         try:
                                             if op.param3 not in bl["blacklist"]:
                                                 k6.kickoutFromGroup(op.param1,[op.param2])
-                                     	        k6.findAndAddContactsByMid(op.param3)
-            	                                k6.inviteIntoGroup(op.param1,[op.param3])
                                         except:
                                             try:
                                                 if op.param3 not in bl["blacklist"]:
                                                     k7.kickoutFromGroup(op.param1,[op.param2])
-		                    	            k7.findAndAddContactsByMid(op.param3)
-            	                                    k7.inviteIntoGroup(op.param1,[op.param3])
                                             except:
                                                 try:
                                                     if op.param3 not in bl["blacklist"]:
                                                         k8.kickoutFromGroup(op.param1,[op.param2])
-		                    	                k8.findAndAddContactsByMid(op.param3)
-            	                                        k8.inviteIntoGroup(op.param1,[op.param3])
                                                 except:
                                                     pass
                                                                 
