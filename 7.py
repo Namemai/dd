@@ -31,7 +31,7 @@ print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist1 
 k2 = LINE("ago06104@zzrgg.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist2 Login ]\033[0m"""%(Bot_startTime))
 
-k3 = LINE("bvu03985@eoopy.com","mai065558mai")
+k3 = LINE("tlm27566@bcaoo.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist3 Login ]\033[0m"""%(Bot_startTime))
 
 k4 = LINE("vsz71687@eoopy.com","mai065558mai")
@@ -2911,7 +2911,7 @@ def bot(op):
                 G = cl.getGroup(op.param1)	
                 G.preventedJoinByTicket = True		
                 random.choice(ABC).updateGroup(G)	
-                random.choice(ABC).sendMessage(op.param1,"mamam tu")					
+                random.choice(ABC).sendMessage(op.param1,"ติดดำถาวร")					
                 random.choice(ABC).sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)														
             else:
                 pass
@@ -3130,56 +3130,7 @@ def bot(op):
                         path = cl.getContact(msg.contentMetadata["mid"]).picturePath
                         image = 'http://dl.profile.line.naver.jp'+path
                         cl.sendMessage(msg.to,"Nama : " + msg.contentMetadata["displayName"] + "\nMID : " + msg.contentMetadata["mid"] + "\nStatus Msg : " + contact.statusMessage + "\nPicture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
-                        cl.sendImageWithURL(msg.to, image)
-                        
-        if op.type == 25 or op.type == 26:
-            msg = op.message
-            text = msg.text
-            msg_id = msg.id
-            receiver = msg.to
-            sender = msg._from
-            if msg.toType == 2:
-               if msg.toType == 0:
-                    to = msg._from
-               elif msg.toType == 2:
-                    to = msg.to
-               if msg.contentType == 16:
-                    if wait["Timeline"] == True:
-                            ret_ = "「 ᴅᴇᴛᴀɪʟ ᴘᴏsᴛɪɴɢᴀɴ 」"
-                            if msg.contentMetadata["serviceType"] == "GB":
-                                contact = cl.getContact(sender)
-                                auth = "\n• ℹ༓ᴘᴇɴᴜʟɪs : {}".format(str(contact.displayName))
-                            else:
-                                auth = "\n• ℹ ༓ᴘᴇɴᴜʟɪs : {}".format(str(msg.contentMetadata["serviceName"]))
-                            ret_ += auth
-                            if "stickerId" in msg.contentMetadata:
-                                stck = "\n• ℹ༓sᴛɪᴄᴋᴇʀ : https://line.me/R/shop/detail/{}".format(str(msg.contentMetadata["packageId"]))
-                                ret_ += stck
-                            if "mediaOid" in msg.contentMetadata:
-                                object_ = msg.contentMetadata["mediaOid"].replace("svc=myhome|sid=h|","")
-                                if msg.contentMetadata["mediaType"] == "V":
-                                    if msg.contentMetadata["serviceType"] == "GB":
-                                        ourl = "\n• ℹ༓ Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
-                                        murl = "\n• ℹ༓Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(msg.contentMetadata["mediaOid"]))
-                                    else:
-                                        ourl = "\n• ℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
-                                        murl = "\n• ℹ༓Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(object_))
-                                    ret_ += murl
-                                else:
-                                    if msg.contentMetadata["serviceType"] == "GB":
-                                        ourl = "\n• ℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
-                                    else:
-                                        ourl = "\n• ℹ༓Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
-                                ret_ += ourl
-                            if "text" in msg.contentMetadata:
-                                text = "\n• ℹ༓Tulisan : {}".format(str(msg.contentMetadata["text"]))
-                                purl = "\n• ℹ༓Post URL : {}".format(str(msg.contentMetadata["postEndUrl"]).replace("line://","https://line.me/R/"))
-                                ret_ += purl
-                                ret_ += text
-                                url = msg.contentMetadata['postEndUrl']
-                            cl.sendMessage(to, str(ret_))
-                            cl.likePost(url[25:58], url[66:], likeType=1005)
-                            cl.createComment(url[25:58], url[66:], wait["comment"])                           
+                        cl.sendImageWithURL(msg.to, image)                        
 #=======================================================================
         if op.type == 25 or op.type == 26:
             msg = op.message
@@ -3415,37 +3366,37 @@ def bot(op):
                         if Amid in Setmain["SKfoto"]:
                             path = k1.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Amid]
-                            k1.updateProfilePicture(path)
+                            k1.updateProfilePicture(path1)
                             k1.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Bmid in Setmain["SKfoto"]:
                             path = k2.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Bmid]
-                            k2.updateProfilePicture(path)
+                            k2.updateProfilePicture(path2)
                             k2.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Cmid in Setmain["SKfoto"]:
                             path = k3.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Cmid]
-                            k3.updateProfilePicture(path)
+                            k3.updateProfilePicture(path3)
                             k3.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Dmid in Setmain["SKfoto"]:
                             path = k4.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Dmid]
-                            k4.updateProfilePicture(path)
+                            k4.updateProfilePicture(path4)
                             k4.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Emid in Setmain["SKfoto"]:
                             path = k5.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Emid]
-                            k5.updateProfilePicture(path)
+                            k5.updateProfilePicture(path5)
                             k5.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Fmid in Setmain["SKfoto"]:
                             path = k6.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Fmid]
-                            k6.updateProfilePicture(path)
+                            k6.updateProfilePicture(path6)
                             k6.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Gmid in Setmain["SKfoto"]:
                             path = k7.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Gmid]
-                            k7.updateProfilePicture(path)
+                            k7.updateProfilePicture(path7)
                             k7.sendMessage(msg.to,"Foto berhasil dirubah")
                             
                if msg.contentType == 1:
@@ -3564,7 +3515,7 @@ def bot(op):
                                sendMention(msg.to, sender, "ᴍʏ ᴄʀᴇᴀᴛᴏʀ\n\n")
                                cl.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
-                        elif cmd == "me" or text.lower() == 'มี':
+                        elif cmd == "me" or text.lower() == 'คท':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff:                                           
                                 msg.contentType = 13
@@ -3574,7 +3525,7 @@ def bot(op):
                                 image = 'http://dl.profile.line.naver.jp'+path
                                 cl.sendImageWithURL(msg.to, image)
                                 
-                        elif cmd == "gue":                       	
+                        elif cmd == "มี":                       	
                     	    if msg._from in owner or msg._from in admin or msg._from in staff: 
                               contact = cl.getContact(sender)
                               image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
@@ -3583,14 +3534,6 @@ def bot(op):
                                                                                                      
                         elif text.lower() == "mid":
                                cl.sendMessage(msg.to, msg._from)
-                        elif text.lower() == 'ass':
-                               cl.sendMessage(msg.to, "Assalamu'alaikum Wr. Wb")
-                               cl.sendMessage(msg.to, "السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ")
-                        elif text.lower() == 'wss':
-                               cl.sendMessage(msg.to, "Wa'alaikumsallam.Wr,Wb")
-                               cl.sendMessage(msg.to, "ُوَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ  ")
-                        elif text.lower() == 'bot':
-                               cl.sendMessage(msg.to, "вoтѕ ѕιap ѕтay😡")
 
                         elif ("Get id " in msg.text):
                           if wait["selfbot"] == True:
@@ -3694,13 +3637,7 @@ def bot(op):
                               wait["blacklist"] = {}
                               ragets = cl.getContacts(wait["blacklist"])
                               mc = "「%i」User Blacklist" % len(ragets)
-                              k1.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k2.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k3.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k4.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k5.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k6.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k7.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              cl.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
                               
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
@@ -3743,7 +3680,7 @@ def bot(op):
                                except:
                                    pass
 
-                        elif cmd.startswith("on: "):
+                        elif cmd.startswith("พิม: "):
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                                sep = text.split(" ")
@@ -3756,13 +3693,13 @@ def bot(op):
                                saya = k6.getGroupIdsJoined()
                                saya = k7.getGroupIdsJoined()
                                for group in saya:
-                                   k1.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
-                                   k2.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
-                                   k3.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
-                                   k4.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
-                                   k5.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
-                                   k6.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
-                                   k7.sendMessage(group,"🔴Bot On \n\n" + str(pesan))
+                                   k1.sendMessage(group,"\n" + str(pesan))
+                                   k2.sendMessage(group,"\n" + str(pesan))
+                                   k3.sendMessage(group,"\n" + str(pesan))
+                                   k4.sendMessage(group,"\n" + str(pesan))
+                                   k5.sendMessage(group,"\n" + str(pesan))
+                                   k6.sendMessage(group,"\n" + str(pesan))
+                                   k7.sendMessage(group,"\n" + str(pesan))
 
                         elif text.lower() == "sname":
                           if wait["selfbot"] == True:
@@ -4602,32 +4539,32 @@ def bot(op):
                                   cl.sendMessage(msg.to, "Sudak tidak aktif")
 
 #===========add img============# 
-                        elif cmd == "upgrup":
+                        elif cmd == "รูปกลุ่ม":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                               if msg.toType == 2:
                                 settings["groupPicture"] = True
-                                cl.sendMessage(msg.to,"ҡıяıṃ ɢѧṃṃɞѧя ȗṅṭȗҡ ṃєṅɢɢѧṅṭı ɢяȗק...")
+                                cl.sendMessage(msg.to,"ɢѧṃṃɞѧя ȗṅṭȗҡ ṃєṅɢɢѧṅṭı ɢяȗק...")
 
-                        elif cmd == "updatebot":
+                        elif cmd == "รูปบอท":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["changePicture"] = True
-                                cl.sendMessage(msg.to,"ҡıяıṃ ғȏṭȏ ȗṅṭȗҡ ṃєṅɢɢѧṅṭı ɞȏṭś.....")
+                                cl.sendMessage(msg.to,"ғȏṭȏ ȗṅṭȗҡ ṃєṅɢɢѧṅṭı ɞȏṭś.....")
                                               
-                        elif cmd == "changedual":
+                        elif cmd == "อัพวีดีโอ":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["ChangeVideoProfilevid"][msg._from] = True
-                                cl.sendMessage(msg.to,"ҡıяıṃ ṿıԀєȏ ṅʏѧ...")
+                                cl.sendMessage(msg.to,"ṿıԀєȏ ṅʏѧ...")
                                 
-                        elif cmd.startswith("changedualurl: "):
+                        elif cmd.startswith("อัพวีดีโอ: "):
                             if msg._from in admin:
                                 sep = msg.text.split(" ")
                                 url = msg.text.replace(sep[0] + " ","")                            
                                 cl.downloadFileURL(url,'path','video.mp4')
                                 settings["ChangeVideoProfilePicture"][msg._from] = True
-                                cl.sendMessage(msg.to, "ҡıяıṃ ғȏṭȏṅʏѧ.....")
+                                cl.sendMessage(msg.to, "ғȏṭȏṅʏѧ.....")
                                 
                      
 #==============add video==========================================================================
