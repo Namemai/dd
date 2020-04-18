@@ -3255,7 +3255,7 @@ def bot(op):
                 G = cl.getGroup(op.param1)	
                 G.preventedJoinByTicket = True		
                 random.choice(ABC).updateGroup(G)	
-                random.choice(ABC).sendMessage(op.param1,"mamam tu")					
+                random.choice(ABC).sendMessage(op.param1,"ติดดำถาวร กรุนาทักแอดมินบอท")					
                 random.choice(ABC).sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)														
             else:
                 pass
@@ -3711,42 +3711,42 @@ def bot(op):
                         if Amid in Setmain["SKfoto"]:
                             path = k1.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Amid]
-                            k1.updateProfilePicture(path)
+                            k1.updateProfilePicture(path1)
                             k1.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Bmid in Setmain["SKfoto"]:
                             path = k2.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Bmid]
-                            k2.updateProfilePicture(path)
+                            k2.updateProfilePicture(path2)
                             k2.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Cmid in Setmain["SKfoto"]:
                             path = k3.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Cmid]
-                            k3.updateProfilePicture(path)
+                            k3.updateProfilePicture(path3)
                             k3.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Dmid in Setmain["SKfoto"]:
                             path = k4.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Dmid]
-                            k4.updateProfilePicture(path)
+                            k4.updateProfilePicture(path4)
                             k4.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Emid in Setmain["SKfoto"]:
                             path = k5.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Emid]
-                            k5.updateProfilePicture(path)
+                            k5.updateProfilePicture(path5)
                             k5.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Fmid in Setmain["SKfoto"]:
                             path = k6.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Fmid]
-                            k6.updateProfilePicture(path)
+                            k6.updateProfilePicture(path6)
                             k6.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Gmid in Setmain["SKfoto"]:
                             path = k7.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Gmid]
-                            k7.updateProfilePicture(path)
+                            k7.updateProfilePicture(path7)
                             k7.sendMessage(msg.to,"Foto berhasil dirubah")
                         elif Hmid in Setmain["SKfoto"]:
                             path = k8.downloadObjectMsg(msg_id)
                             del Setmain["SKfoto"][Hmid]
-                            k8.updateProfilePicture(path)
+                            k8.updateProfilePicture(path8)
                             k8.sendMessage(msg.to,"Foto berhasil dirubah")
                             
                if msg.contentType == 1:
@@ -3887,14 +3887,6 @@ def bot(op):
                                                                                                      
                         elif text.lower() == "mid":
                                cl.sendMessage(msg.to, msg._from)
-                        elif text.lower() == 'ass':
-                               cl.sendMessage(msg.to, "Assalamu'alaikum Wr. Wb")
-                               cl.sendMessage(msg.to, "السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ")
-                        elif text.lower() == 'wss':
-                               cl.sendMessage(msg.to, "Wa'alaikumsallam.Wr,Wb")
-                               cl.sendMessage(msg.to, "ُوَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ  ")
-                        elif text.lower() == 'bot':
-                               cl.sendMessage(msg.to, "вoтѕ ѕιap ѕтay😡")
 
                         elif ("Get id " in msg.text):
                           if wait["selfbot"] == True:
@@ -4006,14 +3998,7 @@ def bot(op):
                               wait["blacklist"] = {}
                               ragets = cl.getContacts(wait["blacklist"])
                               mc = "「%i」User Blacklist" % len(ragets)
-                              k1.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k2.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k3.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k4.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k5.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k6.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k7.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k8.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              cl.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
                               
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
@@ -4948,32 +4933,32 @@ def bot(op):
                                   cl.sendMessage(msg.to, "Sudak tidak aktif")
 
 #===========add img============# 
-                        elif cmd == "upgrup":
+                        elif cmd == "รูปกลุ่ม":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                               if msg.toType == 2:
                                 settings["groupPicture"] = True
-                                cl.sendMessage(msg.to,"ҡıяıṃ ɢѧṃṃɞѧя ȗṅṭȗҡ ṃєṅɢɢѧṅṭı ɢяȗק...")
+                                cl.sendMessage(msg.to,"ส่งรูปมาค่ะ...")
 
-                        elif cmd == "updatebot":
+                        elif cmd == "upbot":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["changePicture"] = True
-                                cl.sendMessage(msg.to,"ҡıяıṃ ғȏṭȏ ȗṅṭȗҡ ṃєṅɢɢѧṅṭı ɞȏṭś.....")
+                                cl.sendMessage(msg.to,"ғȏṭȏ ȗṅṭȗҡ ṃєṅɢɢѧṅṭı ɞȏṭś.....")
                                               
-                        elif cmd == "changedual":
+                        elif cmd == "อัพ":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["ChangeVideoProfilevid"][msg._from] = True
-                                cl.sendMessage(msg.to,"ҡıяıṃ ṿıԀєȏ ṅʏѧ...")
+                                cl.sendMessage(msg.to,"ṿıԀєȏ ṅʏѧ...")
                                 
-                        elif cmd.startswith("changedualurl: "):
+                        elif cmd.startswith("อัพวีดีโอ: "):
                             if msg._from in admin:
                                 sep = msg.text.split(" ")
                                 url = msg.text.replace(sep[0] + " ","")                            
                                 cl.downloadFileURL(url,'path','video.mp4')
                                 settings["ChangeVideoProfilePicture"][msg._from] = True
-                                cl.sendMessage(msg.to, "ҡıяıṃ ғȏṭȏṅʏѧ.....")
+                                cl.sendMessage(msg.to, "กรุนารอแปบ.....")
                                 
                      
 #==============add video==========================================================================
@@ -6079,25 +6064,16 @@ def bot(op):
                                     a = a + 1
                                     end = '\n'
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                k1.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k2.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k3.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k4.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k5.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k6.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k7.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k8.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k9.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k10.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
+                                cl.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
 
                         elif cmd == "blc" or text.lower() == 'bc':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              if wait["blacklist"] == {}:
+                              if bl["blacklist"] == {}:
                                     cl.sendMessage(msg.to,"Tidak ada blacklist")
                               else:
                                     ma = ""
-                                    for i in wait["blacklist"]:
+                                    for i in bl["blacklist"]:
                                         ma = cl.getContact(i)
                                         cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
@@ -6107,14 +6083,7 @@ def bot(op):
                               wait["blacklist"] = {}
                               ragets = cl.getContacts(wait["blacklist"])
                               mc = "「%i」User Blacklist" % len(ragets)
-                              k1.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k2.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k3.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k4.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k5.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k6.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k7.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k8.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              cl.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
                               
                         elif text.lower() == rname["rname"]+" bl" or text.lower() == sname["sname"]+" bl":
                           if wait["selfbot"] == True:
