@@ -3630,14 +3630,6 @@ def bot(op):
                                 get_profile = cl.getProfile()
                                 get_profile_time = time.time() - get_profile_time_start
                                 k7.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
-
-                        elif cmd == "clearban" or text.lower() == 'cb':
-                          if wait["selfbot"] == True:
-                            if msg._from in admin:
-                              wait["blacklist"] = {}
-                              ragets = cl.getContacts(wait["blacklist"])
-                              mc = "「%i」User Blacklist" % len(ragets)
-                              cl.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
                               
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
@@ -3656,27 +3648,6 @@ def bot(op):
                                try:
                                    cl.removeAllMessages(op.param2)                                  
                                    cl.sendMessage(msg.to,"Chat sudah d bersihkan 👍")                                  
-                               except:
-                                   pass
-
-                        elif text.lower() == "ลบแชทคิก":
-                          if wait["selfbot"] == True:
-                            if msg._from in owner:
-                               try:
-                                   k1.removeAllMessages(op.param2)
-                                   k2.removeAllMessages(op.param2)
-                                   k3.removeAllMessages(op.param2)
-                                   k4.removeAllMessages(op.param2)
-                                   k5.removeAllMessages(op.param2)
-                                   k6.removeAllMessages(op.param2)
-                                   k7.removeAllMessages(op.param2)
-                                   k1.sendText(msg.to,"Chat dibersihkan...")
-                                   k2.sendText(msg.to,"Chat dibersihkan...")
-                                   k3.sendText(msg.to,"Chat dibersihkan...")
-                                   k4.sendText(msg.to,"Chat dibersihkan...")
-                                   k5.sendText(msg.to,"Chat dibersihkan...")
-                                   k6.sendText(msg.to,"Chat dibersihkan...")
-                                   k7.sendText(msg.to,"Chat dibersihkan...")
                                except:
                                    pass
 
@@ -5658,50 +5629,24 @@ def bot(op):
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
                                 cl.sendMessage(msg.to,"Blacklist\n\n"+ma+"\n %s User" %(str(len(wait["blacklist"]))))
 
-                        elif cmd == "blacklist" or text.lower() == 'ดำ':
-                          if wait["selfbot"] == True:
-                            if msg._from in owner:
-                              if wait["blacklist"] == {}:
-                                cl.sendMessage(msg.to,"รายชื่อคนติดดำ")
-                              else:
-                                ma = ""
-                                a = 0
-                                for m_id in wait["blacklist"]:
-                                    a = a + 1
-                                    end = '\n'
-                                    ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                k1.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k2.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k3.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k4.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k5.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k6.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-                                k7.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-
                         elif cmd == "blc" or text.lower() == 'bc':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              if wait["blacklist"] == {}:
-                                    cl.sendMessage(msg.to,"Tidak ada blacklist")
+                              if bl["blacklist"] == {}:
+                                    cl.sendMessage(msg.to,"คนที่ติดดำ")
                               else:
                                     ma = ""
-                                    for i in wait["blacklist"]:
+                                    for i in bl["blacklist"]:
                                         ma = cl.getContact(i)
                                         cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
-                        elif cmd == "clearban" or text.lower() == 'ล้างดำ':
+                        elif cmd == "clearban" or text.lower() == 'cb':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              wait["blacklist"] = {}
-                              ragets = cl.getContacts(wait["blacklist"])
-                              mc = "「%i」User Blacklist" % len(ragets)
-                              k1.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k2.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k3.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k4.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k5.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k6.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
-                              k7.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              bl["blacklist"] = {}
+                              ragets = cl.getContacts(bl["blacklist"])
+                              mc = "「%i」Blacklist" % len(ragets)
+                              cl.sendMessage(msg.to,"ลบบัญชีดำแล้วค่ะ" +mc)
                               
                         elif text.lower() == rname["rname"]+" bl" or text.lower() == sname["sname"]+" bl":
                           if wait["selfbot"] == True:
