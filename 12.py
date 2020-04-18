@@ -4832,14 +4832,6 @@ def bot(op):
                                 get_profile = cl.getProfile()
                                 get_profile_time = time.time() - get_profile_time_start
                                 k10.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
-
-                        elif cmd == "clearban" or text.lower() == 'cb':
-                          if wait["selfbot"] == True:
-                            if msg._from in admin:
-                              wait["blacklist"] = {}
-                              ragets = cl.getContacts(wait["blacklist"])
-                              mc = "「%i」User Blacklist" % len(ragets)
-                              cl.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
                               
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
@@ -4861,14 +4853,34 @@ def bot(op):
                                except:
                                    pass
 
-                        elif cmd.startswith("bcast: "):
+                        elif cmd.startswith("พิม: "):
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                                sep = text.split(" ")
                                pesan = text.replace(sep[0] + " ","")
                                saya = cl.getGroupIdsJoined()
+                               saya = k1.getGroupIdsJoined()
+                               saya = k2.getGroupIdsJoined()
+                               saya = k3.getGroupIdsJoined()
+                               saya = k4.getGroupIdsJoined()
+                               saya = k5.getGroupIdsJoined()
+                               saya = k6.getGroupIdsJoined()
+                               saya = k7.getGroupIdsJoined()
+                               saya = k8.getGroupIdsJoined()
+                               saya = k9.getGroupIdsJoined()
+                               saya = k10.getGroupIdsJoined()
                                for group in saya:
-                                   cl.sendMessage(group,"🔴Broadcast \n\n" + str(pesan))
+                                   cl.sendMessage(group,"\n" + str(pesan))
+                                   k1.sendMessage(group,"\n" + str(pesan))
+                                   k2.sendMessage(group,"\n" + str(pesan))
+                                   k3.sendMessage(group,"\n" + str(pesan))
+                                   k4.sendMessage(group,"\n" + str(pesan))
+                                   k5.sendMessage(group,"\n" + str(pesan))
+                                   k6.sendMessage(group,"\n" + str(pesan))
+                                   k7.sendMessage(group,"\n" + str(pesan))
+                                   k8.sendMessage(group,"\n" + str(pesan))
+                                   k9.sendMessage(group,"\n" + str(pesan))
+                                   k10.sendMessage(group,"\n" + str(pesan))
 
                         elif text.lower() == "sname":
                           if wait["selfbot"] == True:
@@ -7004,38 +7016,24 @@ def bot(op):
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
                                 cl.sendMessage(msg.to,"Blacklist\n\n"+ma+"\n %s User" %(str(len(wait["blacklist"]))))
 
-                        elif cmd == "blacklist" or text.lower() == 'ดำ':
-                          if wait["selfbot"] == True:
-                            if msg._from in owner:
-                              if wait["blacklist"] == {}:
-                                cl.sendMessage(msg.to,"รายชื่อคนติดดำ")
-                              else:
-                                ma = ""
-                                a = 0
-                                for m_id in wait["blacklist"]:
-                                    a = a + 1
-                                    end = '\n'
-                                    ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                cl.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
-
                         elif cmd == "blc" or text.lower() == 'bc':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                               if bl["blacklist"] == {}:
-                                    cl.sendMessage(msg.to,"Tidak ada blacklist")
+                                    cl.sendMessage(msg.to,"คนที่ติดดำ")
                               else:
                                     ma = ""
                                     for i in bl["blacklist"]:
                                         ma = cl.getContact(i)
                                         cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
-                        elif cmd == "clearban" or text.lower() == 'ล้างดำ':
+                        elif cmd == "clearban" or text.lower() == 'cb':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              wait["blacklist"] = {}
-                              ragets = cl.getContacts(wait["blacklist"])
-                              mc = "「%i」User Blacklist" % len(ragets)
-                              cl.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              bl["blacklist"] = {}
+                              ragets = cl.getContacts(bl["blacklist"])
+                              mc = "「%i」Blacklist" % len(ragets)
+                              cl.sendMessage(msg.to,"ลบบัญชีดำแล้วค่ะ" +mc)
                               
                         elif text.lower() == rname["rname"]+" bl" or text.lower() == sname["sname"]+" bl":
                           if wait["selfbot"] == True:
