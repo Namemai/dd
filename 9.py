@@ -49,15 +49,6 @@ print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist7 
 k8 = LINE("vsz71687@eoopy.com","mai06555mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist8 Login ]\033[0m"""%(Bot_startTime))
 
-k9 = LINE("hgr99109@eoopy.com","mai06555mai")
-print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist9 Login ]\033[0m"""%(Bot_startTime))
-
-k10 = LINE("mhh87894@zzrgg.com","mai06555mai")
-print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist10 Login ]\033[0m"""%(Bot_startTime))
-
-g1 = LINE("llr96697@bcaoo.com","mai06555mai")
-print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Kicker1 Login ]\033[0m"""%(Bot_startTime))
-
 #==========================[[PAKE TOKEN CHROMEOS 2.1.5]]=========================
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m
 
@@ -68,10 +59,10 @@ Login Time %s \033[0m\n\n"""%(Bot_startTime))
 #==============================================================================
 oepoll = OEPoll(cl)
 call = cl
-creator = ["uce3452158166e93bf8fed7190265e5d9"]
-owner = ["uce3452158166e93bf8fed7190265e5d9"]
-admin = ["uce3452158166e93bf8fed7190265e5d9"]
-staff = ["uce3452158166e93bf8fed7190265e5d9"]
+creator = ["u02b175e62fb53fd8547e712148e1d510"]
+owner = ["u02b175e62fb53fd8547e712148e1d510"]
+admin = ["u02b175e62fb53fd8547e712148e1d510"]
+staff = ["u02b175e62fb53fd8547e712148e1d510"]
 #==============================================================================
 lineProfile = cl.getProfile()
 mid = cl.getProfile().mid
@@ -82,14 +73,10 @@ Dmid = k4.getProfile().mid
 Emid = k5.getProfile().mid
 Fmid = k6.getProfile().mid
 Gmid = k7.getProfile().mid
-Hmid = k8.getProfile().mid
-Imid = k9.getProfile().mid
-Jmid = k10.getProfile().mid   
-g1MID = g1.getProfile().mid               
-KAC = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10]
-ABC = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10]
-KICKER = [g1]           
-Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid,g1MID]
+Hmid = k8.getProfile().mid              
+KAC = [cl,k1,k2,k3,k4,k5,k6,k7,k8]
+ABC = [cl,k1,k2,k3,k4,k5,k6,k7,k8]
+Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid]
 Saint = admin + owner + staff
 Team = creator + owner + admin + staff + Bots
 Setbot = codecs.open("setting.json","r","utf-8")
@@ -139,8 +126,6 @@ responsename5 = k5.getProfile().displayName
 responsename6 = k6.getProfile().displayName
 responsename7 = k7.getProfile().displayName
 responsename8 = k8.getProfile().displayName
-responsename9 = k9.getProfile().displayName
-responsename10 = k10.getProfile().displayName
 #===============================================================================
 settings = {
     "autoBlock": False,
@@ -985,6 +970,7 @@ def bot(op):
                             cl.reissueGroupTicket(op.param1)
                             X = cl.getGroup(op.param1)
                             X.preventedJoinByTicket = True
+                            cl.kickoutFromGroup(op.param1, [op.param2])
                             cl.updateGroup(X)
                             cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                 except:
@@ -994,8 +980,9 @@ def bot(op):
                                 k1.reissueGroupTicket(op.param1)
                                 X = k1.getGroup(op.param1)
                                 X.preventedJoinByTicket = True
+                                k1.kickoutFromGroup(op.param1, [op.param2])
                                 k1.updateGroup(X)
-                                cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                k1.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                     except:
                         try:
                             if k2.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1003,8 +990,9 @@ def bot(op):
                                     k2.reissueGroupTicket(op.param1)
                                     X = k2.getGroup(op.param1)
                                     X.preventedJoinByTicket = True
+                                    k2.kickoutFromGroup(op.param1, [op.param2])
                                     k2.updateGroup(X)
-                                    cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                    k2.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                         except:
                             try:
                                 if k3.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1012,8 +1000,9 @@ def bot(op):
                                         k3.reissueGroupTicket(op.param1)
                                         X = k3.getGroup(op.param1)
                                         X.preventedJoinByTicket = True
+                                        k3.kickoutFromGroup(op.param1, [op.param2])
                                         k3.updateGroup(X)
-                                        cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                        k3.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                             except:
                                 try:
                                     if k4.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1021,8 +1010,9 @@ def bot(op):
                                             k4.reissueGroupTicket(op.param1)
                                             X = k4.getGroup(op.param1)
                                             X.preventedJoinByTicket = True
+                                            k4.kickoutFromGroup(op.param1, [op.param2])
                                             k4.updateGroup(X)
-                                            cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                            k4.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                 except:
                                     try:
                                         if k5.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1030,8 +1020,9 @@ def bot(op):
                                                 k5.reissueGroupTicket(op.param1)
                                                 X = k5.getGroup(op.param1)
                                                 X.preventedJoinByTicket = True
+                                                k5.kickoutFromGroup(op.param1, [op.param2])
                                                 k5.updateGroup(X)
-                                                cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                k5.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                     except:
                                         try:
                                             if k6.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1039,8 +1030,9 @@ def bot(op):
                                                     k6.reissueGroupTicket(op.param1)
                                                     X = k6.getGroup(op.param1)
                                                     X.preventedJoinByTicket = True
+                                                    k6.kickoutFromGroup(op.param1, [op.param2])
                                                     k6.updateGroup(X)
-                                                    cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                    k6.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                         except:
                                             try:
                                                 if k7.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1048,8 +1040,9 @@ def bot(op):
                                                         k7.reissueGroupTicket(op.param1)
                                                         X = k7.getGroup(op.param1)
                                                         X.preventedJoinByTicket = True
+                                                        k7.kickoutFromGroup(op.param1, [op.param2])
                                                         k7.updateGroup(X)
-                                                        cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                        k7.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                             except:
                                                 try:
                                                     if k8.getGroup(op.param1).preventedJoinByTicket == False:
@@ -1057,29 +1050,12 @@ def bot(op):
                                                             k8.reissueGroupTicket(op.param1)
                                                             X = k8.getGroup(op.param1)
                                                             X.preventedJoinByTicket = True
+                                                            k8.kickoutFromGroup(op.param1, [op.param2])
                                                             k8.updateGroup(X)
-                                                            cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                            k8.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                                 except:
-                                                    try:
-                                                        if k9.getGroup(op.param1).preventedJoinByTicket == False:
-                                                            if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                                                                k9.reissueGroupTicket(op.param1)
-                                                                X = k9.getGroup(op.param1)
-                                                                X.preventedJoinByTicket = True
-                                                                k9.updateGroup(X)
-                                                                cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
-                                                    except:
-                                                        try:
-                                                            if k10.getGroup(op.param1).preventedJoinByTicket == False:
-                                                                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                                                                    k10.reissueGroupTicket(op.param1)
-                                                                    X = k10.getGroup(op.param1)
-                                                                    X.preventedJoinByTicket = True
-                                                                    k10.updateGroup(X)
-                                                                    cl.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
-                                                        except:
-                                                            pass
-#====================================================================                            
+                                                    pass
+#====================================================================                          
         if op.type == 13:
             if mid in op.param3:
                 if wait["autoLeave"] == True:
@@ -1107,7 +1083,8 @@ def bot(op):
                 for taged in InviterX:
                     if taged in bl['blacklist']:
                         try:
-                            cl.cancelGroupInvitation(op.param1,[taged])                           
+                            cl.cancelGroupInvitation(op.param1,[taged])
+                            cl.kickoutFromGroup(op.param1, [op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
@@ -1297,107 +1274,57 @@ def bot(op):
                                 json.dump(bl, fp, sort_keys=True, indent=4)
                         except:
                             pass
-        if op.type == 13:
-            if Imid in op.param3:
-                G = k9.getGroup(op.param1)
-                if wait["autoJoin"] == True:
-                    k9.acceptGroupInvitation(op.param1)
-                else:
-                    if wait["autoJoin"] == True:
-                        k9.acceptGroupInvitation(op.param1)
-                    else:
-                        pass
-            else:
-                Inviter = op.param3.replace(" ",'')
-                InviterX = Inviter.split(",")
-                for taged in InviterX:
-                    if taged in bl['blacklist']:
-                        try:
-                            k9.cancelGroupInvitation(op.param1,[taged])
-                            k9.kickoutFromGroup(op.param1,[op.param2])
-                            bl['blacklist'][op.param2] = True
-                            with open('bl.json', 'w') as fp:
-                                json.dump(bl, fp, sort_keys=True, indent=4)
-                        except:
-                            pass
-        if op.type == 13:
-            if Jmid in op.param3:
-                G = k10.getGroup(op.param1)
-                if wait["autoJoin"] == True:
-                    k10.acceptGroupInvitation(op.param1)
-                else:
-                    if wait["autoJoin"] == True:
-                        k10.acceptGroupInvitation(op.param1)
-                    else:
-                        pass
-            else:
-                Inviter = op.param3.replace(" ",'')
-                InviterX = Inviter.split(",")
-                for taged in InviterX:
-                    if taged in bl['blacklist']:
-                        try:
-                            k10.cancelGroupInvitation(op.param1,[taged])
-                            k10.kickoutFromGroup(op.param1,[op.param2])
-                            bl['blacklist'][op.param2] = True
-                            with open('bl.json', 'w') as fp:
-                                json.dump(bl, fp, sort_keys=True, indent=4)
-                        except:
-                            pass
+
         if op.type == 13:
             if op.param3 in bl['blacklist'] and op.param2 in bl['blacklist'] and op.param2 not in Bots and op.param2 not in Saint and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                 bl['blacklist'][op.param2] = True
                 with open('bl.json', 'w') as fp:
                     json.dump(bl, fp, sort_keys=True, indent=4)
                 try:
-                    k1.cancelGroupInvitation(op.param1,[op.param3])
-                    k1.kickoutFromGroup(op.param1, [op.param2])
+                    cl.cancelGroupInvitation(op.param1,[op.param3])
+                    cl.kickoutFromGroup(op.param1, [op.param2])
                 except:
                         try:
                             if op.param3 not in bl["blacklist"]:
-                                k2.cancelGroupInvitation(op.param1,[op.param3])
-                                k2.kickoutFromGroup(op.param1, [op.param2])
+                                k1.cancelGroupInvitation(op.param1,[op.param3])
+                                k1.kickoutFromGroup(op.param1, [op.param2])
                         except:
                             try:
                                 if op.param3 not in bl["blacklist"]:
-                                    k3.cancelGroupInvitation(op.param1,[op.param3])
-                                    k3.kickoutFromGroup(op.param1, [op.param2])
+                                    k2.cancelGroupInvitation(op.param1,[op.param3])
+                                    k2.kickoutFromGroup(op.param1, [op.param2])
                             except:
                                 try:
                                     if op.param3 not in bl["blacklist"]:
-                                        k4.cancelGroupInvitation(op.param1,[op.param3])
-                                        k4.kickoutFromGroup(op.param1, [op.param2])
+                                        k3.cancelGroupInvitation(op.param1,[op.param3])
+                                        k3.kickoutFromGroup(op.param1, [op.param2])
                                 except:
                                     try:
                                         if op.param3 not in bl["blacklist"]:
-                                            k5.cancelGroupInvitation(op.param1,[op.param3])
-                                            k5.kickoutFromGroup(op.param1, [op.param2])
+                                            k4.cancelGroupInvitation(op.param1,[op.param3])
+                                            k4.kickoutFromGroup(op.param1, [op.param2])
                                     except:
                                         try:
                                             if op.param3 not in bl["blacklist"]:
-                                                k6.cancelGroupInvitation(op.param1,[op.param3])
-                                                k6.kickoutFromGroup(op.param1, [op.param2])
+                                                k5.cancelGroupInvitation(op.param1,[op.param3])
+                                                k5.kickoutFromGroup(op.param1, [op.param2])
                                         except:
                                             try:
                                                 if op.param3 not in bl["blacklist"]:
-                                                    k7.cancelGroupInvitation(op.param1,[op.param3])
-                                                    k7.kickoutFromGroup(op.param1, [op.param2])
+                                                    k6.cancelGroupInvitation(op.param1,[op.param3])
+                                                    k6.kickoutFromGroup(op.param1, [op.param2])
                                             except:
                                                 try:
                                                     if op.param3 not in bl["blacklist"]:
-                                                        k8.cancelGroupInvitation(op.param1,[op.param3])
-                                                        k8.kickoutFromGroup(op.param1, [op.param2])
+                                                        k7.cancelGroupInvitation(op.param1,[op.param3])
+                                                        k7.kickoutFromGroup(op.param1, [op.param2])
                                                 except:
                                                     try:
                                                         if op.param3 not in bl["blacklist"]:
-                                                            k9.cancelGroupInvitation(op.param1,[op.param3])
-                                                            k9.kickoutFromGroup(op.param1, [op.param2])
+                                                            k8.cancelGroupInvitation(op.param1,[op.param3])
+                                                            k8.kickoutFromGroup(op.param1, [op.param2])
                                                     except:
-                                                        try:
-                                                            if op.param3 not in bl["blacklist"]:
-                                                                k10.cancelGroupInvitation(op.param1,[op.param3])
-                                                                k10.kickoutFromGroup(op.param1, [op.param2])
-                                                        except:
-                                                            pass
+                                                        pass
                 return                     
 #====================================================================       
         if op.type == 13:
@@ -1516,15 +1443,7 @@ def bot(op):
                                                     if op.param3 not in bl["blacklist"]:
                                                         k8.kickoutFromGroup(op.param1,[op.param2])
                                                 except:
-                                                    try:
-                                                        if op.param3 not in bl["blacklist"]:
-                                                            k9.kickoutFromGroup(op.param1,[op.param2])
-                                                    except:
-                                                        try:
-                                                            if op.param3 not in bl["blacklist"]:
-                                                                k10.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass
+                                                    pass
                                                                 
                 return
                                         
@@ -1535,44 +1454,52 @@ def bot(op):
                     try:
                         if op.param3 not in bl["blacklist"]:
                         	k1.kickoutFromGroup(op.param1,[op.param2])
+            	                k1.findAndAddContactsByMid(op.param3)
+            	                k1.inviteIntoGroup(op.param1,[op.param3])
                     except: 
                         try:
                             if op.param3 not in bl["blacklist"]:
                                 k2.kickoutFromGroup(op.param1,[op.param2])
+                    	        k2.findAndAddContactsByMid(op.param3)
+            	                k2.inviteIntoGroup(op.param1,[op.param3])
                         except:
                             try:
                                 if op.param3 not in bl["blacklist"]:
                                     k3.kickoutFromGroup(op.param1,[op.param2])
+                    	            k3.findAndAddContactsByMid(op.param3)
+            	                    k3.inviteIntoGroup(op.param1,[op.param3])
                             except:
                                 try:
                                     if op.param3 not in bl["blacklist"]:
                                         k4.kickoutFromGroup(op.param1,[op.param2])
+                    	                k4.findAndAddContactsByMid(op.param3)
+            	                        k4.inviteIntoGroup(op.param1,[op.param3])
                                 except: 
                                     try:
                                         if op.param3 not in bl["blacklist"]:
                                             k5.kickoutFromGroup(op.param1,[op.param2])
+                          	            k5.findAndAddContactsByMid(op.param3)
+            	                            k5.inviteIntoGroup(op.param1,[op.param3])
                                     except:
                                         try:
                                             if op.param3 not in bl["blacklist"]:
                                                 k6.kickoutFromGroup(op.param1,[op.param2])
+                                     	        k6.findAndAddContactsByMid(op.param3)
+            	                                k6.inviteIntoGroup(op.param1,[op.param3])
                                         except:
                                             try:
                                                 if op.param3 not in bl["blacklist"]:
                                                     k7.kickoutFromGroup(op.param1,[op.param2])
+		                    	            k7.findAndAddContactsByMid(op.param3)
+            	                                    k7.inviteIntoGroup(op.param1,[op.param3])
                                             except:
                                                 try:
                                                     if op.param3 not in bl["blacklist"]:
                                                         k8.kickoutFromGroup(op.param1,[op.param2])
+		                    	                k8.findAndAddContactsByMid(op.param3)
+            	                                        k8.inviteIntoGroup(op.param1,[op.param3])
                                                 except:
-                                                    try:
-                                                        if op.param3 not in bl["blacklist"]:
-                                                            k9.kickoutFromGroup(op.param1,[op.param2])
-                                                    except:
-                                                        try:
-                                                            if op.param3 not in bl["blacklist"]:
-                                                                k10.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass
+                                                    pass
                                                                 
                 return                                                                         
 #====================================================================  
@@ -1609,15 +1536,7 @@ def bot(op):
                                                     if op.param3 not in bl["blacklist"]:
                                                         k8.reissueGroupTicket(op.param1)
                                                 except:
-                                                    try:
-                                                        if op.param3 not in bl["blacklist"]:
-                                                            k9.reissueGroupTicket(op.param1)
-                                                    except:
-                                                        try:
-                                                            if op.param3 not in bl["blacklist"]:
-                                                                k10.reissueGroupTicket(op.param1)
-                                                        except:
-                                                            pass
+                                                    pass
                  
 #====================================================================                                                                                                                 
 #====================================================================                            
@@ -1648,12 +1567,9 @@ def bot(op):
                                                     k8.kickoutFromGroup(op.param1,[op.param2])
                                                 except:
                                                     try:
-                                                        k9.kickoutFromGroup(op.param1,[op.param2])
+                                                        cl.kickoutFromGroup(op.param1,[op.param2])
                                                     except:
-                                                        try:
-                                                            k10.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass
+                                                        pass
                                                                 
                 
 #====================================================================     
@@ -1684,97 +1600,11 @@ def bot(op):
                                                     k8.kickoutFromGroup(op.param1,[op.param2])
                                                 except:
                                                     try:
-                                                        k9.kickoutFromGroup(op.param1,[op.param2])
+                                                        cl.kickoutFromGroup(op.param1,[op.param2])
                                                     except:
-                                                        try:
-                                                            k10.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass
+                                                        pass
                                                                 
-#====================================================================                                            
-        if op.type == 19:
-            if op.param1 in ghost:
-            	try:
-            	    if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-            	        G = cl.getGroup(op.param1)
-            	        G.preventedJoinByTicket = False
-            	        cl.updateGroup(G)
-            	        invsend = 0
-            	        Ticket = cl.reissueGroupTicket(op.param1)
-            	        g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-            	        try:
-            	            g1.kickoutFromGroup(op.param1,[op.param2])
-            	        except:
-            	            try:
-            	                g1.kickoutFromGroup(op.param1,[op.param2])
-            	            except:
-            	                pass
-            	        bl["blacklist"][op.param2] = True
-            	        try:
-            	            g1.findAndAddContactsByMid(op.param3)
-            	            g1.inviteIntoGroup(op.param1,[op.param3])
-            	        except:
-            	            try:
-            	                g1.findAndAddContactsByMid(op.param3)
-            	                g1.inviteIntoGroup(op.param1,[op.param3])
-            	            except:
-            	                g1.sendMessage(op.param1,"Bl succes")
-            	                g1.leaveGroup(op.param1)
-            	        g1.leaveGroup(op.param1)
-            	        X = cl.getGroup(op.param1)
-            	        X.preventedJoinByTicket = True
-            	        cl.updateGroup(X)
-            	except:
-            	    pass              	
-#============================[[[ Anti Kicker ]]]========================================                                                              
-        if op.type == 19:
-            if op.param1 in protectantijs:
-                if mid in op.param3:
-                    if op.param2 not in Bots and op.param2 not in Saint and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                        try:
-                            g1.acceptGroupInvitation(op.param1)                                                                                 
-                            G = g1.getGroup(op.param1)
-                            G.preventedJoinByTicket = False
-                            g1.updateGroup(G)
-                            Ticket = g1.reissueGroupTicket(op.param1)
-                            cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                            k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                            k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                            k3.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                            k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                            k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                            k6.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                            k7.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                            k8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                            k9.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                            k10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                            bl["blacklist"][op.param2] = True
-                            g1.leaveGroup(op.param1)                           
-                            cl.inviteIntoGroup(op.param1,[g1MID])                                                  
-                        except:
-                            pass
-                            
-                            
-            if op.param3 in g1MID:
-                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                        cl.findAndAddContactsByMid(op.param3)
-                        cl.inviteIntoGroup(op.param1,[g1MID])
-                        cl.sendMessage(op.param1,"ANTI KICKER STAY")
-                else:
-                        cl.findAndAddContactsByMid(op.param3)
-                        cl.inviteIntoGroup(op.param1,[g1MID])
-                        cl.sendMessage(op.param1,"ANTI KICKER STAY")
-                        
-                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                    if op.param3 in admin:
-                        if op.param1 in protectantijs:
-                            bl["blacklist"][op.param2] = True
-                            cl.findAndAddContactsByMid(op.param3)
-                            cl.inviteIntoGroup(op.param1,[op.param3])
-                            cl.sendMessage(op.param1,"SUCSESS INVITE ADMIN")
-                else:
-                    pass
-            
+#====================================================================
             if op.param1 in protectantijs:
                 if g2MID in op.param3:
                     if op.param2 not in Bots and op.param2 not in Saint and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
@@ -1877,122 +1707,52 @@ def bot(op):
                     try:
                         if op.param3 not in bl["blacklist"]:
                             k1.kickoutFromGroup(op.param1,[op.param2])
-                            k1.inviteIntoGroup(op.param1,[g1MID])
                             k1.sendMessage(op.param1,"Heh Maen cancel cipok ni 🙍")
                             k1.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)									
                     except:
                         try:
                             if op.param3 not in bl["blacklist"]:
                                 k2.kickoutFromGroup(op.param1,[op.param2])
-                                k2.inviteIntoGroup(op.param1,[g1MID])
                                 k2.sendMessage(op.param1,"Heh Maen cancel cipok ni 🙍")
                                 k2.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)										
                         except:
                             try:
                                 if op.param3 not in bl["blacklist"]:
                                     k3.kickoutFromGroup(op.param1,[op.param2])
-                                    k3.inviteIntoGroup(op.param1,[g1MID])
                                     k3.sendMessage(op.param1,"Heh Maen cancel cipok ni 🙍")
                                     k3.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)										
                             except:
                                 try:
                                     if op.param3 not in bl["blacklist"]:
                                         k4.kickoutFromGroup(op.param1,[op.param2])
-                                        k4.inviteIntoGroup(op.param1,[g1MID])
                                         k4.sendMessage(op.param1,"Heh Maen cancel cipok ni 🙍")
                                         k4.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)											
                                 except:
                                     try:
                                         if op.param3 not in bl["blacklist"]:
                                             k5.kickoutFromGroup(op.param1,[op.param2])
-                                            k5.inviteIntoGroup(op.param1,[g1MID])
                                             k5.sendMessage(op.param1,"Heh Maen cancel cipok ni 🙍")
                                             k5.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                     except:
                                         try:
                                             if op.param3 not in bl["blacklist"]:
                                                 k6.kickoutFromGroup(op.param1,[op.param2])
-                                                k6.inviteIntoGroup(op.param1,[g1MID])
                                                 k6.sendMessage(op.param1,"Heh Maen cancel cipok ni 🙍")
                                                 k6.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)			
                                         except:
                                             try:
                                                 if op.param3 not in bl["blacklist"]:
                                                     k7.kickoutFromGroup(op.param1,[op.param2])
-                                                    k7.inviteIntoGroup(op.param1,[g1MID])
                                                     k7.sendMessage(op.param1,"Heh Maen cancel cipok ni 🙍")
                                                     k7.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)														
                                             except:
                                                 try:
                                                     if op.param3 not in bl["blacklist"]:
                                                         k8.kickoutFromGroup(op.param1,[op.param2])
-                                                        k8.nviteIntoGroup(op.param1,[g1MID])
                                                         k8.sendMessage(op.param1,"Heh Maen cancel cipok ni 🙍")
                                                         k8.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)													
                                                 except:
                                                     pass
-        if op.type == 19:
-            if mid in op.param3:
-                if op.param2 in Bots:
-                    pass
-                if op.param2 in owner:
-                    pass
-                if op.param2 in admin:
-                    pass
-                if op.param2 in staff:
-                    pass
-                else:
-                    bl['blacklist'][op.param2] = True
-                    with open('bl.json', 'w') as fp:
-                        json.dump(bl, fp, sort_keys=True, indent=4)
-                    try:
-                        g1.acceptGroupInvitation(op.param1)
-                        g1.findAndAddContactsByMid(op.param3)
-                        g1.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid])
-                        cl.acceptGroupInvitation(op.param1)
-                        k1.acceptGroupInvitation(op.param1)
-                        k1.kickoutFromGroup(op.param1,[op.param2])
-                        k2.acceptGroupInvitation(op.param1)
-                        k2.kickoutFromGroup(op.param1,[op.param2])
-                        k3.acceptGroupInvitation(op.param1)
-                        k3.kickoutFromGroup(op.param1,[op.param2])
-                        k4.acceptGroupInvitation(op.param1)
-                        k4.kickoutFromGroup(op.param1,[op.param2])
-                        k5.acceptGroupInvitation(op.param1)
-                        k5.kickoutFromGroup(op.param1,[op.param2])
-                        k6.acceptGroupInvitation(op.param1)
-                        k6.kickoutFromGroup(op.param1,[op.param2])
-                        k7.acceptGroupInvitation(op.param1)
-                        k7.kickoutFromGroup(op.param1,[op.param2])
-                        k8.acceptGroupInvitation(op.param1)
-                        k8.kickoutFromGroup(op.param1,[op.param2])
-                        k9.acceptGroupInvitation(op.param1)
-                        k9.kickoutFromGroup(op.param1,[op.param2])
-                        k10.acceptGroupInvitation(op.param1)
-                        k9.kickoutFromGroup(op.param1,[op.param2])
-                        x = g1.getGroup(op.param1)
-                        x.preventedJoinByTicket = False
-                        g1.updateGroup(x)
-                        invsend = 0
-                        Ti = g1.reissueGroupTicket(op.param1)
-                        cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k6.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        k10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        Ticket = g1.reissueGroupTicket(op.param1)
-                        g1.leaveGroup(op.param1)
-                        random.choice(ABC).findAndAddContactsByMid(op.param3)
-                        random.choice(ABC).inviteIntoGroup(op.param1,[g1MID])
-                    except:
-                        random.choice(ABC).findAndAddContactsByMid(op.param3)
-                        random.choice(ABC).inviteIntoGroup(op.param1,[g1MID])
 #====================================================================                  
                 return
                                                                                                                     
