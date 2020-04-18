@@ -6133,30 +6133,18 @@ def bot(op):
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
                                 cl.sendMessage(msg.to,"Blacklist\n\n"+ma+"\n %s User" %(str(len(wait["blacklist"]))))
 
-                        elif cmd == "blacklist" or text.lower() == 'ดำ':
-                          if wait["selfbot"] == True:
-                            if msg._from in owner:
-                              if wait["blacklist"] == {}:
-                                cl.sendMessage(msg.to,"รายชื่อคนติดดำ")
-                              else:
-                                ma = ""
-                                a = 0
-                                for m_id in wait["blacklist"]:
-                                    a = a + 1
-                                    end = '\n'
-                                    ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                cl.sendMessage(msg.to," User\n\n"+ma+"\nTotal%sTalkban User" %(str(len(wait["blacklist"]))))
 
                         elif cmd == "blc" or text.lower() == 'bc':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                               if bl["blacklist"] == {}:
-                                    cl.sendMessage(msg.to,"Tidak ada blacklist")
+                                    cl.sendMessage(msg.to,"blacklist")
                               else:
                                     ma = ""
                                     for i in bl["blacklist"]:
                                         ma = cl.getContact(i)
-                                        cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
+                                        mc = "「%i」คน Blacklist" % len(ragets)
+                                        cl.sendMessage(msg.to,"จำนวล" +mc)
 
                         elif cmd == "clearban" or text.lower() == 'cb':
                           if wait["selfbot"] == True:
