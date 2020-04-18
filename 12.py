@@ -3910,6 +3910,45 @@ def bot(op):
                                                                     k10.acceptGroupInvitation(op.param1)
                                                                 except:
                                                                     pass
+                return
+
+            if admin in op.param3:
+                if op.param2 in Bots:
+                    pass
+                if op.param2 in owner:
+                    pass
+                if op.param2 in admin:
+                    pass
+                if op.param2 in staff:
+                    pass
+                else:
+                    wait["blacklist"][op.param2] = True
+                    try:
+                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                        random.choice(ABC).findAndAddContactsByMid(op.param1,admin)
+                        random.choice(ABC).inviteIntoGroup(op.param1,admin)
+                    except:
+                        pass
+
+                return
+
+            if staff in op.param3:
+                if op.param2 in Bots:
+                    pass
+                if op.param2 in owner:
+                    pass
+                if op.param2 in admin:
+                    pass
+                if op.param2 in staff:
+                    pass
+                else:
+                    wait["blacklist"][op.param2] = True
+                    try:
+                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                        random.choice(ABC).findAndAddContactsByMid(op.param1,staff)
+                        random.choice(ABC).inviteIntoGroup(op.param1,staff)
+                    except:
+                        pass
 #===================================================================================================                  
                 return
 
