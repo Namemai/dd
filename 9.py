@@ -4073,11 +4073,11 @@ def bot(op):
                                 get_profile_time = time.time() - get_profile_time_start
                                 k8.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
 
-                        elif cmd == "clearban" or text.lower() == 'cb':
+                        elif cmd == "clearban" or text.lower() == 'ล้างดำ':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                              wait["blacklist"] = {}
-                              ragets = cl.getContacts(wait["blacklist"])
+                              bl["blacklist"] = {}
+                              ragets = cl.getContacts(bl["blacklist"])
                               mc = "「%i」User Blacklist" % len(ragets)
                               cl.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
                               
@@ -6158,13 +6158,13 @@ def bot(op):
                                         ma = cl.getContact(i)
                                         cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
-                        elif cmd == "clearban" or text.lower() == 'ล้างดำ':
+                        elif cmd == "clearban" or text.lower() == 'cb':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                              wait["blacklist"] = {}
-                              ragets = cl.getContacts(wait["blacklist"])
+                              bl["blacklist"] = {}
+                              ragets = cl.getContacts(bl["blacklist"])
                               mc = "「%i」User Blacklist" % len(ragets)
-                              cl.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              cl.sendMessage(msg.to,"ok " +mc)
                               
                         elif text.lower() == rname["rname"]+" bl" or text.lower() == sname["sname"]+" bl":
                           if wait["selfbot"] == True:
