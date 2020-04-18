@@ -1804,6 +1804,8 @@ def bot(op):
                                                             cl.updateGroup(group)
                                                             invsend = 0
                                                             ticket = cl.reissueGroupTicket(to)
+                                                            cl.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
                                                             k1.acceptGroupInvitationByTicket(to,format(str(ticket)))
                                                             time.sleep(0.01)
                                                             k2.acceptGroupInvitationByTicket(to,format(str(ticket)))
@@ -1963,11 +1965,13 @@ def bot(op):
                                                         k8.acceptGroupInvitation(op.param1)
                                                     except:
                                                         try:
-                                                            group = cl.getGroup(to)
+                                                            group = k1.getGroup(to)
                                                             group.preventedJoinByTicket = False
-                                                            cl.updateGroup(group)
+                                                            k1.updateGroup(group)
                                                             invsend = 0
-                                                            ticket = cl.reissueGroupTicket(to)
+                                                            ticket = k1.reissueGroupTicket(to)
+                                                            cl.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
                                                             k1.acceptGroupInvitationByTicket(to,format(str(ticket)))
                                                             time.sleep(0.01)
                                                             k2.acceptGroupInvitationByTicket(to,format(str(ticket)))
@@ -1985,9 +1989,9 @@ def bot(op):
                                                             k8.acceptGroupInvitationByTicket(to,format(str(ticket)))
                                                             time.sleep(0.01)
                                                             random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                            group = cl.getGroup(to)
+                                                            group = k1.getGroup(to)
                                                             group.preventedJoinByTicket = False
-                                                            cl.updateGroup(group)
+                                                            k1.updateGroup(group)
                                                         except:
                                                             try:
                                                                 k2.kickoutFromGroup(op.param1,[op.param2])
@@ -2129,24 +2133,33 @@ def bot(op):
                                                         k8.acceptGroupInvitation(op.param1)
                                                     except:
                                                         try:
-                                                            G = k2.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = False
-                                                            k2.updateGroup(G)
+                                                            group = k2.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k2.updateGroup(group)
                                                             invsend = 0
-                                                            Ticket = k2.reissueGroupTicket(op.param1)
-                                                            cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k3.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k6.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k7.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                                            ticket = k2.reissueGroupTicket(to)
+                                                            cl.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k1.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k2.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k3.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k4.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k5.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k6.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k7.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k8.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
                                                             random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                            G = k2.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = True
-                                                            k2.updateGroup(G) 
+                                                            group = k2.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k2.updateGroup(group) 
                                                         except:
                                                             try:
                                                                 k3.kickoutFromGroup(op.param1,[op.param2])
@@ -2288,24 +2301,33 @@ def bot(op):
                                                         k8.acceptGroupInvitation(op.param1)
                                                     except:
                                                         try:
-                                                            G = k3.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = False
-                                                            k3.updateGroup(G)
+                                                            group = k3.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k3.updateGroup(group)
                                                             invsend = 0
-                                                            Ticket = k3.reissueGroupTicket(op.param1)
-                                                            cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k3.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k6.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k7.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                                            ticket = k3.reissueGroupTicket(to)
+                                                            cl.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k1.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k2.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k3.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k4.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k5.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k6.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k7.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k8.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
                                                             random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                            G = k3.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = True
-                                                            k3.updateGroup(G) 
+                                                            group = k3.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k3.updateGroup(group)
                                                         except:
                                                             try:
                                                                 k4.kickoutFromGroup(op.param1,[op.param2])
@@ -2446,24 +2468,33 @@ def bot(op):
                                                         k8.acceptGroupInvitation(op.param1)
                                                     except:
                                                         try:
-                                                            G = k4.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = False
-                                                            k4.updateGroup(G)
+                                                            group = k4.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k4.updateGroup(group)
                                                             invsend = 0
-                                                            Ticket = k4.reissueGroupTicket(op.param1)
-                                                            cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k3.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k6.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k7.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                                            ticket = k4.reissueGroupTicket(to)
+                                                            cl.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k1.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k2.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k3.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k4.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k5.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k6.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k7.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k8.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
                                                             random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                            G = k4.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = True
-                                                            k4.updateGroup(G)
+                                                            group = k4.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k4.updateGroup(group)
                                                         except:
                                                             try:
                                                                 k5.kickoutFromGroup(op.param1,[op.param2])
@@ -2609,24 +2640,33 @@ def bot(op):
                                                         k8.acceptGroupInvitation(op.param1)
                                                     except:
                                                         try:
-                                                            G = k5.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = False
-                                                            k5.updateGroup(G)
+                                                            group = k5.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k5.updateGroup(group)
                                                             invsend = 0
-                                                            Ticket = k5.reissueGroupTicket(op.param1)
-                                                            cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k3.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k6.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k7.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                                            ticket = k5.reissueGroupTicket(to)
+                                                            cl.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k1.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k2.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k3.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k4.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k5.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k6.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k7.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k8.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
                                                             random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                            G = k5.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = True
-                                                            k5.updateGroup(G)
+                                                            group = k5.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k5.updateGroup(group)
                                                         except:
                                                             try:
                                                                 k6.kickoutFromGroup(op.param1,[op.param2])
@@ -2772,24 +2812,33 @@ def bot(op):
                                                         k8.acceptGroupInvitation(op.param1)
                                                     except:
                                                         try:
-                                                            G = k6.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = False
-                                                            k6.updateGroup(G)
+                                                            group = k6.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k6.updateGroup(group)
                                                             invsend = 0
-                                                            Ticket = k6.reissueGroupTicket(op.param1)
-                                                            cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k3.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k6.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k7.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                                            ticket = k6.reissueGroupTicket(to)
+                                                            cl.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k1.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k2.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k3.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k4.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k5.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k6.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k7.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k8.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
                                                             random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                            G = k6.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = True
-                                                            k6.updateGroup(G) 
+                                                            group = k6.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k6.updateGroup(group)
                                                         except:
                                                             try:
                                                                 k7.kickoutFromGroup(op.param1,[op.param2])
@@ -2934,24 +2983,33 @@ def bot(op):
                                                         k8.acceptGroupInvitation(op.param1)
                                                     except:
                                                         try:
-                                                            G = k7.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = False
-                                                            k7.updateGroup(G)
+                                                            group = k7.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k7.updateGroup(group)
                                                             invsend = 0
-                                                            Ticket = k7.reissueGroupTicket(op.param1)
-                                                            cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k3.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k6.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k7.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                                            ticket = k7.reissueGroupTicket(to)
+                                                            cl.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k1.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k2.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k3.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k4.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k5.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k6.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k7.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k8.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
                                                             random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                            X = k7.getGroup(op.param1)
-                                                            X.preventedJoinByTicket = True
-                                                            k7.updateGroup(X) 
+                                                            group = k7.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k7.updateGroup(group)
                                                         except:
                                                             try:
                                                                 k8.kickoutFromGroup(op.param1,[op.param2])
@@ -3096,24 +3154,33 @@ def bot(op):
                                                         k8.acceptGroupInvitation(op.param1)
                                                     except:
                                                         try:
-                                                            G = k8.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = False
-                                                            k8.updateGroup(G)
+                                                            group = k8.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k8.updateGroup(group)
                                                             invsend = 0
-                                                            Ticket = k8.reissueGroupTicket(op.param1)
-                                                            cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k3.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            k6.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k7.acceptGroupInvitationByTicket(op.param1,Ticket)	
-                                                            k8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                                            ticket = k8.reissueGroupTicket(to)
+                                                            cl.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k1.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k2.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k3.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k4.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k5.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k6.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k7.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
+                                                            k8.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                                                            time.sleep(0.01)
                                                             random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                            G = k8.getGroup(op.param1)
-                                                            G.preventedJoinByTicket = True
-                                                            k8.updateGroup(G) 
+                                                            group = k8.getGroup(to)
+                                                            group.preventedJoinByTicket = False
+                                                            k8.updateGroup(group)
                                                         except:
                                                             try:
                                                                 cl.kickoutFromGroup(op.param1,[op.param2])
