@@ -1588,6 +1588,21 @@ def bot(op):
                                                         pass
                                                                 
 #====================================================================
+            if op.param1 in protectantijs:
+                if g2MID in op.param3:
+                    if op.param2 not in Bots and op.param2 not in Saint and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                        bl["blacklist"][op.param2] = True
+                        try:
+                            g1.inviteIntoGroup(op.param1,[g2MID])
+                            g1.kickoutFromGroup(op.param1,[op.param2])
+                        except:
+                            try:
+                                cl.inviteIntoGroup(op.param1,[g2MID])
+                                cl.kickoutFromGroup(op.param1,[op.param2])
+                            except:
+                                pass
+                               
+            try:
                 if op.param3 in owner:
                     if op.param2 in Bots:
                         cl.findAndAddContactsByMid(op.param3)
