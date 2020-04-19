@@ -4715,7 +4715,10 @@ def bot(op):
                                k7.acceptGroupInvitationByTicket(to,format(str(ticket)))
                                time.sleep(0.01)
                                k8.acceptGroupInvitationByTicket(to,format(str(ticket)))
-                               time.sleep(0.01)                               
+                               time.sleep(0.01)
+                               group = k8.getGroup(to)
+                               group.preventedJoinByTicket = True
+                               k8.updateGroup(group)
                         
                         elif cmd == "iv":
                           if wait["selfbot"] == True:
