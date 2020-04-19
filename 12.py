@@ -1867,7 +1867,20 @@ def bot(op):
                             bl["blacklist"][op.param2] = True              
             except:
                 pass
-#====================================================================                                 
+#==================================================================== 
+        if op.type == 13:
+            if op.param3 in bl["blacklist"]:
+                    try:
+                        random.choice(ABC).cancelGroupInvitation(op.param1,[op.param3])
+                    except:
+                        pass
+
+        if op.type == 17:
+            if op.param2 in bl["blacklist"]:
+                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+            else:
+                pass
+
         if op.type == 17:
             if op.param1 in welcome:
                 if op.param2 in Bots:
@@ -5521,7 +5534,10 @@ def bot(op):
                                k9.acceptGroupInvitationByTicket(to,format(str(ticket)))
                                time.sleep(0.01)
                                k10.acceptGroupInvitationByTicket(to,format(str(ticket)))
-                               time.sleep(0.01)                               
+                               time.sleep(0.01)
+                               group = k10.getGroup(to)
+                               group.preventedJoinByTicket = True
+                               k10.updateGroup(group)
                         
                         elif cmd == "iv":
                           if wait["selfbot"] == True:
