@@ -1759,8 +1759,7 @@ def bot(op):
                             k8.acceptGroupInvitationByTicket(op.param1,Ticket)
                             k9.acceptGroupInvitationByTicket(op.param1,Ticket)	
                             k10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                            bl["blacklist"][op.param2] = True
-                            g1.leaveGroup(op.param1)                           
+                            bl["blacklist"][op.param2] = True                          
                             cl.inviteIntoGroup(op.param1,[g1MID])                                                  
                         except:
                             pass
@@ -1768,10 +1767,12 @@ def bot(op):
                             
             if op.param3 in g1MID:
                 if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                        cl.kickoutFromGroup(op.param1,[op.param2])
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[g1MID])
                         cl.sendMessage(op.param1,"ANTI KICKER STAY")
                 else:
+                        cl.kickoutFromGroup(op.param1,[op.param2])
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[g1MID])
                         cl.sendMessage(op.param1,"ANTI KICKER STAY")
@@ -1780,6 +1781,7 @@ def bot(op):
                     if op.param3 in admin:
                         if op.param1 in protectantijs:
                             bl["blacklist"][op.param2] = True
+                            cl.kickoutFromGroup(op.param1,[op.param2])
                             cl.findAndAddContactsByMid(op.param3)
                             cl.inviteIntoGroup(op.param1,[op.param3])
                             cl.sendMessage(op.param1,"SUCSESS INVITE ADMIN")
@@ -1791,30 +1793,29 @@ def bot(op):
                     if op.param2 not in Bots and op.param2 not in Saint and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                         bl["blacklist"][op.param2] = True
                         try:
-                            g1.inviteIntoGroup(op.param1,[mid])
+                            g1.inviteIntoGroup(op.param1,[g2MID])
                             g1.kickoutFromGroup(op.param1,[op.param2])
                         except:
                             try:
-                                cl.inviteIntoGroup(op.param1,[g1MID])
+                                cl.inviteIntoGroup(op.param1,[g2MID])
+                                cl.kickoutFromGroup(op.param1,[op.param2])
                             except:
                                 pass
                                
-
+            try:
                 if op.param3 in owner:
                     if op.param2 in Bots:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
-                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                     elif op.param2 in owner:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
-                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                     elif op.param2 in admin:
                         pass
                     else:
+                        cl.kickoutFromGroup(op.param1,[op.param2])
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
-                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                         if op.param2 in Bots:
                             pass
                         else:
@@ -1824,7 +1825,6 @@ def bot(op):
                     if op.param2 in Bots:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
-                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                     elif op.param2 in owner:
                         pass
                     elif op.param2 in admin:
@@ -1832,9 +1832,9 @@ def bot(op):
                     elif op.param2 in Bots:
                         pass
                     else:
+                        cl.kickoutFromGroup(op.param1,[op.param2])
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
-                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                         if op.param2 in Bots:
                             pass
                         else:
@@ -1844,11 +1844,9 @@ def bot(op):
                     if op.param2 in Bots:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
-                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                     elif op.param2 in staff:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
-                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                     elif op.param2 in owner:
                         pass
                     elif op.param2 in admin:
@@ -1857,10 +1855,10 @@ def bot(op):
                         pass
                     elif op.param2 in Bots:
                         pass
-                   
+                    else:
+                        cl.kickoutFromGroup(op.param1,[op.param2])
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
-                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                         if op.param2 in Bots:
                             pass
                         else:
