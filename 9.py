@@ -1655,7 +1655,20 @@ def bot(op):
                             bl["blacklist"][op.param2] = True              
             except:
                 pass
-#====================================================================                                 
+#==================================================================== 
+        if op.type == 13:
+            if op.param3 in bl["blacklist"]:
+                    try:
+                        random.choice(ABC).cancelGroupInvitation(op.param1,[op.param3])
+                    except:
+                        pass
+
+        if op.type == 17:
+            if op.param2 in bl["blacklist"]:
+                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+            else:
+                pass
+
         if op.type == 17:
             if op.param1 in welcome:
                 if op.param2 in Bots:
@@ -4065,14 +4078,6 @@ def bot(op):
                                 get_profile = cl.getProfile()
                                 get_profile_time = time.time() - get_profile_time_start
                                 k8.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
-
-                        elif cmd == "clearban" or text.lower() == 'ล้างดำ':
-                          if wait["selfbot"] == True:
-                            if msg._from in admin:
-                              bl["blacklist"] = {}
-                              ragets = cl.getContacts(bl["blacklist"])
-                              mc = "「%i」User Blacklist" % len(ragets)
-                              cl.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
                               
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
@@ -5781,6 +5786,21 @@ def bot(op):
                                        except:
                                            pass
 
+                        elif ("ลบแอดมิน " in msg.text):
+                            if msg._from in owner or msg._from in admin:
+                               key = eval(msg.contentMetadata["MENTION"])
+                               key["MENTIONEES"][0]["M"]
+                               targets = []
+                               for x in key["MENTIONEES"]:
+                                    targets.append(x["M"])
+                               for target in targets:
+                                   if target not in Dpk:
+                                       try:
+                                           admin.remove(target)
+                                           cl.sendMessage(msg.to,"❃ѕuccєєdєd menghapus admin")
+                                       except:
+                                           pass
+
                         elif ("ลบสตาฟ " in msg.text):
                             if msg._from in owner or msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
@@ -6026,7 +6046,7 @@ def bot(op):
                                                 cl.sendMessage(msg.to,"Sucsess clear banned")
                                             except:
                                                 pass
-                        elif ("talkban " in msg.text):
+                        elif ("ดำ " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
@@ -6037,12 +6057,12 @@ def bot(op):
                                for target in targets:
                                    if target not in Team:
                                        try:
-                                           wait["Talkblacklist"][target] = True
+                                           bl["Talkblacklist"][target] = True
                                            cl.sendMessage(msg.to,"Berhasil menambahkan blacklist")
                                        except:
                                            pass
 
-                        elif ("takbandell " in msg.text):
+                        elif ("ขาว " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
@@ -6052,7 +6072,7 @@ def bot(op):
                                     targets.append(x["M"])
                                for target in targets:
                                        try:
-                                           del wait["Talkblacklist"][target]
+                                           del bl["Talkblacklist"][target]
                                            cl.sendMessage(msg.to,"Berhasil menghapus blacklist")
                                        except:
                                            pass
@@ -6080,7 +6100,7 @@ def bot(op):
                                for target in targets:
                                    if target not in Team:
                                        try:
-                                           wait["blacklist"][target] = True
+                                           bl["blacklist"][target] = True
                                            cl.sendMessage(msg.to,"Berhasil menambahkan blacklist")
                                        except:
                                            pass
@@ -6095,7 +6115,7 @@ def bot(op):
                                     targets.append(x["M"])
                                for target in targets:
                                        try:
-                                           del wait["blacklist"][target]
+                                           del bl["blacklist"][target]
                                            cl.sendMessage(msg.to,"Berhasil menghapus blacklist")
                                        except:
                                            pass
@@ -6332,7 +6352,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = cl.findGroupByTicket(ticket_id)
                                      cl.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     cl.sendMessage(msg.to, "ดีครับมาใหม่นะ : %s" % str(group.name))
+                                     cl.sendMessage(msg.to, "ดีค่ะมาใหม่นะ : %s" % str(group.name))
                                      group1 = cl.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
