@@ -1799,19 +1799,22 @@ def bot(op):
                             except:
                                 pass
                                
-            try:
+
                 if op.param3 in owner:
                     if op.param2 in Bots:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
+                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                     elif op.param2 in owner:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
+                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                     elif op.param2 in admin:
                         pass
                     else:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
+                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                         if op.param2 in Bots:
                             pass
                         else:
@@ -1821,6 +1824,7 @@ def bot(op):
                     if op.param2 in Bots:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
+                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                     elif op.param2 in owner:
                         pass
                     elif op.param2 in admin:
@@ -1830,6 +1834,7 @@ def bot(op):
                     else:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
+                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                         if op.param2 in Bots:
                             pass
                         else:
@@ -1839,9 +1844,11 @@ def bot(op):
                     if op.param2 in Bots:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
+                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                     elif op.param2 in staff:
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
+                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                     elif op.param2 in owner:
                         pass
                     elif op.param2 in admin:
@@ -1853,6 +1860,7 @@ def bot(op):
                    
                         cl.findAndAddContactsByMid(op.param3)
                         cl.inviteIntoGroup(op.param1,[op.param3])
+                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                         if op.param2 in Bots:
                             pass
                         else:
