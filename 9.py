@@ -1084,7 +1084,6 @@ def bot(op):
                     if taged in bl['blacklist']:
                         try:
                             cl.cancelGroupInvitation(op.param1,[taged])
-                            cl.kickoutFromGroup(op.param1, [op.param2])
                             bl['blacklist'][op.param2] = True
                             with open('bl.json', 'w') as fp:
                                 json.dump(bl, fp, sort_keys=True, indent=4)
