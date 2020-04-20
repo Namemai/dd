@@ -7275,7 +7275,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = cl.findGroupByTicket(ticket_id)
                                      cl.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     cl.sendMessage(msg.to, มุดแล้วค่ะ : %s" % str(group.name))
+                                     cl.sendMessage(msg.to, "มุดแล้วค่ะ : %s" % str(group.name))
                                      group1 = cl.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7283,7 +7283,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k1.findGroupByTicket(ticket_id)
                                      k1.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k1.sendMessage(msg.to, "มุดแล้วค่ะ.. : %s" % str(group.name))
+                                     k1.sendMessage(msg.to, "ดีค่มุดแล้วค่ะ.. : %s" % str(group.name))
                                      groupl = k1.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7291,7 +7291,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k2.findGroupByTicket(ticket_id)
                                      k2.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k2.sendMessage(msg.to, "มุดแล้วค่ะ.. : %s" % str(group.name))
+                                     k2.sendMessage(msg.to, "ดีค่มุดแล้วค่ะ.. : %s" % str(group.name))
                                      groupl = k2.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7299,7 +7299,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k3.findGroupByTicket(ticket_id)
                                      k3.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k3.sendMessage(msg.to, "มุดแล้วค่ะ.. : %s" % str(group.name))
+                                     k3.sendMessage(msg.to, "ดีค่มุดแล้วค่ะ.. : %s" % str(group.name))
                                      groupl = k3.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7307,7 +7307,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k4.findGroupByTicket(ticket_id)
                                      k4.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k4.sendMessage(msg.to, "มุดแล้วค่ะ.. : %s" % str(group.name))
+                                     k4.sendMessage(msg.to, "ดีค่มุดแล้วค่ะ.. : %s" % str(group.name))
                                      groupl = k4.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7315,12 +7315,12 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k5.findGroupByTicket(ticket_id)
                                      k5.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k5.sendMessage(msg.to, "มุดแล้วค่ะ.. : %s" % str(group.name))
+                                     k5.sendMessage(msg.to, "ดีค่มุดแล้วค่ะ.. : %s" % str(group.name))
                                      groupl = k5.findGroupByTicket(ticket_id)
                                  for ticket_id in n_links:
                                      group = k6.findGroupByTicket(ticket_id)
                                      k6.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k6.sendMessage(msg.to, "มุดแล้วค่ะ.. : %s" % str(group.name))
+                                     k6.sendMessage(msg.to, "ดีค่มุดแล้วค่ะ.. : %s" % str(group.name))
                                      groupl = k6.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7328,7 +7328,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k7.findGroupByTicket(ticket_id)
                                      k7.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k7.sendMessage(msg.to, "มุดแล้วค่ะ.. : %s" % str(group.name))
+                                     k7.sendMessage(msg.to, "ดีค่มุดแล้วค่ะ.. : %s" % str(group.name))
                                      groupl = k7.findGroupByTicket(ticket_id)
                                  for l in links:
                                      if l not in n_links:
@@ -7336,24 +7336,8 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = k8.findGroupByTicket(ticket_id)
                                      k8.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k8.sendMessage(msg.to, "มุดแล้วค่ะ.. : %s" % str(group.name))
+                                     k8.sendMessage(msg.to, "ดีค่มุดแล้วค่ะ.. : %s" % str(group.name))
                                      groupl = k8.findGroupByTicket(ticket_id)
-                                 for l in links:
-                                     if l not in n_links:
-                                        n_links.append(l)
-                                 for ticket_id in n_links:
-                                     group = k9.findGroupByTicket(ticket_id)
-                                     k9.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k9.sendMessage(msg.to, "มุดแล้วค่ะ.. : %s" % str(group.name))
-                                     groupl = k9.findGroupByTicket(ticket_id)
-                                 for l in links:
-                                     if l not in n_links:
-                                        n_links.append(l)
-                                 for ticket_id in n_links:
-                                     group = k10.findGroupByTicket(ticket_id)
-                                     k10.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     k10.sendMessage(msg.to, "มุดแล้วค่ะ.. : %s" % str(group.name))
-                                     groupl = k10.findGroupByTicket(ticket_id)
                                      
     except Exception as error:
         print (error)
