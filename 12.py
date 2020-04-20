@@ -6616,9 +6616,6 @@ def bot(op):
                                            Ticket = cl.reissueGroupTicket(msg.to)
                                            g1.acceptGroupInvitationByTicket(msg.to,Ticket)
                                            g1.kickoutFromGroup(msg.to, [target])
-                                           g1.kickoutFromGroup(msg.to, [target])
-                                           g1.kickoutFromGroup(msg.to, [target])
-                                           g1.kickoutFromGroup(msg.to, [target])
                                            g1.leaveGroup(msg.to)
                                            X = cl.getGroup(msg.to)
                                            X.preventedJoinByTicket = True
