@@ -22,7 +22,7 @@ print("""
 \033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Start Bot ]\033[0m    
 """%(Bot_startTime))
 #==============================================================
-cl = LINE("")
+cl = LINE("EQHrgbwT3bVvViXecSZf.SQlju9I7iQVneOWiBASAhW.VewKzKmEyfVL95JtQKIw5T0t8voJeYtvlzL4kmSsoGo=")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Selfbot Login ]\033[0m"""%(Bot_startTime))
 
 k1 = LINE("EQ8CpzzqMhIRQax4m69e.tsWh/XhwZNQR/EYas4X8FG.Fv5f/rf+lNnH1u/We0D6FHv0m81QAYP8Qvvo2Xyj8AE=")
@@ -55,7 +55,7 @@ print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist9 
 k10 = LINE("EQUhYrzfv64NZoSbmCu3.dW2Z5+YdAMonZeUDn8NUqW.3WInL9+OV5zCm/J8hbiqE/5UAoXYukwuvVJPGodb5PQ=")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist10 Login ]\033[0m"""%(Bot_startTime))
 
-g1 = LINE()
+g1 = LINE("EQSeCm18cIcc4h01ARJd.woYcLKjUBgViV18maqKE3q.0kwMDnDmnwo1WAVHljRx5M9an0ADk/BuM/Jbww01TX0=")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Kicker1 Login ]\033[0m"""%(Bot_startTime))
 
 #==========================[[PAKE TOKEN CHROMEOS 2.1.5]]=========================
