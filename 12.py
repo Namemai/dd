@@ -37,7 +37,7 @@ print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist3 
 k4 = LINE("EQQxRKRPurI8vzzQsnY1.6aDpR7WaeYIerTV/ke45mq.0PRosPlB7DLqx4bV16MgD2ombieWcjW9Z2T4CWsKmtk=")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist4 Login ]\033[0m"""%(Bot_startTime))
 
-k5 = LINE("EQAT1ZdkQTIEaqRsPTfa.R3Upp+bxWHnVGQKSqGxWsG.lTXe4+jg9Sxrq+9sHK8BV3z8TypyXBd+Glw78IjNxH0=)
+k5 = LINE("EQAT1ZdkQTIEaqRsPTfa.R3Upp+bxWHnVGQKSqGxWsG.lTXe4+jg9Sxrq+9sHK8BV3z8TypyXBd+Glw78IjNxH0=")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist5 Login ]\033[0m"""%(Bot_startTime))
 
 k6 = LINE("EQw0NrNlojbhh50SN1ja.wuBBWSllrbi0GXuNV017QG.XhaxQ5sl2rZ0tOeQShfdLj4Q85hk/TrLMfpojq94TEo=")
