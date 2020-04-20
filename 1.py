@@ -7056,7 +7056,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                               if bl["blacklist"] == {}:
-                                    cl.sendMessage(msg.to,"คนที่ติดดำ")
+                                    cl.sendMessage(msg.to,"ยังไม่มีคนที่ติดดำค่ะ")
                               else:
                                     ma = ""
                                     for i in bl["blacklist"]:
