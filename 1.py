@@ -40,19 +40,19 @@ print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist4 
 k5 = LINE("gkl87129@eoopy.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist5 Login ]\033[0m"""%(Bot_startTime))
 
-k6 = LINE("อีเมล","N0891554508")
+k6 = LINE("iou85385@eoopy.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist6 Login ]\033[0m"""%(Bot_startTime))
 
-k7 = LINE("อีเมล","N0891554508")
+k7 = LINE("pbh40458@eoopy.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist7 Login ]\033[0m"""%(Bot_startTime))
 
-k8 = LINE("อีเมล","N0891554508")
+k8 = LINE("fgj90510@eoopy.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist8 Login ]\033[0m"""%(Bot_startTime))
 
-k9 = LINE("อีเมล","N0891554508")
+k9 = LINE("azn03676@bcaoo.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist9 Login ]\033[0m"""%(Bot_startTime))
 
-k10 = LINE("อีเมล","N0891554508")
+k10 = LINE("gpc94087@eoopy.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist10 Login ]\033[0m"""%(Bot_startTime))
 
 g1 = LINE("mtb84131@bcaoo.com","N0891554508")
