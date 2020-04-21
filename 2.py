@@ -22,7 +22,7 @@ print("""
 \033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Start Bot ]\033[0m    
 """%(Bot_startTime))
 #==============================================================
-cl = LINE("อีเมล","N0891554508")
+cl = LINE("tpi44390@bcaoo.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Selfbot Login ]\033[0m"""%(Bot_startTime))
 
 k1 = LINE("jsu02172@eoopy.com","N0891554508")
@@ -37,25 +37,25 @@ print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist3 
 k4 = LINE("mcm58422@zzrgg.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist4 Login ]\033[0m"""%(Bot_startTime))
 
-k5 = LINE("lls26302@bcaoo.com","N0891554508")
+k5 = LINE("jms27324@bcaoo.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist5 Login ]\033[0m"""%(Bot_startTime))
 
-k6 = LINE("อีเมล","N0891554508")
+k6 = LINE("lls26302@bcaoo.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist6 Login ]\033[0m"""%(Bot_startTime))
 
-k7 = LINE("อีเมล","N0891554508")
+k7 = LINE("oog21277@bcaoo.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist7 Login ]\033[0m"""%(Bot_startTime))
 
-k8 = LINE("อีเมล","N0891554508")
+k8 = LINE("uhg11187@eoopy.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist8 Login ]\033[0m"""%(Bot_startTime))
 
-k9 = LINE("อีเมล","N0891554508")
+k9 = LINE("uyh94815@eoopy.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist9 Login ]\033[0m"""%(Bot_startTime))
 
-k10 = LINE("อีเมล","N0891554508")
+k10 = LINE("qxx20300@eoopy.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist10 Login ]\033[0m"""%(Bot_startTime))
 
-g1 = LINE("อีเมล","N0891554508")
+g1 = LINE("dpi95011@zzrgg.com","N0891554508")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Kicker1 Login ]\033[0m"""%(Bot_startTime))
 
 #==========================[[PAKE TOKEN CHROMEOS 2.1.5]]=========================
