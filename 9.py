@@ -2157,37 +2157,37 @@ def bot(op):
                     try:
                         k6.kickoutFromGroup(op.param1,[op.param2])
                         k6.inviteIntoGroup(op.param1,[op.param3])
-                        k5.acceptGroupInvitation(op.param1)
+                        k.acceptGroupInvitation(op.param1)
                     except:
                         try:
                             k7.kickoutFromGroup(op.param1,[op.param2])
                             k7.inviteIntoGroup(op.param1,[op.param3])
-                            k5.acceptGroupInvitation(op.param1)
+                            k.acceptGroupInvitation(op.param1)
                         except:
                             try:
                                 k8.kickoutFromGroup(op.param1,[op.param2])
                                 k8.inviteIntoGroup(op.param1,[op.param3])
-                                k5.acceptGroupInvitation(op.param1)
+                                k.acceptGroupInvitation(op.param1)
                             except:
                                 try:
                                     k1.kickoutFromGroup(op.param1,[op.param2])
                                     k1.inviteIntoGroup(op.param1,[op.param3])
-                                    k5.acceptGroupInvitation(op.param1)
+                                    k.acceptGroupInvitation(op.param1)
                                 except:
                                     try:
                                         k2.kickoutFromGroup(op.param1,[op.param2])
                                         k2.inviteIntoGroup(op.param1,[op.param3])
-                                        k5.acceptGroupInvitation(op.param1)
+                                        k.acceptGroupInvitation(op.param1)
                                     except:
                                         try:
                                             k3.kickoutFromGroup(op.param1,[op.param2])
                                             k3.inviteIntoGroup(op.param1,[op.param3])
-                                            k5.acceptGroupInvitation(op.param1)
+                                            k.acceptGroupInvitation(op.param1)
                                         except:
                                             try:
                                                 k4.kickoutFromGroup(op.param1,[op.param2])
                                                 k4.inviteIntoGroup(op.param1,[op.param3])
-                                                k5.acceptGroupInvitation(op.param1)
+                                                k.acceptGroupInvitation(op.param1)
                                             except:
                                                 try:
                                                     group = k5.getGroup(op.param1)
@@ -4010,7 +4010,7 @@ def bot(op):
                                 k7.sendMessage(msg.to, "Pulang dulu "+str(G.name))
                                 k7.leaveGroup(msg.to)
                                 
-                        elif cmd == "bye8":
+                        elif cmd == "bye":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
