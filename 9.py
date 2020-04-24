@@ -2284,13 +2284,13 @@ def bot(op):
                                                     bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
-                                                        k6.kickoutFromGroup(op.param1,[op.param2])
+                                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                     except:
                                                         try:
-                                                            k6.kickoutFromGroup(op.param1,[op.param2])
+                                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                         except:
                                                             try:
-                                                                k6.kickoutFromGroup(op.param1,[op.param2])
+                                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                             except:
                                                                 pass                                                                     
                 return
