@@ -168,7 +168,7 @@ settings = {
 }
 
 wait = {
-    "limit": 500,
+    "limit": 1000,
     "owner":{},
     "admin":{},
     "addadmin":False,
@@ -376,7 +376,7 @@ def _images_get_all_items(page):
             break
         else:
             items.append(item)      
-            time.sleep(0.1)        
+            time.sleep(0.001)        
             page = page[end_content:]
     return items
     
@@ -1019,8 +1019,8 @@ def bot(op):
                         ginfo = cl.getGroup(op.param1)
                         cl.leaveGroup(op.param1)
                     else:
-                        cl.acceptGroupInvitation(op.param1)
-                        ginfo = cl.getGroup(op.param1)      
+                        cl.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ginfo = cl.getGroup(op.param1)  
 #====================================================================                          
         if op.type == 13:
             if mid in op.param3:
@@ -1029,7 +1029,7 @@ def bot(op):
                     cl.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        cl.acceptGroupInvitation(op.param1)
+                        cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1051,7 +1051,7 @@ def bot(op):
                     k1.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        k1.acceptGroupInvitation(op.param1)
+                        k1.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1074,7 +1074,7 @@ def bot(op):
                     k2.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        k2.acceptGroupInvitation(op.param1)
+                        k2.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1097,7 +1097,7 @@ def bot(op):
                     k3.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        k3.acceptGroupInvitation(op.param1)
+                        k3.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1120,7 +1120,7 @@ def bot(op):
                     k4.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        k4.acceptGroupInvitation(op.param1)
+                        k4.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1143,7 +1143,7 @@ def bot(op):
                     k5.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        ke.acceptGroupInvitation(op.param1)
+                        k5.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1557,17 +1557,22 @@ def bot(op):
                                             Ticket = cl.reissueGroupTicket(op.param1)
                                             cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                                             k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            k1.kickoutFromGroup(op.param1,[op.param2])
                                             k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            k2.kickoutFromGroup(op.param1,[op.param2])
                                             k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            k3.kickoutFromGroup(op.param1,[op.param2])
                                             k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            k4.kickoutFromGroup(op.param1,[op.param2])
                                             k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            k5.kickoutFromGroup(op.param1,[op.param2])
+                                            bl['blacklist'][op.param2] = True
                                         except:
-                                            pass 
+                                            try:
+                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            except:
+                                                try:
+                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                except:
+                                                    try:
+                                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                    except:
+                                                        pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1612,17 +1617,22 @@ def bot(op):
                                         Ticket = k1.reissueGroupTicket(op.param1)
                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k1.kickoutFromGroup(op.param1,[op.param2])
                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k2.kickoutFromGroup(op.param1,[op.param2])
                                         k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k3.kickoutFromGroup(op.param1,[op.param2])
                                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k4.kickoutFromGroup(op.param1,[op.param2])
                                         k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k5.kickoutFromGroup(op.param1,[op.param2])
+                                        bl['blacklist'][op.param2] = True
                                     except:
-                                        pass 
+                                        try:
+                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                        except:
+                                            try:
+                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            except:
+                                                try:
+                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                except:
+                                                    pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1667,17 +1677,22 @@ def bot(op):
                                         Ticket = k2.reissueGroupTicket(op.param1)
                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k1.kickoutFromGroup(op.param1,[op.param2])
                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k2.kickoutFromGroup(op.param1,[op.param2])
                                         k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k3.kickoutFromGroup(op.param1,[op.param2])
                                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k4.kickoutFromGroup(op.param1,[op.param2])
                                         k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k5.kickoutFromGroup(op.param1,[op.param2])
+                                        bl['blacklist'][op.param2] = True
                                     except:
-                                        pass
+                                        try:
+                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                        except:
+                                            try:
+                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            except:
+                                                try:
+                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                except:
+                                                    pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1722,17 +1737,22 @@ def bot(op):
                                         Ticket = k3.reissueGroupTicket(op.param1)
                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k1.kickoutFromGroup(op.param1,[op.param2])
                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k2.kickoutFromGroup(op.param1,[op.param2])
                                         k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k3.kickoutFromGroup(op.param1,[op.param2])
                                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k4.kickoutFromGroup(op.param1,[op.param2])
                                         k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k5.kickoutFromGroup(op.param1,[op.param2])
+                                        bl['blacklist'][op.param2] = True
                                     except:
-                                        pass
+                                        try:
+                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                        except:
+                                            try:
+                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            except:
+                                                try:
+                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                except:
+                                                    pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1777,17 +1797,22 @@ def bot(op):
                                         Ticket = k4.reissueGroupTicket(op.param1)
                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k1.kickoutFromGroup(op.param1,[op.param2])
                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k2.kickoutFromGroup(op.param1,[op.param2])
                                         k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k3.kickoutFromGroup(op.param1,[op.param2])
                                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k4.kickoutFromGroup(op.param1,[op.param2])
                                         k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k5.kickoutFromGroup(op.param1,[op.param2])
+                                        bl['blacklist'][op.param2] = True
                                     except:
-                                        pass
+                                        try:
+                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                        except:
+                                            try:
+                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            except:
+                                                try:
+                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                except:
+                                                    pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1832,17 +1857,24 @@ def bot(op):
                                         Ticket = k5.reissueGroupTicket(op.param1)
                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k1.kickoutFromGroup(op.param1,[op.param2])
                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k2.kickoutFromGroup(op.param1,[op.param2])
                                         k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k3.kickoutFromGroup(op.param1,[op.param2])
                                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k4.kickoutFromGroup(op.param1,[op.param2])
                                         k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        k5.kickoutFromGroup(op.param1,[op.param2])
+                                        bl['blacklist'][op.param2] = True
                                     except:
-                                        pass
+                                        try:
+                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                        except:
+                                            try:
+                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            except:
+                                                try:
+                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                except:
+                                                    pass
+                return
+                                                                                                                    
         if op.type == 19:
             if Emid in op.param3:
                 if op.param2 in Bots:
@@ -1858,96 +1890,78 @@ def bot(op):
                     with open('bl.json', 'w') as fp:
                         json.dump(bl, fp, sort_keys=True, indent=4)
                     try:                  	
-                        k1.kickoutFromGroup(op.param1,[op.param2])
-                        k1.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                        cl.acceptGroupInvitation(op.param1)
+                        k5.kickoutFromGroup(op.param1,[op.param2])
+                        k5.inviteIntoGroup(op.param1,[op.param3])
                         k1.acceptGroupInvitation(op.param1)
-                        k2.acceptGroupInvitation(op.param1)
-                        k3.acceptGroupInvitation(op.param1)
-                        k4.acceptGroupInvitation(op.param1)
-                        k5.acceptGroupInvitation(op.param1)
                     except:
                         try:
-                            k2.kickoutFromGroup(op.param1,[op.param2])
-                            k2.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                            cl.acceptGroupInvitation(op.param1)
+                            k4.kickoutFromGroup(op.param1,[op.param2])
+                            k4.inviteIntoGroup(op.param1,[op.param3])
                             k1.acceptGroupInvitation(op.param1)
-                            k2.acceptGroupInvitation(op.param1)
-                            k3.acceptGroupInvitation(op.param1)
-                            k4.acceptGroupInvitation(op.param1)
-                            k5.acceptGroupInvitation(op.param1)
                         except:
                             try:
                                 k3.kickoutFromGroup(op.param1,[op.param2])
-                                k3.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                cl.acceptGroupInvitation(op.param1)
+                                k3.inviteIntoGroup(op.param1,[op.param3])
                                 k1.acceptGroupInvitation(op.param1)
-                                k2.acceptGroupInvitation(op.param1)
-                                k3.acceptGroupInvitation(op.param1)
-                                k4.acceptGroupInvitation(op.param1)
-                                k5.acceptGroupInvitation(op.param1)
                             except:
                                 try:
-                                    k4.kickoutFromGroup(op.param1,[op.param2])
-                                    k4.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                    cl.acceptGroupInvitation(op.param1)
+                                    k2.kickoutFromGroup(op.param1,[op.param2])
+                                    k2.inviteIntoGroup(op.param1,[op.param3])
                                     k1.acceptGroupInvitation(op.param1)
-                                    k2.acceptGroupInvitation(op.param1)
-                                    k3.acceptGroupInvitation(op.param1)
-                                    k4.acceptGroupInvitation(op.param1)
-                                    k5.acceptGroupInvitation(op.param1)
                                 except:
                                     try:
-                                        k5.kickoutFromGroup(op.param1,[op.param2])
-                                        k5.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                        cl.acceptGroupInvitation(op.param1)
-                                        k1.acceptGroupInvitation(op.param1)
-                                        k2.acceptGroupInvitation(op.param1)
-                                        k3.acceptGroupInvitation(op.param1)
-                                        k4.acceptGroupInvitation(op.param1)
-                                        k5.acceptGroupInvitation(op.param1)
+                                        group = k1.getGroup(op.param1)
+                                        group.preventedJoinByTicket = False
+                                        k1.updateGroup(group)
+                                        invsend = 0
+                                        Ticket = k1.reissueGroupTicket(op.param1)
+                                        cl.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        k1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        k2.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        k3.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        k4.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        k5.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        bl['blacklist'][op.param2] = True
                                     except:
                                         try:
-                                            group = cl.getGroup(op.param1)
-                                            group.preventedJoinByTicket = False
-                                            cl.updateGroup(group)
-                                            invsend = 0
-                                            Ticket = cl.reissueGroupTicket(op.param1)
-                                            cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            k1.kickoutFromGroup(op.param1,[op.param2])
-                                            k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            k2.kickoutFromGroup(op.param1,[op.param2])
-                                            k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            k3.kickoutFromGroup(op.param1,[op.param2])
-                                            k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            k4.kickoutFromGroup(op.param1,[op.param2])
-                                            k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            k5.kickoutFromGroup(op.param1,[op.param2])
+                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                         except:
-                                            pass
+                                            try:
+                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            except:
+                                                try:
+                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                except:
+                                                    pass
 #===================================================================================================                  
                 return
 
         if op.type == 55:
             if op.param3 in bl['blacklist'] and op.param2 in bl['blacklist'] and op.param2 not in Bots and op.param2 not in admin:
                 try:
-                    k1.cancelGroupInvitation(op.param1,[op.param3])
+                    cl.cancelGroupInvitation(op.param1,[op.param3])
                 except:
                     try:
-                        k2.cancelGroupInvitation(op.param1,[op.param3])
+                        k1.cancelGroupInvitation(op.param1,[op.param3])
+                        k1.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
-                            k3.cancelGroupInvitation(op.param1,[op.param3])
+                            k2.cancelGroupInvitation(op.param1,[op.param3])
+                            k2.kickoutFromGroup(op.param1,[op.param2])
                         except:
                             try:
-                                k4.cancelGroupInvitation(op.param1,[op.param3])
+                                k3.cancelGroupInvitation(op.param1,[op.param3])
+                                k3.kickoutFromGroup(op.param1,[op.param2])
                             except:
                                 try:
-                                    k5.cancelGroupInvitation(op.param1,[op.param3])
+                                    k4.cancelGroupInvitation(op.param1,[op.param3])
+                                    k4.kickoutFromGroup(op.param1,[op.param2])
                                 except:
-                                    pass         
-#===================================================================================================                      
+                                    try:
+                                        k5.cancelGroupInvitation(op.param1,[op.param3])
+                                        k5.kickoutFromGroup(op.param1,[op.param2])
+                                    except:
+                                        pass                    
 #===================================================================================================
         if op.type == 25 or op.type == 26:
           if settings['SpamInvite'] == True:
