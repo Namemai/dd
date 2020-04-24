@@ -183,7 +183,7 @@ settings = {
 }
 
 wait = {
-    "limit": 100,
+    "limit": 1000,
     "owner":{},
     "admin":{},
     "addadmin":False,
