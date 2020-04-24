@@ -1064,7 +1064,7 @@ def bot(op):
                         ginfo = cl.getGroup(op.param1)
                         cl.leaveGroup(op.param1)
                     else:
-                        cl.acceptGroupInvitation(op.param1)
+                        cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ginfo = cl.getGroup(op.param1)      
 #====================================================================                          
         if op.type == 13:
@@ -1074,7 +1074,7 @@ def bot(op):
                     cl.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        cl.acceptGroupInvitation(op.param1)
+                        cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1096,7 +1096,7 @@ def bot(op):
                     k1.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        k1.acceptGroupInvitation(op.param1)
+                        k1.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1119,7 +1119,7 @@ def bot(op):
                     k2.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        k2.acceptGroupInvitation(op.param1)
+                        k2.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1142,7 +1142,7 @@ def bot(op):
                     k3.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        k3.acceptGroupInvitation(op.param1)
+                        k3.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1165,7 +1165,7 @@ def bot(op):
                     k4.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        k4.acceptGroupInvitation(op.param1)
+                        k4.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1188,7 +1188,7 @@ def bot(op):
                     k5.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        ke.acceptGroupInvitation(op.param1)
+                        k5.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1211,7 +1211,7 @@ def bot(op):
                     k6.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        k6.acceptGroupInvitation(op.param1)
+                        k6.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1234,7 +1234,7 @@ def bot(op):
                     k7.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        k7.acceptGroupInvitation(op.param1)
+                        k7.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1257,7 +1257,7 @@ def bot(op):
                     k8.acceptGroupInvitation(op.param1)
                 else:
                     if wait["autoJoin"] == True:
-                        k8.acceptGroupInvitation(op.param1)
+                        k8.acceptGroupInvitationByTicket(op.param1,Ticket)
                     else:
                         pass
             else:
@@ -1897,15 +1897,15 @@ def bot(op):
                                                     bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
-                                                        k1.kickoutFromGroup(op.param1,[op.param2])
+                                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                     except:
                                                         try:
-                                                            k1.kickoutFromGroup(op.param1,[op.param2])
+                                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                         except:
                                                             try:
-                                                                k1.kickoutFromGroup(op.param1,[op.param2])
+                                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                             except:
-                                                                pass
+                                                                pass 
                                                                                                                       
                                         
                 return        
@@ -1975,15 +1975,15 @@ def bot(op):
                                                     bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
-                                                        k2.kickoutFromGroup(op.param1,[op.param2])
+                                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                     except:
                                                         try:
-                                                            k2.kickoutFromGroup(op.param1,[op.param2])
+                                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                         except:
                                                             try:
-                                                                k2.kickoutFromGroup(op.param1,[op.param2])
+                                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                             except:
-                                                                pass
+                                                                pass 
                                                                
                 return
               
@@ -2053,15 +2053,15 @@ def bot(op):
                                                     bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
-                                                        k3.kickoutFromGroup(op.param1,[op.param2])
+                                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                     except:
                                                         try:
-                                                            k3.kickoutFromGroup(op.param1,[op.param2])
+                                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                         except:
                                                             try:
-                                                                k3.kickoutFromGroup(op.param1,[op.param2])
+                                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                             except:
-                                                                pass
+                                                                pass pass
                                                                                          
                 return
             if Dmid in op.param3:
@@ -2130,15 +2130,15 @@ def bot(op):
                                                     bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
-                                                        k4.kickoutFromGroup(op.param1,[op.param2])
+                                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                     except:
                                                         try:
-                                                            k4.kickoutFromGroup(op.param1,[op.param2])
+                                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                         except:
                                                             try:
-                                                                k4.kickoutFromGroup(op.param1,[op.param2])
+                                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                             except:
-                                                                pass
+                                                                pass 
                                                             
                 return
             if Emid in op.param3:
@@ -2207,15 +2207,15 @@ def bot(op):
                                                     bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
-                                                        k5.kickoutFromGroup(op.param1,[op.param2])
+                                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                     except:
                                                         try:
-                                                            k5.kickoutFromGroup(op.param1,[op.param2])
+                                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                         except:
                                                             try:
-                                                                k5.kickoutFromGroup(op.param1,[op.param2])
+                                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                             except:
-                                                                pass
+                                                                pass 
                                                             
                 return
             if Fmid in op.param3:
@@ -2360,15 +2360,15 @@ def bot(op):
                                                     bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
-                                                        k7.kickoutFromGroup(op.param1,[op.param2])
+                                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                     except:
                                                         try:
-                                                            k7.kickoutFromGroup(op.param1,[op.param2])
+                                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                         except:
                                                             try:
-                                                                k7.kickoutFromGroup(op.param1,[op.param2])
+                                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                             except:
-                                                                pass
+                                                                pass 
                 return
             if Hmid in op.param3:
                 if op.param2 in Bots:
@@ -2436,15 +2436,15 @@ def bot(op):
                                                     bl['blacklist'][op.param2] = True
                                                 except:
                                                     try:
-                                                        k8.kickoutFromGroup(op.param1,[op.param2])
+                                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                     except:
                                                         try:
-                                                            k8.kickoutFromGroup(op.param1,[op.param2])
+                                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                         except:
                                                             try:
-                                                                k8.kickoutFromGroup(op.param1,[op.param2])
+                                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                             except:
-                                                                pass
+                                                                pass 
 #===================================================================================================                  
                 return
 
