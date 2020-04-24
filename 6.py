@@ -376,7 +376,7 @@ def _images_get_all_items(page):
             break
         else:
             items.append(item)      
-            time.sleep(0.01)        
+            time.sleep(0.1)        
             page = page[end_content:]
     return items
     
@@ -500,6 +500,117 @@ def backupProfile():
     settings['myProfile']['videoProfile'] = profile.videoProfile
     coverId = cl.getProfileDetail()['result']['objectId']
     settings['myProfile']['coverId'] = str(coverId)
+    
+def mentionMembers(to, mid):
+    try:
+        arrData = ""
+        textx = "✏DAFTAR JONES「{}」\n\n╔━━━━[ SILENT KILLER ]━━━\n╠❂➣✏1. ".format(str(len(mid)))
+        arr = []
+        no = 1
+        num = 2
+        for i in mid:
+            mention = "@x\n"
+            slen = str(len(textx))
+            elen = str(len(textx) + len(mention) - 1)
+            arrData = {'S':slen, 'E':elen, 'M':i}
+            arr.append(arrData)
+            textx += mention
+            if no < len(mid):
+                no += 1
+                textx += "╠❂➣✏%i.  " % (num)
+                num=(num+1)
+            else:
+                try:
+                    no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
+                except:
+                    no = "\n╚══[ Success ]"
+        cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    except Exception as error:
+        cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
+        
+        
+def sendMentionV2(to, text="", mids=[]):
+    arrData = ""
+    arr = []
+    mention = "@dhenza "
+    if mids == []:
+        raise Exception("Invalid mids")
+    if "@!" in text:
+        if text.count("@!") != len(mids):
+            raise Exception("Invalid mids")
+        texts = text.split("@!")
+        textx = ""
+        for mid in mids:
+            textx += str(texts[mids.index(mid)])
+            slen = len(textx)
+            elen = len(textx) + 15
+            arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mid}
+            arr.append(arrData)
+            textx += mention
+        textx += str(texts[len(mids)])
+    else:
+        textx = ""
+        slen = len(textx)
+        elen = len(textx) + 15
+        arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mids[0]}
+        arr.append(arrData)
+        textx += mention + str(text)
+    cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0) 
+
+def siderMembers(to, mid):
+    try:
+        arrData = ""
+        textx = "Sider User「{}」\nHaii ".format(str(len(mid)))
+        arr = []
+        no = 1
+        num = 2
+        for i in mid:
+            mention = "@x\n"
+            slen = str(len(textx))
+            elen = str(len(textx) + len(mention) - 1)
+            arrData = {'S':slen, 'E':elen, 'M':i}
+            arr.append(arrData)
+            textx += mention+wait["mention"]
+            if no < len(mid):
+                no += 1
+                textx += "%i. " % (num)
+                num=(num+1)
+            else:
+                try:
+                    no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
+                except:
+                    no = "\n╚══[ Success ]"
+        cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    except Exception as error:
+        cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
+
+def welcomeMembers(to, mid):
+    try:
+        arrData = ""
+        textx = "Member Masuk「{}」\nHaii  ".format(str(len(mid)))
+        arr = []
+        no = 1
+        num = 2
+        for i in mid:
+            ginfo = cl.getGroup(to)
+            mention = "@x\n"
+            slen = str(len(textx))
+            elen = str(len(textx) + len(mention) - 1)
+            arrData = {'S':slen, 'E':elen, 'M':i}
+            arr.append(arrData)
+            textx += mention+wait["welcome"]+"\nNama grup : "+str(ginfo.name)
+            if no < len(mid):
+                no += 1
+                textx += "%i " % (num)
+                num=(num+1)
+            else:
+                try:
+                    no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
+                except:
+                    no = "\n╚══[ Success ]"
+        cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    except Exception as error:
+        cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
 
 def sendMention(to, mid, firstmessage):
     try:
@@ -1445,33 +1556,18 @@ def bot(op):
                                             invsend = 0
                                             Ticket = cl.reissueGroupTicket(op.param1)
                                             cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
                                             k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
+                                            k1.kickoutFromGroup(op.param1,[op.param2])
                                             k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
+                                            k2.kickoutFromGroup(op.param1,[op.param2])
                                             k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
+                                            k3.kickoutFromGroup(op.param1,[op.param2])
                                             k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
+                                            k4.kickoutFromGroup(op.param1,[op.param2])
                                             k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
-                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                            group = cl.getGroup(op.param1)
-                                            group.preventedJoinByTicket = True
-                                            cl.updateGroup(group)
+                                            k5.kickoutFromGroup(op.param1,[op.param2])
                                         except:
-                                            try:
-                                                cl.kickoutFromGroup(op.param1,[op.param2])
-                                                cl.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                                cl.acceptGroupInvitation(op.param1)
-                                                k1.acceptGroupInvitation(op.param1)
-                                                k2.acceptGroupInvitation(op.param1)
-                                                k3.acceptGroupInvitation(op.param1)
-                                                k4.acceptGroupInvitation(op.param1)
-                                                k5.acceptGroupInvitation(op.param1)
-                                            except:
-                                                pass 
+                                            pass 
                 return
                                                                                                                     
         if op.type == 19:
@@ -1515,33 +1611,18 @@ def bot(op):
                                         invsend = 0
                                         Ticket = k1.reissueGroupTicket(op.param1)
                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k1.kickoutFromGroup(op.param1,[op.param2])
                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k2.kickoutFromGroup(op.param1,[op.param2])
                                         k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k3.kickoutFromGroup(op.param1,[op.param2])
                                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k4.kickoutFromGroup(op.param1,[op.param2])
                                         k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
-                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                        group = k1.getGroup(op.param1)
-                                        group.preventedJoinByTicket = True
-                                        k1.updateGroup(group)
+                                        k5.kickoutFromGroup(op.param1,[op.param2])
                                     except:
-                                        try:
-                                            k1.kickoutFromGroup(op.param1,[op.param2])
-                                            k1.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                            cl.acceptGroupInvitation(op.param1)
-                                            k1.acceptGroupInvitation(op.param1)
-                                            k2.acceptGroupInvitation(op.param1)
-                                            k3.acceptGroupInvitation(op.param1)
-                                            k4.acceptGroupInvitation(op.param1)
-                                            k5.acceptGroupInvitation(op.param1)
-                                        except:
-                                            pass
+                                        pass 
                 return
                                                                                                                     
         if op.type == 19:
@@ -1585,33 +1666,18 @@ def bot(op):
                                         invsend = 0
                                         Ticket = k2.reissueGroupTicket(op.param1)
                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k1.kickoutFromGroup(op.param1,[op.param2])
                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k2.kickoutFromGroup(op.param1,[op.param2])
                                         k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k3.kickoutFromGroup(op.param1,[op.param2])
                                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k4.kickoutFromGroup(op.param1,[op.param2])
                                         k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
-                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                        group = k2.getGroup(op.param1)
-                                        group.preventedJoinByTicket = True
-                                        k2.updateGroup(group)
+                                        k5.kickoutFromGroup(op.param1,[op.param2])
                                     except:
-                                        try:
-                                            k2.kickoutFromGroup(op.param1,[op.param2])
-                                            k2.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                            cl.acceptGroupInvitation(op.param1)
-                                            k1.acceptGroupInvitation(op.param1)
-                                            k2.acceptGroupInvitation(op.param1)
-                                            k3.acceptGroupInvitation(op.param1)
-                                            k4.acceptGroupInvitation(op.param1)
-                                            k5.acceptGroupInvitation(op.param1)
-                                        except:
-                                            pass
+                                        pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1655,33 +1721,18 @@ def bot(op):
                                         invsend = 0
                                         Ticket = k3.reissueGroupTicket(op.param1)
                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k1.kickoutFromGroup(op.param1,[op.param2])
                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k2.kickoutFromGroup(op.param1,[op.param2])
                                         k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k3.kickoutFromGroup(op.param1,[op.param2])
                                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k4.kickoutFromGroup(op.param1,[op.param2])
                                         k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
-                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                        group = k3.getGroup(op.param1)
-                                        group.preventedJoinByTicket = True
-                                        k3.updateGroup(group)
+                                        k5.kickoutFromGroup(op.param1,[op.param2])
                                     except:
-                                        try:
-                                            k3.kickoutFromGroup(op.param1,[op.param2])
-                                            k3.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                            cl.acceptGroupInvitation(op.param1)
-                                            k1.acceptGroupInvitation(op.param1)
-                                            k2.acceptGroupInvitation(op.param1)
-                                            k3.acceptGroupInvitation(op.param1)
-                                            k4.acceptGroupInvitation(op.param1)
-                                            k5.acceptGroupInvitation(op.param1)
-                                        except:
-                                            pass
+                                        pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1725,33 +1776,18 @@ def bot(op):
                                         invsend = 0
                                         Ticket = k4.reissueGroupTicket(op.param1)
                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k1.kickoutFromGroup(op.param1,[op.param2])
                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k2.kickoutFromGroup(op.param1,[op.param2])
                                         k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k3.kickoutFromGroup(op.param1,[op.param2])
                                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k4.kickoutFromGroup(op.param1,[op.param2])
                                         k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
-                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                        group = k4.getGroup(op.param1)
-                                        group.preventedJoinByTicket = True
-                                        k4.updateGroup(group)
+                                        k5.kickoutFromGroup(op.param1,[op.param2])
                                     except:
-                                        try:
-                                            k4.kickoutFromGroup(op.param1,[op.param2])
-                                            k4.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                            cl.acceptGroupInvitation(op.param1)
-                                            k1.acceptGroupInvitation(op.param1)
-                                            k2.acceptGroupInvitation(op.param1)
-                                            k3.acceptGroupInvitation(op.param1)
-                                            k4.acceptGroupInvitation(op.param1)
-                                            k5.acceptGroupInvitation(op.param1)
-                                        except:
-                                            pass
+                                        pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1795,33 +1831,18 @@ def bot(op):
                                         invsend = 0
                                         Ticket = k5.reissueGroupTicket(op.param1)
                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k1.kickoutFromGroup(op.param1,[op.param2])
                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k2.kickoutFromGroup(op.param1,[op.param2])
                                         k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k3.kickoutFromGroup(op.param1,[op.param2])
                                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
+                                        k4.kickoutFromGroup(op.param1,[op.param2])
                                         k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                        time.sleep(0.01)
-                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                        group = k5.getGroup(op.param1)
-                                        group.preventedJoinByTicket = True
-                                        k5.updateGroup(group)
+                                        k5.kickoutFromGroup(op.param1,[op.param2])
                                     except:
-                                        try:
-                                            k5.kickoutFromGroup(op.param1,[op.param2])
-                                            k5.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                            cl.acceptGroupInvitation(op.param1)
-                                            k1.acceptGroupInvitation(op.param1)
-                                            k2.acceptGroupInvitation(op.param1)
-                                            k3.acceptGroupInvitation(op.param1)
-                                            k4.acceptGroupInvitation(op.param1)
-                                            k5.acceptGroupInvitation(op.param1)
-                                        except:
-                                            pass
+                                        pass
         if op.type == 19:
             if Emid in op.param3:
                 if op.param2 in Bots:
@@ -1893,33 +1914,18 @@ def bot(op):
                                             invsend = 0
                                             Ticket = cl.reissueGroupTicket(op.param1)
                                             cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
                                             k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
+                                            k1.kickoutFromGroup(op.param1,[op.param2])
                                             k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
+                                            k2.kickoutFromGroup(op.param1,[op.param2])
                                             k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
+                                            k3.kickoutFromGroup(op.param1,[op.param2])
                                             k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
+                                            k4.kickoutFromGroup(op.param1,[op.param2])
                                             k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                            time.sleep(0.01)
-                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                            group = cl.getGroup(op.param1)
-                                            group.preventedJoinByTicket = True
-                                            cl.updateGroup(group)
+                                            k5.kickoutFromGroup(op.param1,[op.param2])
                                         except:
-                                            try:
-                                                cl.kickoutFromGroup(op.param1,[op.param2])
-                                                cl.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                                cl.acceptGroupInvitation(op.param1)
-                                                k1.acceptGroupInvitation(op.param1)
-                                                k2.acceptGroupInvitation(op.param1)
-                                                k3.acceptGroupInvitation(op.param1)
-                                                k4.acceptGroupInvitation(op.param1)
-                                                k5.acceptGroupInvitation(op.param1)
-                                            except:
-                                                pass
+                                            pass
 #===================================================================================================                  
                 return
 
