@@ -6145,22 +6145,8 @@ def bot(op):
                                 wait["dblacklist"] = True
                                 cl.sendMessage(msg.to,"Send contact")
 
-                        elif cmd == "banlist" or text.lower() == 'bl':
-                          if wait["selfbot"] == True:
-                            if msg._from in owner or msg._from in admin:
-                              if wait["blacklist"] == {}:
-                                cl.sendMessage(msg.to,"Nothing blacklist")
-                              else:
-                                ma = ""
-                                a = 0
-                                for m_id in wait["blacklist"]:
-                                    a = a + 1
-                                    end = '\n'
-                                    ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                cl.sendMessage(msg.to,"Blacklist\n\n"+ma+"\n %s User" %(str(len(wait["blacklist"]))))
 
-
-                        elif cmd == "blc" or text.lower() == 'bc':
+                        elif cmd == "blc" or text.lower() == 'ดำ':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                               if bl["blacklist"] == {}:
@@ -6171,7 +6157,7 @@ def bot(op):
                                         ma = cl.getContact(i)
                                         cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
-                        elif cmd == "clearban" or text.lower() == 'cb':
+                        elif cmd == "clearban" or text.lower() == 'ล้างดำ':
                           if wait["selfbot"] == True:
                             if msg._from in owner:
                               bl["blacklist"] = {}
@@ -6179,7 +6165,7 @@ def bot(op):
                               mc = "「%i」Blacklist" % len(ragets)
                               cl.sendMessage(msg.to,"ลบบัญชีดำแล้วค่ะ" +mc)
                               
-                        elif text.lower() == rname["rname"]+" bl" or text.lower() == sname["sname"]+" bl":
+                        elif cmd == "Bc" or text.lower() == 'bc':
                           if wait["selfbot"] == True:
                             if sender in admin:
                               if bl['blacklist'] == {}:
@@ -6198,7 +6184,7 @@ def bot(op):
                                 cl.sendMessage(msg.to, "User Blacklist: \n\n" + bn + "\n")
                                 print ("Cek blacklist")
 
-                        elif text.lower() == rname["rname"]+" dbn" or text.lower() == sname["sname"]+" dbn":
+                        elif cmd == "cb or text.lower() == 'Cb':
                           if wait["selfbot"] == True:
                             if sender in admin:
                               cl.sendMessage(msg.to,"{} blacklist cleared.".format(str(len(bl['blacklist']))))
