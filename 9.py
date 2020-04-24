@@ -1810,21 +1810,14 @@ def bot(op):
                                                         Ticket = cl.reissueGroupTicket(op.param1)
                                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                        k1.kickoutFromGroup(op.param1,[op.param2])
                                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                        k2.kickoutFromGroup(op.param1,[op.param2])
                                                         k3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                        k3.kickoutFromGroup(op.param1,[op.param2])
                                                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                        k4.kickoutFromGroup(op.param1,[op.param2])
                                                         k5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                        k5.kickoutFromGroup(op.param1,[op.param2])
                                                         k6.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                        k6.kickoutFromGroup(op.param1,[op.param2])
                                                         k7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                        k7.kickoutFromGroup(op.param1,[op.param2])
                                                         k8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                        k8.kickoutFromGroup(op.param1,[op.param2])
+                                                        bl['blacklist'][op.param2] = True
                                                     except:
                                                         pass 
                 return
