@@ -1548,13 +1548,10 @@ def bot(op):
                                                 try:
                                                     k8.kickoutFromGroup(op.param1,[op.param2])
                                                 except:
-                                                    try:
-                                                        cl.kickoutFromGroup(op.param1,[op.param2])
-                                                    except:
-                                                        pass
+                                                    pass
                                                                 
                 
-#====================================================================     
+#====================================================================
         if op.type == 19:
             if op.param2 in bl['blacklist']:            
                     try:
@@ -1581,10 +1578,7 @@ def bot(op):
                                                 try:
                                                     k8.kickoutFromGroup(op.param1,[op.param2])
                                                 except:
-                                                    try:
-                                                        cl.kickoutFromGroup(op.param1,[op.param2])
-                                                    except:
-                                                        pass
+                                                    pass
                                                                 
 #====================================================================
             if op.param1 in protectantijs:
