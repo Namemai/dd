@@ -74,8 +74,8 @@ Emid = k5.getProfile().mid
 Fmid = k6.getProfile().mid
 Gmid = k7.getProfile().mid
 Hmid = k8.getProfile().mid              
-KAC = [cl,k1,k2,k3,k4,k5,k6,k7,k8]
-ABC = [cl,k1,k2,k3,k4,k5,k6,k7,k8]
+KAC = [k1,k2,k3,k4,k5,k6,k7,k8]
+ABC = [k1,k2,k3,k4,k5,k6,k7,k8]
 Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid]
 Saint = admin + owner + staff
 Team = creator + owner + admin + staff + Bots
@@ -1281,7 +1281,6 @@ def bot(op):
                     json.dump(bl, fp, sort_keys=True, indent=4)
                 try:
                     cl.cancelGroupInvitation(op.param1,[op.param3])
-                    cl.kickoutFromGroup(op.param1, [op.param2])
                 except:
                         try:
                             if op.param3 not in bl["blacklist"]:
