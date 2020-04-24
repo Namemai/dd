@@ -6184,7 +6184,7 @@ def bot(op):
                                 cl.sendMessage(msg.to, "User Blacklist: \n\n" + bn + "\n")
                                 print ("Cek blacklist")
 
-                        elif cmd == "cb or text.lower() == 'Cb':
+                        elif cmd == "cb" or text.lower() == 'Cb':
                           if wait["selfbot"] == True:
                             if sender in admin:
                               cl.sendMessage(msg.to,"{} blacklist cleared.".format(str(len(bl['blacklist']))))
