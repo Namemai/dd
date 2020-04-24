@@ -22,7 +22,7 @@ print("""
 \033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Start Bot ]\033[0m    
 """%(Bot_startTime))
 #==============================================================
-cl = LINE("ytv47663@bcaoo.com","mai065558mai")
+cl = LINE("06555mai@gmail.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Selfbot Login ]\033[0m"""%(Bot_startTime))
 
 k1 = LINE("oqt64130@eoopy.com","mai065558mai")
@@ -59,10 +59,10 @@ Login Time %s \033[0m\n\n"""%(Bot_startTime))
 #==============================================================================
 oepoll = OEPoll(cl)
 call = cl
-creator = ["u02b175e62fb53fd8547e712148e1d510"]
-owner = ["u02b175e62fb53fd8547e712148e1d510"]
-admin = ["u02b175e62fb53fd8547e712148e1d510"]
-staff = ["u02b175e62fb53fd8547e712148e1d510"]
+creator = ["u7dd3b094df38ef9fa28d313f73455389"]
+owner = ["u7dd3b094df38ef9fa28d313f73455389"]
+admin = ["u7dd3b094df38ef9fa28d313f73455389"]
+staff = ["u7dd3b094df38ef9fa28d313f73455389"]
 #==============================================================================
 lineProfile = cl.getProfile()
 mid = cl.getProfile().mid
