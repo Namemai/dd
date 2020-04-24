@@ -37,7 +37,7 @@ print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist3 
 k4 = LINE("bsx99927@zzrgg.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist4 Login ]\033[0m"""%(Bot_startTime))
 
-k5 = LINE("dix76528@zzrgg.com","mai065558mai")
+k5 = LINE("gcu89366@zzrgg.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist5 Login ]\033[0m"""%(Bot_startTime))
 
 #==========================[[PAKE TOKEN CHROMEOS 2.1.5]]=========================
