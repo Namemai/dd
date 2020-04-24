@@ -22,7 +22,7 @@ print("""
 \033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Start Bot ]\033[0m    
 """%(Bot_startTime))
 #==============================================================
-cl = LINE("06555mai@gmail.com","mai065558mai")
+cl = LINE("ytv47663@bcaoo.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Selfbot Login ]\033[0m"""%(Bot_startTime))
 
 k1 = LINE("oqt64130@eoopy.com","mai065558mai")
