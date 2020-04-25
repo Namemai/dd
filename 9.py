@@ -2061,7 +2061,7 @@ def bot(op):
                                                             try:
                                                                 random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                             except:
-                                                                pass pass
+                                                                pass
                                                                                          
                 return
             if Dmid in op.param3:
