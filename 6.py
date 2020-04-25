@@ -1308,29 +1308,25 @@ def bot(op):
         if op.type == 11:
             if op.param2 in bl['blacklist']:
                     try:
-                        cl.reissueGroupTicket(op.param1) 
+                        k1.reissueGroupTicket(op.param1) 
                     except:
                         try:
                             if op.param3 not in bl["blacklist"]:
-                                k1.reissueGroupTicket(op.param1) 
+                                k2.reissueGroupTicket(op.param1) 
                         except:
                             try:
                                 if op.param3 not in bl["blacklist"]:
-                                    k2.reissueGroupTicket(op.param1) 
+                                    k3.reissueGroupTicket(op.param1) 
                             except:
                                 try:
                                     if op.param3 not in bl["blacklist"]:
-                                        k3.reissueGroupTicket(op.param1) 
+                                        k4.reissueGroupTicket(op.param1) 
                                 except:
                                     try:
                                         if op.param3 not in bl["blacklist"]:
-                                            k4.reissueGroupTicket(op.param1) 
+                                            k5.reissueGroupTicket(op.param1) 
                                     except:
-                                        try:
-                                            if op.param3 not in bl["blacklist"]:
-                                                k5.reissueGroupTicket(op.param1) 
-                                        except:
-                                            pass
+                                        pass
                  
 #====================================================================                                                                                                                 
 #====================================================================                            
