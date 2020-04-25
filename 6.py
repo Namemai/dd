@@ -1326,9 +1326,7 @@ def bot(op):
                                         if op.param3 not in bl["blacklist"]:
                                             k5.reissueGroupTicket(op.param1) 
                                     except:
-                                        pass
-                 
-#====================================================================                                                                                                                 
+                                        pass                                                                                                               
 #====================================================================                            
         if op.type == 17:
             if op.param2 in bl['blacklist']:                
