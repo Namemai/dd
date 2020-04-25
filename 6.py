@@ -1564,14 +1564,7 @@ def bot(op):
                                             bl['blacklist'][op.param2] = True
                                         except:
                                             try:
-                                                cl.kickoutFromGroup(op.param1,[op.param2])
-                                                cl.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                                cl.acceptGroupInvitation(op.param1)
-                                                k1.acceptGroupInvitation(op.param1)
-                                                k2.acceptGroupInvitation(op.param1)
-                                                k3.acceptGroupInvitation(op.param1)
-                                                k4.acceptGroupInvitation(op.param1)
-                                                k5.acceptGroupInvitation(op.param1)
+                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                             except:
                                                 pass
                 return
@@ -1626,13 +1619,8 @@ def bot(op):
                                     except:
                                         try:
                                             k1.kickoutFromGroup(op.param1,[op.param2])
-                                            k1.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                            cl.acceptGroupInvitation(op.param1)
-                                            k1.acceptGroupInvitation(op.param1)
+                                            k2.inviteIntoGroup(op.param1,[op.param3])
                                             k2.acceptGroupInvitation(op.param1)
-                                            k3.acceptGroupInvitation(op.param1)
-                                            k4.acceptGroupInvitation(op.param1)
-                                            k5.acceptGroupInvitation(op.param1)
                                         except:
                                             pass
                 return
@@ -1687,13 +1675,8 @@ def bot(op):
                                     except:
                                         try:
                                             k2.kickoutFromGroup(op.param1,[op.param2])
-                                            k2.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                            cl.acceptGroupInvitation(op.param1)
-                                            k1.acceptGroupInvitation(op.param1)
-                                            k2.acceptGroupInvitation(op.param1)
+                                            k2.inviteIntoGroup(op.param1,[op.param3])
                                             k3.acceptGroupInvitation(op.param1)
-                                            k4.acceptGroupInvitation(op.param1)
-                                            k5.acceptGroupInvitation(op.param1)
                                         except:
                                             pass
                 return
@@ -1748,13 +1731,8 @@ def bot(op):
                                     except:
                                         try:
                                             k3.kickoutFromGroup(op.param1,[op.param2])
-                                            k3.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                            cl.acceptGroupInvitation(op.param1)
-                                            k1.acceptGroupInvitation(op.param1)
-                                            k2.acceptGroupInvitation(op.param1)
-                                            k3.acceptGroupInvitation(op.param1)
+                                            k3.inviteIntoGroup(op.param1,[op.param3])
                                             k4.acceptGroupInvitation(op.param1)
-                                            k5.acceptGroupInvitation(op.param1)
                                         except:
                                             pass
                 return
@@ -1809,12 +1787,7 @@ def bot(op):
                                     except:
                                         try:
                                             k4.kickoutFromGroup(op.param1,[op.param2])
-                                            k4.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                            cl.acceptGroupInvitation(op.param1)
-                                            k1.acceptGroupInvitation(op.param1)
-                                            k2.acceptGroupInvitation(op.param1)
-                                            k3.acceptGroupInvitation(op.param1)
-                                            k4.acceptGroupInvitation(op.param1)
+                                            k4.inviteIntoGroup(op.param1,[op.param3])
                                             k5.acceptGroupInvitation(op.param1)
                                         except:
                                             pass
@@ -1870,13 +1843,8 @@ def bot(op):
                                     except:
                                         try:
                                             k5.kickoutFromGroup(op.param1,[op.param2])
-                                            k5.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
-                                            cl.acceptGroupInvitation(op.param1)
+                                            k5.inviteIntoGroup(op.param1,[op.param3])
                                             k1.acceptGroupInvitation(op.param1)
-                                            k2.acceptGroupInvitation(op.param1)
-                                            k3.acceptGroupInvitation(op.param1)
-                                            k4.acceptGroupInvitation(op.param1)
-                                            k5.acceptGroupInvitation(op.param1)
                                         except:
                                             pass
                 return
