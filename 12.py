@@ -2082,6 +2082,7 @@ def bot(op):
                             k3.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid])
                             cl.acceptGroupInvitation(op.param1)
                             k1.acceptGroupInvitation(op.param1)
+                            k2.acceptGroupInvitation(op.param1)
                             k3.acceptGroupInvitation(op.param1)
                             k4.acceptGroupInvitation(op.param1)
                             k5.acceptGroupInvitation(op.param1)
