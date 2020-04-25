@@ -1569,10 +1569,7 @@ def bot(op):
                                                 try:
                                                     random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                 except:
-                                                    try:
-                                                        random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                    except:
-                                                        pass
+                                                    pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1624,15 +1621,12 @@ def bot(op):
                                         bl['blacklist'][op.param2] = True
                                     except:
                                         try:
-                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            k1.kickoutFromGroup(op.param1,[op.param2])
                                         except:
                                             try:
-                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                k1.kickoutFromGroup(op.param1,[op.param2])
                                             except:
-                                                try:
-                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                except:
-                                                    pass
+                                                pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1684,15 +1678,12 @@ def bot(op):
                                         bl['blacklist'][op.param2] = True
                                     except:
                                         try:
-                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            k2.kickoutFromGroup(op.param1,[op.param2])
                                         except:
                                             try:
-                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                k2.kickoutFromGroup(op.param1,[op.param2])
                                             except:
-                                                try:
-                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                except:
-                                                    pass
+                                                pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1744,15 +1735,12 @@ def bot(op):
                                         bl['blacklist'][op.param2] = True
                                     except:
                                         try:
-                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            k3.kickoutFromGroup(op.param1,[op.param2])
                                         except:
                                             try:
-                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                k3.kickoutFromGroup(op.param1,[op.param2])
                                             except:
-                                                try:
-                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                except:
-                                                    pass
+                                                pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1804,15 +1792,12 @@ def bot(op):
                                         bl['blacklist'][op.param2] = True
                                     except:
                                         try:
-                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            k4.kickoutFromGroup(op.param1,[op.param2])
                                         except:
                                             try:
-                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                k4.kickoutFromGroup(op.param1,[op.param2])
                                             except:
-                                                try:
-                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                except:
-                                                    pass
+                                                pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1864,15 +1849,12 @@ def bot(op):
                                         bl['blacklist'][op.param2] = True
                                     except:
                                         try:
-                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            k5.kickoutFromGroup(op.param1,[op.param2])
                                         except:
                                             try:
-                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                k5.kickoutFromGroup(op.param1,[op.param2])
                                             except:
-                                                try:
-                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                except:
-                                                    pass
+                                                pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1929,10 +1911,7 @@ def bot(op):
                                             try:
                                                 random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                             except:
-                                                try:
-                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                except:
-                                                    pass
+                                                pass
 #===================================================================================================                  
                 return
 
@@ -3109,6 +3088,7 @@ def bot(op):
                                k3.leaveGroup(msg.to)
                                k4.leaveGroup(msg.to)
                                k5.leaveGroup(msg.to)
+                               cl.leaveGroup(msg.to)
 #====================================================================                            
                         elif cmd == "tim":
                           if wait["selfbot"] == True:
