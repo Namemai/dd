@@ -1308,25 +1308,29 @@ def bot(op):
         if op.type == 11:
             if op.param2 in bl['blacklist']:
                     try:
-                        k1.reissueGroupTicket(op.param1) 
+                        cl.reissueGroupTicket(op.param1) 
                     except:
                         try:
                             if op.param3 not in bl["blacklist"]:
-                                k2.reissueGroupTicket(op.param1) 
+                                k1.reissueGroupTicket(op.param1) 
                         except:
                             try:
                                 if op.param3 not in bl["blacklist"]:
-                                    k3.reissueGroupTicket(op.param1) 
+                                    k2.reissueGroupTicket(op.param1) 
                             except:
                                 try:
                                     if op.param3 not in bl["blacklist"]:
-                                        k4.reissueGroupTicket(op.param1) 
+                                        k3.reissueGroupTicket(op.param1) 
                                 except:
                                     try:
                                         if op.param3 not in bl["blacklist"]:
-                                            k5.reissueGroupTicket(op.param1) 
+                                            k4.reissueGroupTicket(op.param1) 
                                     except:
-                                        pass
+                                        try:
+                                            if op.param3 not in bl["blacklist"]:
+                                                k5.reissueGroupTicket(op.param1) 
+                                        except:
+                                            pass
                  
 #====================================================================                                                                                                                 
 #====================================================================                            
@@ -1564,12 +1568,16 @@ def bot(op):
                                             bl['blacklist'][op.param2] = True
                                         except:
                                             try:
-                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                                cl.kickoutFromGroup(op.param1,[op.param2])
+                                                cl.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                                                cl.acceptGroupInvitation(op.param1)
+                                                k1.acceptGroupInvitation(op.param1)
+                                                k2.acceptGroupInvitation(op.param1)
+                                                k3.acceptGroupInvitation(op.param1)
+                                                k4.acceptGroupInvitation(op.param1)
+                                                k5.acceptGroupInvitation(op.param1)
                                             except:
-                                                try:
-                                                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                except:
-                                                    pass
+                                                pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1622,11 +1630,15 @@ def bot(op):
                                     except:
                                         try:
                                             k1.kickoutFromGroup(op.param1,[op.param2])
+                                            k1.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                                            cl.acceptGroupInvitation(op.param1)
+                                            k1.acceptGroupInvitation(op.param1)
+                                            k2.acceptGroupInvitation(op.param1)
+                                            k3.acceptGroupInvitation(op.param1)
+                                            k4.acceptGroupInvitation(op.param1)
+                                            k5.acceptGroupInvitation(op.param1)
                                         except:
-                                            try:
-                                                k1.kickoutFromGroup(op.param1,[op.param2])
-                                            except:
-                                                pass
+                                            pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1679,11 +1691,15 @@ def bot(op):
                                     except:
                                         try:
                                             k2.kickoutFromGroup(op.param1,[op.param2])
+                                            k2.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                                            cl.acceptGroupInvitation(op.param1)
+                                            k1.acceptGroupInvitation(op.param1)
+                                            k2.acceptGroupInvitation(op.param1)
+                                            k3.acceptGroupInvitation(op.param1)
+                                            k4.acceptGroupInvitation(op.param1)
+                                            k5.acceptGroupInvitation(op.param1)
                                         except:
-                                            try:
-                                                k2.kickoutFromGroup(op.param1,[op.param2])
-                                            except:
-                                                pass
+                                            pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1736,11 +1752,15 @@ def bot(op):
                                     except:
                                         try:
                                             k3.kickoutFromGroup(op.param1,[op.param2])
+                                            k3.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                                            cl.acceptGroupInvitation(op.param1)
+                                            k1.acceptGroupInvitation(op.param1)
+                                            k2.acceptGroupInvitation(op.param1)
+                                            k3.acceptGroupInvitation(op.param1)
+                                            k4.acceptGroupInvitation(op.param1)
+                                            k5.acceptGroupInvitation(op.param1)
                                         except:
-                                            try:
-                                                k3.kickoutFromGroup(op.param1,[op.param2])
-                                            except:
-                                                pass
+                                            pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1793,11 +1813,15 @@ def bot(op):
                                     except:
                                         try:
                                             k4.kickoutFromGroup(op.param1,[op.param2])
+                                            k4.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                                            cl.acceptGroupInvitation(op.param1)
+                                            k1.acceptGroupInvitation(op.param1)
+                                            k2.acceptGroupInvitation(op.param1)
+                                            k3.acceptGroupInvitation(op.param1)
+                                            k4.acceptGroupInvitation(op.param1)
+                                            k5.acceptGroupInvitation(op.param1)
                                         except:
-                                            try:
-                                                k4.kickoutFromGroup(op.param1,[op.param2])
-                                            except:
-                                                pass
+                                            pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1850,11 +1874,15 @@ def bot(op):
                                     except:
                                         try:
                                             k5.kickoutFromGroup(op.param1,[op.param2])
+                                            k5.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                                            cl.acceptGroupInvitation(op.param1)
+                                            k1.acceptGroupInvitation(op.param1)
+                                            k2.acceptGroupInvitation(op.param1)
+                                            k3.acceptGroupInvitation(op.param1)
+                                            k4.acceptGroupInvitation(op.param1)
+                                            k5.acceptGroupInvitation(op.param1)
                                         except:
-                                            try:
-                                                k5.kickoutFromGroup(op.param1,[op.param2])
-                                            except:
-                                                pass
+                                            pass
                 return
                                                                                                                     
         if op.type == 19:
@@ -1872,31 +1900,61 @@ def bot(op):
                     with open('bl.json', 'w') as fp:
                         json.dump(bl, fp, sort_keys=True, indent=4)
                     try:                  	
-                        k5.kickoutFromGroup(op.param1,[op.param2])
-                        k5.inviteIntoGroup(op.param1,[op.param3])
+                        k1.kickoutFromGroup(op.param1,[op.param2])
+                        k1.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                        cl.acceptGroupInvitation(op.param1)
                         k1.acceptGroupInvitation(op.param1)
+                        k2.acceptGroupInvitation(op.param1)
+                        k3.acceptGroupInvitation(op.param1)
+                        k4.acceptGroupInvitation(op.param1)
+                        k5.acceptGroupInvitation(op.param1)
                     except:
                         try:
-                            k4.kickoutFromGroup(op.param1,[op.param2])
-                            k4.inviteIntoGroup(op.param1,[op.param3])
+                            k2.kickoutFromGroup(op.param1,[op.param2])
+                            k2.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                            cl.acceptGroupInvitation(op.param1)
                             k1.acceptGroupInvitation(op.param1)
+                            k2.acceptGroupInvitation(op.param1)
+                            k3.acceptGroupInvitation(op.param1)
+                            k4.acceptGroupInvitation(op.param1)
+                            k5.acceptGroupInvitation(op.param1)
                         except:
                             try:
                                 k3.kickoutFromGroup(op.param1,[op.param2])
-                                k3.inviteIntoGroup(op.param1,[op.param3])
+                                k3.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                                cl.acceptGroupInvitation(op.param1)
                                 k1.acceptGroupInvitation(op.param1)
+                                k2.acceptGroupInvitation(op.param1)
+                                k3.acceptGroupInvitation(op.param1)
+                                k4.acceptGroupInvitation(op.param1)
+                                k5.acceptGroupInvitation(op.param1)
                             except:
                                 try:
-                                    k2.kickoutFromGroup(op.param1,[op.param2])
-                                    k2.inviteIntoGroup(op.param1,[op.param3])
+                                    k4.kickoutFromGroup(op.param1,[op.param2])
+                                    k4.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                                    cl.acceptGroupInvitation(op.param1)
                                     k1.acceptGroupInvitation(op.param1)
+                                    k2.acceptGroupInvitation(op.param1)
+                                    k3.acceptGroupInvitation(op.param1)
+                                    k4.acceptGroupInvitation(op.param1)
+                                    k5.acceptGroupInvitation(op.param1)
                                 except:
                                     try:
-                                        group = k1.getGroup(op.param1)
+                                        k5.kickoutFromGroup(op.param1,[op.param2])
+                                        k5.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                                        cl.acceptGroupInvitation(op.param1)
+                                        k1.acceptGroupInvitation(op.param1)
+                                        k2.acceptGroupInvitation(op.param1)
+                                        k3.acceptGroupInvitation(op.param1)
+                                        k4.acceptGroupInvitation(op.param1)
+                                        k5.acceptGroupInvitation(op.param1)
+                                    except:
+                                        try:
+                                        group = cl.getGroup(op.param1)
                                         group.preventedJoinByTicket = False
-                                        k1.updateGroup(group)
+                                        cl.updateGroup(group)
                                         invsend = 0
-                                        Ticket = k1.reissueGroupTicket(op.param1)
+                                        Ticket = cl.reissueGroupTicket(op.param1)
                                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                                         k1.acceptGroupInvitationByTicket(op.param1,Ticket)
                                         k2.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1906,12 +1964,16 @@ def bot(op):
                                         bl['blacklist'][op.param2] = True
                                     except:
                                         try:
-                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                            cl.kickoutFromGroup(op.param1,[op.param2])
+                                            cl.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid])
+                                            cl.acceptGroupInvitation(op.param1)
+                                            k1.acceptGroupInvitation(op.param1)
+                                            k2.acceptGroupInvitation(op.param1)
+                                            k3.acceptGroupInvitation(op.param1)
+                                            k4.acceptGroupInvitation(op.param1)
+                                            k5.acceptGroupInvitation(op.param1)
                                         except:
-                                            try:
-                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                            except:
-                                                pass
+                                            pass
 #===================================================================================================                  
                 return
 
