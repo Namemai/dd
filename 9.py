@@ -1822,10 +1822,7 @@ def bot(op):
                                                         try:
                                                             random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                         except:
-                                                            try:
-                                                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                            except:
-                                                                pass
+                                                            pass
                 return
                                                                                                                     
             if Amid in op.param3:
@@ -1895,13 +1892,11 @@ def bot(op):
                                                 except:
                                                     try:
                                                         k1.kickoutFromGroup(op.param1,[op.param2])
+                                                        k1.inviteIntoGroup(op.param1,[op.param3])
+                                                        k2.acceptGroupInvitation(op.param1)
                                                     except:
-                                                        try:
-                                                            k1.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass 
-                                                                                                                      
-                                        
+                                                        pass
+
                 return        
             if Bmid in op.param3:
                 if op.param2 in Bots:
@@ -1970,11 +1965,10 @@ def bot(op):
                                                 except:
                                                     try:
                                                         k2.kickoutFromGroup(op.param1,[op.param2])
+                                                        k2.inviteIntoGroup(op.param1,[op.param3])
+                                                        k3.acceptGroupInvitation(op.param1)
                                                     except:
-                                                        try:
-                                                            k2.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass 
+                                                        pass
                                                                
                 return
               
@@ -2045,11 +2039,10 @@ def bot(op):
                                                 except:
                                                     try:
                                                         k3.kickoutFromGroup(op.param1,[op.param2])
+                                                        k3.inviteIntoGroup(op.param1,[op.param3])
+                                                        k4.acceptGroupInvitation(op.param1)
                                                     except:
-                                                        try:
-                                                            k3.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass
+                                                        pass
                                                                                          
                 return
             if Dmid in op.param3:
@@ -2119,11 +2112,10 @@ def bot(op):
                                                 except:
                                                     try:
                                                         k4.kickoutFromGroup(op.param1,[op.param2])
+                                                        k4.inviteIntoGroup(op.param1,[op.param3])
+                                                        k5.acceptGroupInvitation(op.param1)
                                                     except:
-                                                        try:
-                                                            k4.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass 
+                                                        pass 
                                                             
                 return
             if Emid in op.param3:
@@ -2193,11 +2185,10 @@ def bot(op):
                                                 except:
                                                     try:
                                                         k5.kickoutFromGroup(op.param1,[op.param2])
+                                                        k5.inviteIntoGroup(op.param1,[op.param3])
+                                                        k6.acceptGroupInvitation(op.param1)
                                                     except:
-                                                        try:
-                                                            k5.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass 
+                                                        pass
                                                             
                 return
             if Fmid in op.param3:
@@ -2267,11 +2258,10 @@ def bot(op):
                                                 except:
                                                     try:
                                                         k6.kickoutFromGroup(op.param1,[op.param2])
+                                                        k6.inviteIntoGroup(op.param1,[op.param3])
+                                                        k7.acceptGroupInvitation(op.param1)
                                                     except:
-                                                        try:
-                                                            k6.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass                                                                     
+                                                        pass                                                                     
                 return
             if Gmid in op.param3:
                 if op.param2 in Bots:
@@ -2340,11 +2330,10 @@ def bot(op):
                                                 except:
                                                     try:
                                                         k7.kickoutFromGroup(op.param1,[op.param2])
+                                                        k7.inviteIntoGroup(op.param1,[op.param3])
+                                                        k8.acceptGroupInvitation(op.param1)
                                                     except:
-                                                        try:
-                                                            k7.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass 
+                                                        pass
                 return
             if Hmid in op.param3:
                 if op.param2 in Bots:
@@ -2413,11 +2402,10 @@ def bot(op):
                                                 except:
                                                     try:
                                                         k8.kickoutFromGroup(op.param1,[op.param2])
+                                                        k8.inviteIntoGroup(op.param1,[op.param3])
+                                                        k1.acceptGroupInvitation(op.param1)
                                                     except:
-                                                        try:
-                                                            k8.kickoutFromGroup(op.param1,[op.param2])
-                                                        except:
-                                                            pass
+                                                        pass
 #===================================================================================================                  
                 return
 
