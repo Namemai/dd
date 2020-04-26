@@ -22,48 +22,37 @@ print("""
 \033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Start Bot ]\033[0m    
 """%(Bot_startTime))
 #==============================================================
-cl = LINE("06555mai@gmail.com","mai065558mai")
+cl = LINE("ytv47663@bcaoo.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Selfbot Login ]\033[0m"""%(Bot_startTime))
 
-k1 = LINE("tnv44216@eoopy.com","mai065558mai")
+k1 = LINE("oqt64130@eoopy.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist1 Login ]\033[0m"""%(Bot_startTime))
 
-k2 = LINE("tyy04389@zzrgg.com","mai065558mai")
+k2 = LINE("ago06104@zzrgg.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist2 Login ]\033[0m"""%(Bot_startTime))
 
-k3 = LINE("qew96124@bcaoo.com","mai065558mai")
+k3 = LINE("tlm27566@bcaoo.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist3 Login ]\033[0m"""%(Bot_startTime))
 
-k4 = LINE("svx93402@zzrgg.com","mai065558mai")
+k4 = LINE("vsz71687@eoopy.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist4 Login ]\033[0m"""%(Bot_startTime))
 
-k5 = LINE("trn62918@bcaoo.com","mai065558mai")
+k5 = LINE("yel10184@bcaoo.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist5 Login ]\033[0m"""%(Bot_startTime))
 
-k6 = LINE("rss84730@eoopy.com","mai065558mai")
+k6 = LINE("mhh87894@zzrgg.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist6 Login ]\033[0m"""%(Bot_startTime))
 
-k7 = LINE("ldf56885@eoopy.com","mai065558mai")
+k7 = LINE("qij17520@zzrgg.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist7 Login ]\033[0m"""%(Bot_startTime))
 
-k8 = LINE("qii76359@bcaoo.com","mai065558mai")
+k8 = LINE("hbp07791@eoopy.com","mai065558mai")
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist8 Login ]\033[0m"""%(Bot_startTime))
 
-k9 = LINE("xvx65670@bcaoo.com","mai065558mai")
-print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist9 Login ]\033[0m"""%(Bot_startTime))
-
-k10 = LINE("axz83700@eoopy.com","mai065558mai")
-print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist10 Login ]\033[0m"""%(Bot_startTime))
-
-g1 = LINE("bsx99927@zzrgg.com","mai065558mai")
-print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Kicker1 Login ]\033[0m"""%(Bot_startTime))
-
-g2 = LINE("dix76528@zzrgg.com","mai065558mai")
-print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Kicker2 Login ]\033[0m"""%(Bot_startTime))
 #==========================[[PAKE TOKEN CHROMEOS 2.1.5]]=========================
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m
 
-	    Welcome To Self Bot Protect  By Dhenza15
+	    Welcome To Self Bot Protect  By mai
 
             
 Login Time %s \033[0m\n\n"""%(Bot_startTime))
@@ -84,15 +73,10 @@ Dmid = k4.getProfile().mid
 Emid = k5.getProfile().mid
 Fmid = k6.getProfile().mid
 Gmid = k7.getProfile().mid
-Hmid = k8.getProfile().mid
-Imid = k9.getProfile().mid
-Jmid = k10.getProfile().mid   
-g1MID = g1.getProfile().mid
-g2MID = g2.getProfile().mid                 
-KAC = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10]
-ABC = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10]
-KICKER = [g1,g2]           
-Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid,g1MID,g2MID]
+Hmid = k8.getProfile().mid              
+KAC = [k1,k2,k3,k4,k5,k6,k7,k8]
+ABC = [k1,k2,k3,k4,k5,k6,k7,k8]
+Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid]
 Saint = admin + owner + staff
 Team = creator + owner + admin + staff + Bots
 Setbot = codecs.open("setting.json","r","utf-8")
@@ -142,8 +126,6 @@ responsename5 = k5.getProfile().displayName
 responsename6 = k6.getProfile().displayName
 responsename7 = k7.getProfile().displayName
 responsename8 = k8.getProfile().displayName
-responsename9 = k9.getProfile().displayName
-responsename10 = k10.getProfile().displayName
 #===============================================================================
 settings = {
     "autoBlock": False,
@@ -201,7 +183,7 @@ settings = {
 }
 
 wait = {
-    "limit": 500,
+    "limit": 1000,
     "owner":{},
     "admin":{},
     "addadmin":False,
