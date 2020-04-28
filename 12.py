@@ -7180,8 +7180,8 @@ def bot(op):
                                            Ticket = cl.reissueGroupTicket(msg.to)
                                            g1.acceptGroupInvitationByTicket(msg.to,Ticket)
                                            g2.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                           g1.kickoutFromGroup(msg.to, [target])
                                            g2.kickoutFromGroup(msg.to, [target])
+                                           g1.kickoutFromGroup(msg.to, [target])
                                            g1.leaveGroup(msg.to)
                                            g2.leaveGroup(msg.to)
                                        except:
