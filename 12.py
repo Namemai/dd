@@ -276,7 +276,7 @@ wait = {
             "pictureStatus": "",
             "statusMessage": ""
             },
-    "mention":"Masuk say ngitip bacok",
+    "mention":"say ngitip bacok",
     "Respontag":"Cuy ngrtag mele..",
     "welcome":"Wellcome to my Fams",
     "comment":"ᴀᴜᴛᴏʟɪᴋᴇ ʙʏ:mai",
