@@ -52,7 +52,7 @@ print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Asist8 
 #==========================[[PAKE TOKEN CHROMEOS 2.1.5]]=========================
 print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m
 
-	    Welcome To Self Bot Protect  By mai
+	    Welcome T Self Bot Protect  By mai
 
             
 Login Time %s \033[0m\n\n"""%(Bot_startTime))
